@@ -1,0 +1,46 @@
+name = University of Cambridge (lite)
+description = Install the core University of Cambridge features.
+version = 7.x-1.0-dev
+core = 7.x
+
+; core
+
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+; contrib
+
+dependencies[] = raven
+
+; theme
+
+dependencies[] = block_class
+dependencies[] = block_titlelink
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = easy_breadcrumb
+dependencies[] = less
+dependencies[] = libraries
+dependencies[] = menu_attributes
+dependencies[] = menu_block
+dependencies[] = pathauto
+dependencies[] = php
+dependencies[] = special_menu_items
+dependencies[] = token

@@ -1,0 +1,289 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the standard installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function cambridge_lite_install() {
+
+  // Add text formats.
+
+  $filtered_html_format = array(
+    'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
+    'weight' => 0,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // HTML filter.
+      'filter_html' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 2,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $filtered_html_format = (object) $filtered_html_format;
+  filter_format_save($filtered_html_format);
+
+  $full_html_format = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
+
+  // Add content types.
+
+  $types = array(
+    array(
+      'type' => 'page',
+      'name' => st('Basic Page'),
+      'base' => 'node_content',
+      'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+  );
+
+  foreach ($types as $type) {
+    $type = node_type_set_defaults($type);
+    node_type_save($type);
+    node_add_body_field($type);
+  }
+
+  // Default "Basic page" to not be promoted and have comments disabled.
+  variable_set('node_options_page', array('status'));
+
+  // Don't display date and author information for "Basic page" nodes by default.
+  variable_set('node_submitted_page', FALSE);
+
+  // Allow visitor account creation with administrative approval.
+  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+
+  // Enable the default and admin theme.
+  $enable = array(
+    'theme_default' => 'university_of_cambridge',
+    'admin_theme' => 'seven',
+  );
+  theme_enable($enable);
+
+  foreach ($enable as $var => $theme) {
+    if (!is_numeric($var)) {
+      variable_set($var, $theme);
+    }
+  }
+
+  theme_disable(array('bartik'));
+
+  // Use the admin theme for creating/editing nodes
+  variable_set('node_admin_theme', 1);
+
+  variable_set(EasyBreadcrumbConstants::DB_VAR_SEGMENTS_SEPARATOR, '/');
+
+  // Insert the page_title block required by the theme
+  db_insert('block_custom')
+    ->fields(
+      array(
+        'body' => "<h1>\n<?php\nprint drupal_get_title();\n?>\n</h1>",
+        'info' => 'Page title',
+        'format' => 'php',
+      )
+    )
+    ->execute();
+
+  // Insert the horizontal menu block required by the theme
+  variable_set("menu_block_1_title_link", 0);
+  variable_set("menu_block_1_admin_title", 'Horizontal menu');
+  variable_set("menu_block_1_parent", 'main-menu:0');
+  variable_set("menu_block_1_level", 1);
+  variable_set("menu_block_1_follow", 1);
+  variable_set("menu_block_1_depth", 0);
+  variable_set("menu_block_1_expanded", 1);
+  variable_set("menu_block_1_sort", 0);
+
+  // Insert the vertical menu block required by the theme
+  variable_set("menu_block_2_title_link", 0);
+  variable_set("menu_block_2_admin_title", 'Vertical menu');
+  variable_set("menu_block_2_parent", 'main-menu:0');
+  variable_set("menu_block_2_level", 1);
+  variable_set("menu_block_2_follow", 1);
+  variable_set("menu_block_2_depth", 0);
+  variable_set("menu_block_2_expanded", 1);
+  variable_set("menu_block_2_sort", 0);
+
+  variable_set('menu_block_ids', array(1, 2));
+
+  $theme = 'university_of_cambridge';
+
+  $blocks = array(
+    array(
+      'module' => 'search',
+      'delta' => 'form',
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => -1,
+      'region' => 'user_fourth',
+      'pages' => '',
+      'title' => '',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'pages' => '',
+      'title' => '',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'easy_breadcrumb',
+      'delta' => 'easy_breadcrumb',
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'breadcrumb',
+      'pages' => '',
+      'title' => '',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'user',
+      'delta' => 'login',
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 10,
+      'region' => 'sidebar_second',
+      'pages' => '',
+      'title' => '',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'block',
+      'delta' => 1,
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'page_title',
+      'pages' => '',
+      'title' => '',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => '',
+    ),
+    array(
+      'module' => 'menu_block',
+      'delta' => 1,
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'menu',
+      'pages' => '',
+      'title' => '<none>',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => 'cam-local-navigation-block',
+    ),
+    array(
+      'module' => 'menu_block',
+      'delta' => 2,
+      'theme' => $theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'sidebar_first',
+      'pages' => '',
+      'title' => '<none>',
+      'cache' => DRUPAL_NO_CACHE,
+      'css_class' => 'cam-local-navigation-side-block v1',
+    ),
+  );
+
+  $query = db_insert('block')
+    ->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'title', 'cache', 'css_class'));
+
+  foreach ($blocks as $block) {
+    $query->values($block);
+  }
+
+  $query->execute();
+
+
+  // Enable default permissions for system roles.
+  $filtered_html_permission = filter_permission_name($filtered_html_format);
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filtered_html_permission));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', $filtered_html_permission));
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  // Reset anonymous and authenticated user permissions.
+
+  user_role_grant_permissions(1, array('access content', 'search content'));
+  user_role_grant_permissions(2, array('access content', 'search content'));
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+}
