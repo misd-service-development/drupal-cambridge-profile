@@ -126,7 +126,7 @@ function cambridge_lite_install() {
       array(
         'body' => "<h1>\n<?php\nprint drupal_get_title();\n?>\n</h1>",
         'info' => 'Page title',
-        'format' => 'php',
+        'format' => 'php_code',
       )
     )
     ->execute();
