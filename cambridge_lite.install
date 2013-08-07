@@ -102,7 +102,7 @@ function cambridge_lite_install() {
 
   // Enable the default and admin theme.
   $enable = array(
-    'theme_default' => 'university_of_cambridge',
+    'theme_default' => 'cambridge_theme',
     'admin_theme' => 'seven',
   );
   theme_enable($enable);
@@ -117,8 +117,6 @@ function cambridge_lite_install() {
 
   // Use the admin theme for creating/editing nodes
   variable_set('node_admin_theme', 1);
-
-  variable_set(EasyBreadcrumbConstants::DB_VAR_SEGMENTS_SEPARATOR, '/');
 
   // Insert the page_title block required by the theme
   db_insert('block_custom')
@@ -136,7 +134,7 @@ function cambridge_lite_install() {
   variable_set("menu_block_1_admin_title", 'Horizontal menu');
   variable_set("menu_block_1_parent", 'main-menu:0');
   variable_set("menu_block_1_level", 1);
-  variable_set("menu_block_1_follow", 1);
+  variable_set("menu_block_1_follow", 0);
   variable_set("menu_block_1_depth", 0);
   variable_set("menu_block_1_expanded", 1);
   variable_set("menu_block_1_sort", 0);
@@ -148,26 +146,14 @@ function cambridge_lite_install() {
   variable_set("menu_block_2_level", 1);
   variable_set("menu_block_2_follow", 1);
   variable_set("menu_block_2_depth", 0);
-  variable_set("menu_block_2_expanded", 1);
-  variable_set("menu_block_2_sort", 0);
+  variable_set("menu_block_2_expanded", 0);
+  variable_set("menu_block_2_sort", 1);
 
   variable_set('menu_block_ids', array(1, 2));
 
-  $theme = 'university_of_cambridge';
+  $theme = 'cambridge_theme';
 
   $blocks = array(
-    array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $theme,
-      'status' => 1,
-      'weight' => -1,
-      'region' => 'user_fourth',
-      'pages' => '',
-      'title' => '',
-      'cache' => DRUPAL_NO_CACHE,
-      'css_class' => '',
-    ),
     array(
       'module' => 'system',
       'delta' => 'help',
@@ -178,19 +164,6 @@ function cambridge_lite_install() {
       'pages' => '',
       'title' => '',
       'cache' => DRUPAL_NO_CACHE,
-      'css_class' => '',
-    ),
-    array(
-      'module' => 'easy_breadcrumb',
-      'delta' => 'easy_breadcrumb',
-      'theme' => $theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'breadcrumb',
-      'pages' => '',
-      'title' => '',
-      'cache' => DRUPAL_NO_CACHE,
-      'css_class' => '',
     ),
     array(
       'module' => 'user',
@@ -198,11 +171,10 @@ function cambridge_lite_install() {
       'theme' => $theme,
       'status' => 1,
       'weight' => 10,
-      'region' => 'sidebar_second',
+      'region' => 'sidebar',
       'pages' => '',
       'title' => '',
       'cache' => DRUPAL_NO_CACHE,
-      'css_class' => '',
     ),
     array(
       'module' => 'block',
@@ -211,10 +183,9 @@ function cambridge_lite_install() {
       'status' => 1,
       'weight' => 0,
       'region' => 'page_title',
-      'pages' => '',
+      'pages' => '<front>',
       'title' => '',
       'cache' => DRUPAL_NO_CACHE,
-      'css_class' => '',
     ),
     array(
       'module' => 'menu_block',
@@ -222,11 +193,10 @@ function cambridge_lite_install() {
       'theme' => $theme,
       'status' => 1,
       'weight' => 0,
-      'region' => 'menu',
+      'region' => 'horizontal_navigation',
       'pages' => '',
       'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
-      'css_class' => 'cam-local-navigation-block',
     ),
     array(
       'module' => 'menu_block',
@@ -234,16 +204,15 @@ function cambridge_lite_install() {
       'theme' => $theme,
       'status' => 1,
       'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
+      'region' => 'left_navigation',
+      'pages' => '<front>',
       'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
-      'css_class' => 'cam-local-navigation-side-block v1',
     ),
   );
 
   $query = db_insert('block')
-    ->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'title', 'cache', 'css_class'));
+    ->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'title', 'cache'));
 
   foreach ($blocks as $block) {
     $query->values($block);

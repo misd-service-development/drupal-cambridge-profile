@@ -25,22 +25,11 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
-; contrib
-
-dependencies[] = raven
-
 ; theme
 
-dependencies[] = block_class
-dependencies[] = block_titlelink
-dependencies[] = context
-dependencies[] = ctools
-dependencies[] = easy_breadcrumb
-dependencies[] = less
-dependencies[] = libraries
-dependencies[] = menu_attributes
 dependencies[] = menu_block
-dependencies[] = pathauto
+
+; contrib
+
 dependencies[] = php
-dependencies[] = special_menu_items
-dependencies[] = token
+dependencies[] = raven
