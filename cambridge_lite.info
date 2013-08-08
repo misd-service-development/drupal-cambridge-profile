@@ -33,3 +33,5 @@ dependencies[] = menu_block
 
 dependencies[] = php
 dependencies[] = raven
+dependencies[] = views
+dependencies[] = views_ui
