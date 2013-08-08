@@ -31,6 +31,7 @@ dependencies[] = menu_block
 
 ; contrib
 
+dependencies[] = link
 dependencies[] = php
 dependencies[] = raven
 dependencies[] = views
