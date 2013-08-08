@@ -151,6 +151,9 @@ function cambridge_lite_install() {
 
   variable_set('menu_block_ids', array(1, 2));
 
+  // Hide Drupal's standard menu blocks
+  variable_set('menu_block_suppress_core', 1);
+
   $theme = 'cambridge_theme';
 
   $blocks = array(
