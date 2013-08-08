@@ -183,6 +183,68 @@ function cambridge_lite_install() {
   // Don't display date and author information for "Basic page" nodes by default.
   variable_set('node_submitted_page', FALSE);
 
+  $fields = array(
+    'field_leading_image' => array(
+      'field_name' => 'field_leading_image',
+      'label' => st('Leading image'),
+      'cardinality' => 1,
+      'type' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+    ),
+  );
+
+  foreach ($fields as $field) {
+    field_create_field($field);
+  }
+
+  $instances = array(
+    'field_leading_image' => array(
+      'entity_type' => 'node',
+      'bundle' => 'page',
+      'field_name' => 'field_leading_image',
+      'label' => st('Leading image'),
+      'cardinality' => 1,
+      'type' => 'field_leading_image',
+      'settings' => array(
+        'alt_field' => 1,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+      ),
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'leading', 'image_link' => ''),
+          'weight' => -1,
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
+          'weight' => -1,
+        ),
+      ),
+    ),
+  );
+
+  foreach ($instances as $instance) {
+    field_create_instance($instance);
+  }
+
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
