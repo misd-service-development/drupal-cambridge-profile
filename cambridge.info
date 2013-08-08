@@ -32,6 +32,7 @@ dependencies[] = menu_block
 
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = advanced_help
 dependencies[] = link
 dependencies[] = pathauto
 dependencies[] = php
