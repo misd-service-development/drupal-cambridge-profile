@@ -71,6 +71,92 @@ function cambridge_lite_install() {
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
 
+  // Add image styles
+
+  $carousel = image_style_save(array('name' => 'carousel', 'label' => 'Carousel'));
+
+  image_effect_save(
+    array(
+      'name' => 'image_scale',
+      'data' => array(
+        'width' => 885,
+        'height' => NULL,
+        'upscale' => TRUE,
+      ),
+      'isid' => $carousel['isid'],
+      'weight' => 1,
+    )
+  );
+
+  image_effect_save(
+    array(
+      'name' => 'image_crop',
+      'data' => array(
+        'width' => 885,
+        'height' => 432,
+        'anchor' => 'center-center',
+      ),
+      'isid' => $carousel['isid'],
+      'weight' => 2,
+    )
+  );
+
+  $leading = image_style_save(array('name' => 'leading', 'label' => 'Leading'));
+
+  image_effect_save(
+    array(
+      'name' => 'image_scale',
+      'data' => array(
+        'width' => 590,
+        'height' => NULL,
+        'upscale' => TRUE,
+      ),
+      'isid' => $leading['isid'],
+      'weight' => 1,
+    )
+  );
+
+  image_effect_save(
+    array(
+      'name' => 'image_crop',
+      'data' => array(
+        'width' => 590,
+        'height' => 288,
+        'anchor' => 'center-center',
+      ),
+      'isid' => $leading['isid'],
+      'weight' => 2,
+    )
+  );
+
+  $inline = image_style_save(array('name' => 'inline', 'label' => 'Inline/teaser'));
+
+  image_effect_save(
+    array(
+      'name' => 'image_scale',
+      'data' => array(
+        'width' => 250,
+        'height' => NULL,
+        'upscale' => TRUE,
+      ),
+      'isid' => $inline['isid'],
+      'weight' => 1,
+    )
+  );
+
+  image_effect_save(
+    array(
+      'name' => 'image_crop',
+      'data' => array(
+        'width' => 250,
+        'height' => 250,
+        'anchor' => 'center-center',
+      ),
+      'isid' => $inline['isid'],
+      'weight' => 2,
+    )
+  );
+
   // Add content types.
 
   $types = array(
