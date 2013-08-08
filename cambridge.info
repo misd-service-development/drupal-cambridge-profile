@@ -1,0 +1,38 @@
+name = University of Cambridge
+description = Install the standard University of Cambridge features.
+version = 7.x-1.0-dev
+core = 7.x
+
+; core
+
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = overlay
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = taxonomy
+dependencies[] = toolbar
+
+; theme
+
+dependencies[] = menu_block
+
+; contrib
+
+dependencies[] = link
+dependencies[] = php
+dependencies[] = raven
+dependencies[] = views
+dependencies[] = views_ui
