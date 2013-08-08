@@ -23,7 +23,6 @@ dependencies[] = rdf
 dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = taxonomy
-dependencies[] = toolbar
 
 ; theme
 
@@ -31,6 +30,8 @@ dependencies[] = menu_block
 
 ; contrib
 
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
 dependencies[] = link
 dependencies[] = php
 dependencies[] = raven
