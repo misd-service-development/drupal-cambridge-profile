@@ -116,4 +116,51 @@ function cambridge_install() {
 
     field_update_instance($instance);
   }
+
+  $field = array(
+    'field_name' => 'field_user_name',
+    'label' => st('Name'),
+    'cardinality' => 1,
+    'type' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+  );
+
+  field_create_field($field);
+
+  $instance = array(
+    'entity_type' => 'user',
+    'bundle' => 'user',
+    'field_name' => 'field_user_name',
+    'label' => st('Name'),
+    'description' => st('The user\'s real name.'),
+    'required' => 1,
+    'cardinality' => 1,
+    'type' => 'field_user_name',
+    'settings' => array(
+      'size' => 60,
+      'text_processing' => 0,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'weight' => -11,
+    ),
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  field_create_instance($instance);
+
+  variable_set('realname_pattern', '[user:field_user_name]');
 }

@@ -42,6 +42,7 @@ dependencies[] = media
 dependencies[] = pathauto
 dependencies[] = php
 dependencies[] = raven
+dependencies[] = realname
 dependencies[] = redirect
 dependencies[] = token
 dependencies[] = views
