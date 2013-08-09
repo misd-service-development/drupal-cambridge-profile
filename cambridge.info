@@ -34,6 +34,7 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = advanced_help
 dependencies[] = date
+dependencies[] = imagecrop
 dependencies[] = link
 dependencies[] = pathauto
 dependencies[] = php
