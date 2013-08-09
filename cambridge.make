@@ -14,6 +14,7 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][destination] = "modules/ckeditor"
 projects[date] = "2.6"
 projects[easy_breadcrumb] = "2.7"
+projects[globalredirect] = "1.5"
 projects[google_analytics] = "1.3"
 projects[imagecrop] = "1.0-rc3"
 projects[media] = "1.3"
