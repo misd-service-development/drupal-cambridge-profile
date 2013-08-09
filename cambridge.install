@@ -19,7 +19,7 @@ function cambridge_install() {
 
   // Set some sensible defaults for the Image javascript crop module.
 
-  variable_set('imagecrop_popup', 'imagecrop_iframe');
+  variable_set('imagecrop_popup', 'imagecrop_popup');
   variable_set('imagecrop_scale_default', 1);
   variable_set('imagecrop_show_cancel_button', 1);
   variable_set('imagecrop_ui_controls', 1);
@@ -102,4 +102,18 @@ function cambridge_install() {
       'weight' => 0,
     )
   );
+
+  // Use the media module for image field instances.
+
+  $instances = array(
+    field_read_instance('node', 'field_leading_image', 'page'),
+    field_read_instance('node', 'field_carousel_image', 'carousel_item'),
+  );
+
+  foreach ($instances as $instance) {
+    $instance['widget']['type'] = 'media_generic';
+    $instance['widget']['module'] = 'media';
+
+    field_update_instance($instance);
+  }
 }

@@ -37,6 +37,7 @@ dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = imagecrop
 dependencies[] = link
+dependencies[] = media
 dependencies[] = pathauto
 dependencies[] = php
 dependencies[] = raven
