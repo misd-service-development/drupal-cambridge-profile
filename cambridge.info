@@ -33,6 +33,7 @@ dependencies[] = menu_block
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = advanced_help
+dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = imagecrop
 dependencies[] = link
