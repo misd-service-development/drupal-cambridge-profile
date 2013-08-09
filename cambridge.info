@@ -7,7 +7,6 @@ core = 7.x
 
 dependencies[] = block
 dependencies[] = contextual
-dependencies[] = dashboard
 dependencies[] = dblog
 dependencies[] = field_ui
 dependencies[] = file
@@ -47,3 +46,5 @@ dependencies[] = redirect
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = workbench
+dependencies[] = workbench_media
