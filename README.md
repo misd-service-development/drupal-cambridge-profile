@@ -1,5 +1,5 @@
-University of Cambridge Drupal install profiles
-===============================================
+University of Cambridge Drupal 7 install profiles
+=================================================
 
 There are two different install profiles provided:
 
