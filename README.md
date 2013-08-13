@@ -22,7 +22,7 @@ And remove the `cambridge.info`, `cambridge.install`, `cambridge.make` and `camb
 Full profile
 ------------
 
-The full profile contains all the features of the lite profile, plus additions that helps you to quickly get going (eg extra modules are enabled and configured).
+The full profile contains all the features of the lite profile, plus additions that helps you to quickly get going: various common modules are enabled and pre-configured to sensible defaults, while other common-but-not-always-used modules are bundled but not enabled.
 
 This profile is useful if you don't mind following established patterns when putting your Drupal site together.
 
