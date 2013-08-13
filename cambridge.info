@@ -44,6 +44,7 @@ dependencies[] = raven
 dependencies[] = realname
 dependencies[] = redirect
 dependencies[] = token
+dependencies[] = transliteration
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = workbench

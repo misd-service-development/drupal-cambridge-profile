@@ -163,4 +163,8 @@ function cambridge_install() {
   field_create_instance($instance);
 
   variable_set('realname_pattern', '[user:field_user_name]');
+
+  // Transliterate Pathauto aliases.
+
+  variable_set('pathauto_transliterate', 1);
 }
