@@ -167,4 +167,23 @@ function cambridge_install() {
   // Transliterate Pathauto aliases.
 
   variable_set('pathauto_transliterate', 1);
+
+  // Turn off CKEditor's Advanced Content Filter.
+
+  $profiles = db_select('ckeditor_settings', 's')
+    ->fields('s')
+    ->condition('name', array('Advanced', 'Full'), 'IN')
+    ->execute()
+    ->fetchAllAssoc('name');
+
+  foreach ($profiles as $name => $profile) {
+    $settings = unserialize($profile->settings);
+
+    $settings['js_conf'] = 'config.allowedContent = true;';
+
+    db_update('ckeditor_settings')
+      ->fields(array('settings' => serialize($settings)))
+      ->condition('name', $name)
+      ->execute();
+  }
 }
