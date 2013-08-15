@@ -117,6 +117,8 @@ function cambridge_install() {
     field_update_instance($instance);
   }
 
+  // Create a real name field for users.
+
   $field = array(
     'field_name' => 'field_user_name',
     'label' => st('Name'),
