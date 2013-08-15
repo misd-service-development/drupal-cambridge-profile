@@ -482,7 +482,7 @@ function cambridge_lite_install() {
       'status' => 1,
       'weight' => 0,
       'region' => 'left_navigation',
-      'pages' => '<front>',
+      'pages' => "<front>\nuser\nuser/*",
       'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
     ),
