@@ -166,6 +166,40 @@ function cambridge_install() {
 
   variable_set('realname_pattern', '[user:field_user_name]');
 
+  // Give the admin user a real name.
+
+  db_insert('field_data_field_user_name')
+    ->fields(
+      array(
+        'entity_type' => 'user',
+        'bundle' => 'user',
+        'deleted' => 0,
+        'entity_id' => 1,
+        'revision_id' => 1,
+        'language' => 'und',
+        'delta' => 0,
+        'field_user_name_value' => 'Administrator',
+        'field_user_name_format' => NULL,
+      )
+    )
+    ->execute();
+
+  db_insert('field_revision_field_user_name')
+    ->fields(
+      array(
+        'entity_type' => 'user',
+        'bundle' => 'user',
+        'deleted' => 0,
+        'entity_id' => 1,
+        'revision_id' => 1,
+        'language' => 'und',
+        'delta' => 0,
+        'field_user_name_value' => 'Administrator',
+        'field_user_name_format' => NULL,
+      )
+    )
+    ->execute();
+
   // Transliterate Pathauto aliases.
 
   variable_set('pathauto_transliterate', 1);
