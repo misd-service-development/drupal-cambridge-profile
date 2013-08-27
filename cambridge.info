@@ -1,5 +1,5 @@
-name = University of Cambridge
-description = Install the standard University of Cambridge features.
+name = "University of Cambridge"
+description = "Install the standard University of Cambridge features."
 version = 7.x-1.0-dev
 core = 7.x
 
