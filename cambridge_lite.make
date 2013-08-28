@@ -11,6 +11,7 @@ projects[menu_block] = "2.3"
 ; contrib
 
 projects[ctools] = "1.3"
+projects[libraries] = "2.1"
 projects[link] = "1.1"
 projects[pathauto] = "1.2"
 projects[raven][type] = "module"
