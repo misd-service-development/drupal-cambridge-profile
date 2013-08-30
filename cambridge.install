@@ -17,6 +17,12 @@ function cambridge_install() {
 
   cambridge_lite_install();
 
+  // Set sensible URL alias pattern defaults.
+
+  variable_set('pathauto_node_pattern', '[node:title]');
+  variable_set('pathauto_node_page_pattern', '[node:menu-link:parent:url:path]/[node:title]');
+  variable_set('pathauto_node_carousel_item_pattern', 'carousel/[node:title]');
+
   // Set some sensible defaults for the Image javascript crop module.
 
   variable_set('imagecrop_popup', 'imagecrop_popup');
