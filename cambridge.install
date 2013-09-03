@@ -17,6 +17,9 @@ function cambridge_install() {
 
   cambridge_lite_install();
 
+  // Force a main-menu link on Basic Pages.
+  variable_set('menu_force_page', TRUE);
+
   // Set sensible URL alias pattern defaults.
 
   variable_set('pathauto_node_pattern', '[node:title]');

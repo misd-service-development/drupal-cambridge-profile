@@ -371,6 +371,12 @@ function cambridge_lite_install() {
     field_create_instance($instance);
   }
 
+  // Basic Pages can have a main-menu item.
+  variable_set('menu_options_page', array('main-menu'));
+
+  // Carousel Items shouldn't be on a menu.
+  variable_set('menu_options_carousel_item', array());
+
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 

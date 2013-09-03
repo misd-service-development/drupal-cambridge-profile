@@ -38,6 +38,7 @@ dependencies[] = globalredirect
 dependencies[] = imagecrop
 dependencies[] = link
 dependencies[] = media
+dependencies[] = menu_force
 dependencies[] = pathauto
 dependencies[] = php
 dependencies[] = raven
