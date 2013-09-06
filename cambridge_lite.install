@@ -207,6 +207,12 @@ function cambridge_lite_install() {
         'uri_scheme' => 'public',
       ),
     ),
+    'field_related_links' => array(
+      'field_name' => 'field_related_links',
+      'label' => st('Related links'),
+      'cardinality' => -1,
+      'type' => 'link_field',
+    ),
     'field_carousel_image' => array(
       'field_name' => 'field_carousel_image',
       'label' => st('Carousel image'),
@@ -274,6 +280,27 @@ function cambridge_lite_install() {
           'type' => 'image',
           'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
           'weight' => -1,
+        ),
+      ),
+    ),
+    'field_related_links' => array(
+      'entity_type' => 'node',
+      'bundle' => 'page',
+      'field_name' => 'field_related_links',
+      'label' => st('Related links'),
+      'cardinality' => -1,
+      'type' => 'field_related_links',
+      'settings' => array(
+        'title' => 'required',
+      ),
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'type' => 'hidden',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'type' => 'hidden',
         ),
       ),
     ),
@@ -652,6 +679,92 @@ function cambridge_lite_install() {
         'visibility' => 1,
         'pages' => '<front>',
         'title' => '<none>',
+        'cache' => DRUPAL_NO_CACHE,
+      )
+    )
+    ->execute();
+
+  // Create a view for the related links field and make it visible in the sidebar.
+
+  $view = new view();
+  $view->name = 'related_links';
+  $view->description = 'Display a list of related links for a node.';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Related links';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE;
+
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Related links';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'campl-unstyled-list campl-related-links';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['fields']['field_related_links']['id'] = 'field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['table'] = 'field_data_field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['field'] = 'field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['label'] = '';
+  $handler->display->display_options['fields']['field_related_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_links']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_related_links']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_related_links']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_related_links']['delta_offset'] = '0';
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'page' => 'page',
+  );
+  $handler->display->display_options['arguments']['nid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_related_links_url']['id'] = 'field_related_links_url';
+  $handler->display->display_options['filters']['field_related_links_url']['table'] = 'field_data_field_related_links';
+  $handler->display->display_options['filters']['field_related_links_url']['field'] = 'field_related_links_url';
+  $handler->display->display_options['filters']['field_related_links_url']['operator'] = 'not empty';
+
+  $view->new_display('block', 'Block', 'block');
+
+  $view->update();
+
+  $view->init_display();
+
+  $view->save();
+
+  db_insert('block')
+    ->fields(
+      array(
+        'module' => 'views',
+        'delta' => 'related_links-block',
+        'theme' => 'cambridge_theme',
+        'status' => 1,
+        'weight' => 1,
+        'region' => 'sidebar',
+        'custom' => 0,
+        'visibility' => 0,
+        'pages' => '',
+        'title' => '',
         'cache' => DRUPAL_NO_CACHE,
       )
     )
