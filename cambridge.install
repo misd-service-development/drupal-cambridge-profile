@@ -213,7 +213,7 @@ function cambridge_install() {
 
   variable_set('pathauto_transliterate', 1);
 
-  // Turn off CKEditor's Advanced Content Filter.
+  // Set CKEditor settings.
 
   $profiles = db_select('ckeditor_settings', 's')
     ->fields('s')
@@ -224,6 +224,10 @@ function cambridge_install() {
   foreach ($profiles as $name => $profile) {
     $settings = unserialize($profile->settings);
 
+    // Set language to English (United Kingdom).
+    $settings['lang'] = 'en-uk';
+
+    // Turn off Advanced Content Filter.
     $settings['js_conf'] = 'config.allowedContent = true;';
 
     db_update('ckeditor_settings')
