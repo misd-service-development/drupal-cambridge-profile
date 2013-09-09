@@ -575,6 +575,7 @@ function cambridge_lite_install() {
     'link_title' => st('Home'),
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
+    'weight' => -100,
   );
   menu_link_save($item);
 
