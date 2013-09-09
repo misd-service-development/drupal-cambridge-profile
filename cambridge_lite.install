@@ -179,6 +179,7 @@ function cambridge_lite_install() {
       'modified' => 1,
       'locked' => 0,
       'has_body' => 0,
+      'title_label' => 'Administrative title',
     ),
   );
 
@@ -348,7 +349,8 @@ function cambridge_lite_install() {
       'bundle' => 'carousel_item',
       'field_name' => 'field_carousel_caption',
       'label' => st('Caption'),
-      'required' => 1,
+      'description' => st('The text to show with the image. If blank, the administrative title will be used.'),
+      'required' => 0,
       'cardinality' => 1,
       'type' => 'field_carousel_caption',
       'settings' => array(
@@ -607,6 +609,14 @@ function cambridge_lite_install() {
   $handler->display->display_options['style_options']['class'] = 'campl-unstyled-list campl-slides';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['fields']['field_carousel_link']['id'] = 'field_carousel_link';
   $handler->display->display_options['fields']['field_carousel_link']['table'] = 'field_data_field_carousel_link';
   $handler->display->display_options['fields']['field_carousel_link']['field'] = 'field_carousel_link';
@@ -643,6 +653,8 @@ function cambridge_lite_install() {
   $handler->display->display_options['fields']['field_carousel_caption']['element_class'] = 'campl-slide-caption';
   $handler->display->display_options['fields']['field_carousel_caption']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_carousel_caption']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_carousel_caption']['empty'] = '<span class="campl-slide-caption-txt">[title]</span>';
+  $handler->display->display_options['fields']['field_carousel_caption']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
