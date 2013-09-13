@@ -215,6 +215,22 @@ function cambridge_install() {
 
   // Set CKEditor settings.
 
+  $settings = db_select('ckeditor_settings', 's')
+    ->fields('s', array('settings'))
+    ->condition('name', 'CKEditor Global Profile')
+    ->execute()
+    ->fetchField();
+
+  $settings = unserialize($settings);
+
+  // Set path to CKEditor library.
+  $settings['ckeditor_path'] = '%b/profiles/cambridge/libraries/ckeditor';
+
+  db_update('ckeditor_settings')
+    ->fields(array('settings' => serialize($settings)))
+    ->condition('name', 'CKEditor Global Profile')
+    ->execute();
+
   $profiles = db_select('ckeditor_settings', 's')
     ->fields('s')
     ->condition('name', array('Advanced', 'Full'), 'IN')
