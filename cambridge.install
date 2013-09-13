@@ -13,9 +13,9 @@
  * @see system_install()
  */
 function cambridge_install() {
-  require_once 'cambridge_lite.install';
+  require_once 'cambridge_base.inc';
 
-  cambridge_lite_install();
+  cambridge_base_install();
 
   // Force a main-menu link on Basic Pages.
   variable_set('menu_force_page', TRUE);
