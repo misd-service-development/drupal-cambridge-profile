@@ -34,6 +34,7 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = advanced_help
 dependencies[] = ckeditor
 dependencies[] = date
+dependencies[] = email
 dependencies[] = globalredirect
 dependencies[] = imagecrop
 dependencies[] = link
