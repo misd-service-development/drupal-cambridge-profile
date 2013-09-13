@@ -13,6 +13,7 @@ projects[cambridge_theme][subdir] = ""
 ; contrib
 
 projects[ctools] = "1.3"
+projects[features] = "2.0-rc3"
 projects[libraries] = "2.1"
 projects[link] = "1.1"
 projects[menu_block] = "2.3"
