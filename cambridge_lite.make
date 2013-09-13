@@ -1,6 +1,8 @@
 api = 2
 core = 7.x
 
+defaults[projects][subdir] = "contrib"
+
 ; theme
 
 projects[cambridge_theme][type] = "theme"
