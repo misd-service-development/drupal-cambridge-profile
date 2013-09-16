@@ -512,7 +512,7 @@ function cambridge_base_install() {
       'status' => TRUE,
       'weight' => 0,
       'region' => 'left_navigation',
-      'pages' => "<front>\ncarousel/*\nuser\nuser/*",
+      'pages' => "<front>\nadmin/\nadmin/*\ncarousel/*\nuser\nuser/*",
       'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
     ),
