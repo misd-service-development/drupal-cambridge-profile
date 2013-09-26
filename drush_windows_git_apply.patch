@@ -1,0 +1,17 @@
+diff --git a/vendor/drush/drush/commands/make/make.project.inc b/vendor/drush/drush/commands/make/make.project.inc
+index 4f77e27..6d2fdc8 100644
+--- a/vendor/drush/drush/commands/make/make.project.inc
++++ b/vendor/drush/drush/commands/make/make.project.inc
+@@ -258,10 +258,10 @@ class DrushMakeProject {
+         // http://drupal.org/node/1054616
+         $patch_levels = array('-p1', '-p0');
+         foreach ($patch_levels as $patch_level) {
+-          $checked = drush_shell_exec('cd %s && GIT_DIR=. git apply --check %s %s --verbose', $project_directory, $patch_level, $filename);
++          $checked = drush_shell_exec('cd %s && git --bare apply --check %s %s --verbose', $project_directory, $patch_level, $filename);
+           if ($checked) {
+             // Apply the first successful style.
+-            $patched = drush_shell_exec('cd %s && GIT_DIR=. git apply %s %s --verbose', $project_directory, $patch_level, $filename);
++            $patched = drush_shell_exec('cd %s && git --bare apply %s %s --verbose', $project_directory, $patch_level, $filename);
+             break;
+           }
+         }
