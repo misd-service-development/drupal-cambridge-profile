@@ -2,6 +2,7 @@
     "require": {
         "drush/drush": "~6.0",
         "symfony/filesystem": "~2.3",
+        "symfony/finder": "~2.3",
         "symfony/process": "~2.3"
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\Process\Process;
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -18,10 +19,15 @@ $fs->remove($build);
 
 $arguments = array_slice($argv, 1);
 
-$profiles = array(
-  'cambridge',
-  'cambridge_lite',
-);
+$finder = new Finder();
+
+$makeFiles = $finder->files()->name('*.make')->depth(1)->in($src);
+
+$profiles = array();
+
+foreach ($makeFiles as $makeFile) {
+  $profiles[] = $makeFile->getPathInfo()->getFilename();
+}
 
 if (count($arguments) > 0) {
   foreach ($arguments as $argument) {
