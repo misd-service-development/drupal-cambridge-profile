@@ -53,6 +53,7 @@ foreach ($profiles as $profile) {
       $profile . '.profile'
     ),
     $src => array('cambridge_base.inc'),
+    __DIR__ => array('LICENSE.txt'),
   );
 
   foreach ($filesets as $fileDir => $files) {
