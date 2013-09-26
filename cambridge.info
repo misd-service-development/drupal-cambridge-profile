@@ -35,6 +35,7 @@ dependencies[] = advanced_help
 dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = email
+dependencies[] = features
 dependencies[] = globalredirect
 dependencies[] = imagecrop
 dependencies[] = link
@@ -51,3 +52,11 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = workbench
 dependencies[] = workbench_media
+
+; features
+
+dependencies[] = cambridge_carousel
+dependencies[] = cambridge_image_styles
+dependencies[] = cambridge_link
+dependencies[] = cambridge_related_links
+dependencies[] = cambridge_teasers

@@ -26,97 +26,11 @@ function cambridge_install() {
   variable_set('pathauto_node_page_pattern', '[node:menu-link:parent:url:path]/[node:title]');
   variable_set('pathauto_node_carousel_item_pattern', 'carousel/[node:title]');
 
-  // Set some sensible defaults for the Image javascript crop module.
-
-  variable_set('imagecrop_popup', 'imagecrop_popup');
-  variable_set('imagecrop_scale_default', 1);
-  variable_set('imagecrop_show_cancel_button', 1);
-  variable_set('imagecrop_ui_controls', 1);
-
-  // Replace standard scaling/cropping image style effects and replace them with a Javascript crop effect.
-
-  $carousel = image_style_load('carousel');
-  foreach ($carousel['effects'] as $effect) {
-    image_effect_delete($effect);
-  }
-
-  image_effect_save(
-    array(
-      'name' => 'imagecrop_javascript',
-      'data' => array(
-        'width' => 885,
-        'height' => 432,
-        'xoffset' => 'center',
-        'yoffset' => 'center',
-        'resizable' => 0,
-        'downscaling' => 0,
-        'aspect_ratio' => 'CROP',
-        'disable_if_no_data' => 0,
-      ),
-      'isid' => $carousel['isid'],
-      'weight' => 0,
-    )
-  );
-
-  $instance = field_info_instance('node', 'field_carousel_image', 'carousel_item');
-  $instance['settings']['imagecrop'] = array('carousel' => 'carousel', 'leading' => 0, 'inline' => 0);
-  field_update_instance($instance);
-
-  $leading = image_style_load('leading');
-  foreach ($leading['effects'] as $effect) {
-    image_effect_delete($effect);
-  }
-
-  image_effect_save(
-    array(
-      'name' => 'imagecrop_javascript',
-      'data' => array(
-        'width' => 590,
-        'height' => 288,
-        'xoffset' => 'center',
-        'yoffset' => 'center',
-        'resizable' => 0,
-        'downscaling' => 0,
-        'aspect_ratio' => 'CROP',
-        'disable_if_no_data' => 0,
-      ),
-      'isid' => $leading['isid'],
-      'weight' => 0,
-    )
-  );
-
-  $instance = field_info_instance('node', 'field_leading_image', 'page');
-  $instance['settings']['imagecrop'] = array('leading' => 'leading', 'carousel' => 0, 'inline' => 0);
-  field_update_instance($instance);
-
-  $inline = image_style_load('inline');
-  foreach ($inline['effects'] as $effect) {
-    image_effect_delete($effect);
-  }
-
-  image_effect_save(
-    array(
-      'name' => 'imagecrop_javascript',
-      'data' => array(
-        'width' => 250,
-        'height' => 250,
-        'xoffset' => 'center',
-        'yoffset' => 'center',
-        'resizable' => 0,
-        'downscaling' => 0,
-        'aspect_ratio' => 'CROP',
-        'disable_if_no_data' => 0,
-      ),
-      'isid' => $inline['isid'],
-      'weight' => 0,
-    )
-  );
-
   // Use the media module for image field instances.
 
   $instances = array(
-    field_read_instance('node', 'field_leading_image', 'page'),
-    field_read_instance('node', 'field_carousel_image', 'carousel_item'),
+    field_read_instance('node', 'field_image', 'page'),
+    field_read_instance('node', 'field_image', 'link'),
   );
 
   foreach ($instances as $instance) {

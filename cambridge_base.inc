@@ -9,6 +9,9 @@
  * Perform actions to set up the site for the profiles.
  */
 function cambridge_base_install() {
+  // Features aren't normally available until after hook_install, so make them available now.
+  features_revert();
+
   // Add text formats.
 
   $filtered_html_format = array(
@@ -66,92 +69,6 @@ function cambridge_base_install() {
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
 
-  // Add image styles
-
-  $carousel = image_style_save(array('name' => 'carousel', 'label' => 'Carousel'));
-
-  image_effect_save(
-    array(
-      'name' => 'image_scale',
-      'data' => array(
-        'width' => 885,
-        'height' => NULL,
-        'upscale' => TRUE,
-      ),
-      'isid' => $carousel['isid'],
-      'weight' => 1,
-    )
-  );
-
-  image_effect_save(
-    array(
-      'name' => 'image_crop',
-      'data' => array(
-        'width' => 885,
-        'height' => 432,
-        'anchor' => 'center-center',
-      ),
-      'isid' => $carousel['isid'],
-      'weight' => 2,
-    )
-  );
-
-  $leading = image_style_save(array('name' => 'leading', 'label' => 'Leading'));
-
-  image_effect_save(
-    array(
-      'name' => 'image_scale',
-      'data' => array(
-        'width' => 590,
-        'height' => NULL,
-        'upscale' => TRUE,
-      ),
-      'isid' => $leading['isid'],
-      'weight' => 1,
-    )
-  );
-
-  image_effect_save(
-    array(
-      'name' => 'image_crop',
-      'data' => array(
-        'width' => 590,
-        'height' => 288,
-        'anchor' => 'center-center',
-      ),
-      'isid' => $leading['isid'],
-      'weight' => 2,
-    )
-  );
-
-  $inline = image_style_save(array('name' => 'inline', 'label' => 'Inline/teaser'));
-
-  image_effect_save(
-    array(
-      'name' => 'image_scale',
-      'data' => array(
-        'width' => 250,
-        'height' => NULL,
-        'upscale' => TRUE,
-      ),
-      'isid' => $inline['isid'],
-      'weight' => 1,
-    )
-  );
-
-  image_effect_save(
-    array(
-      'name' => 'image_crop',
-      'data' => array(
-        'width' => 250,
-        'height' => 250,
-        'anchor' => 'center-center',
-      ),
-      'isid' => $inline['isid'],
-      'weight' => 2,
-    )
-  );
-
   // Add content types.
 
   $types = array(
@@ -163,17 +80,15 @@ function cambridge_base_install() {
       'custom' => 1,
       'modified' => 1,
       'locked' => 0,
-      'has_body' => 1,
     ),
     array(
-      'type' => 'carousel_item',
-      'name' => st('Carousel Item'),
+      'type' => 'link',
+      'name' => st('Link'),
       'base' => 'node_content',
-      'description' => st("Use <em>carousel item</em> to promote key messages on section pages."),
+      'description' => st("Use <em>link</em> to add custom links to lists, such as teasers or carousels."),
       'custom' => 1,
       'modified' => 1,
       'locked' => 0,
-      'has_body' => 0,
       'title_label' => 'Administrative title',
     ),
   );
@@ -181,9 +96,7 @@ function cambridge_base_install() {
   foreach ($types as $type) {
     $type = node_type_set_defaults($type);
     node_type_save($type);
-    if ($type->has_body) {
-      node_add_body_field($type);
-    }
+    node_add_body_field($type);
 
     // Not promoted to front page.
     variable_set('node_options_' . $type->type, array('status'));
@@ -192,69 +105,27 @@ function cambridge_base_install() {
     variable_set('node_submitted_' . $type->type, FALSE);
   }
 
-  $fields = array(
-    'field_leading_image' => array(
-      'field_name' => 'field_leading_image',
-      'label' => st('Leading image'),
-      'cardinality' => 1,
-      'type' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-    ),
-    'field_related_links' => array(
-      'field_name' => 'field_related_links',
-      'label' => st('Related links'),
-      'cardinality' => -1,
-      'type' => 'link_field',
-    ),
-    'field_carousel_image' => array(
-      'field_name' => 'field_carousel_image',
-      'label' => st('Carousel image'),
-      'cardinality' => 1,
-      'type' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-    ),
-    'field_carousel_caption' => array(
-      'field_name' => 'field_carousel_caption',
-      'label' => st('Carousel caption'),
-      'cardinality' => 1,
-      'type' => 'text',
-      'settings' => array(
-        'max_length' => 255,
-      ),
-    ),
-    'field_carousel_link' => array(
-      'field_name' => 'field_carousel_link',
-      'label' => st('Carousel link'),
-      'cardinality' => 1,
-      'type' => 'link_field',
-    ),
-  );
-
-  foreach ($fields as $field) {
-    field_create_field($field);
-  }
-
   $instances = array(
-    'field_leading_image' => array(
+    array(
       'entity_type' => 'node',
       'bundle' => 'page',
-      'field_name' => 'field_leading_image',
-      'label' => st('Leading image'),
+      'field_name' => 'field_image',
+      'label' => st('Image'),
       'cardinality' => 1,
-      'type' => 'field_leading_image',
+      'type' => 'field_image',
       'settings' => array(
         'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
+        'imagecrop' => array(
+          'carousel' => 'carousel',
+          'inline' => 'inline',
+          'leading' => 'leading',
+          'sidebar_teaser' => 'sidebar_teaser'
+        ),
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '590x288',
+        'min_resolution' => '885x432',
         'title_field' => 1,
         'user_register_form' => FALSE,
       ),
@@ -277,9 +148,27 @@ function cambridge_base_install() {
           'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
           'weight' => -1,
         ),
+        'carousel_item' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'carousel', 'image_link' => 'content'),
+          'weight' => -1,
+        ),
+        'vertical_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
+          'weight' => -1,
+        ),
+        'sidebar_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'sidebar_teaser', 'image_link' => 'content'),
+          'weight' => -1,
+        ),
       ),
     ),
-    'field_related_links' => array(
+    array(
       'entity_type' => 'node',
       'bundle' => 'page',
       'field_name' => 'field_related_links',
@@ -300,18 +189,24 @@ function cambridge_base_install() {
         ),
       ),
     ),
-    'field_carousel_image' => array(
+    array(
       'entity_type' => 'node',
-      'bundle' => 'carousel_item',
-      'field_name' => 'field_carousel_image',
+      'bundle' => 'link',
+      'field_name' => 'field_image',
       'label' => st('Image'),
       'required' => 1,
       'cardinality' => 1,
-      'type' => 'field_carousel_image',
+      'type' => 'field_image',
       'settings' => array(
         'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
+        'imagecrop' => array(
+          'carousel' => 'carousel',
+          'inline' => 'inline',
+          'leading' => 0,
+          'sidebar_teaser' => 'sidebar_teaser'
+        ),
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '885x432',
@@ -328,64 +223,71 @@ function cambridge_base_install() {
         'default' => array(
           'label' => 'hidden',
           'type' => 'image',
-          'settings' => array('image_style' => 'carousel', 'image_link' => ''),
+          'settings' => array('image_style' => '', 'image_link' => ''),
           'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'hidden',
           'type' => 'image',
-          'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
-          'weight' => 0,
+          'settings' => array('image_style' => 'inline', 'image_link' => ''),
+          'weight' => -1,
+        ),
+        'carousel_item' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'carousel', 'image_link' => ''),
+          'weight' => -1,
+        ),
+        'vertical_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'inline', 'image_link' => ''),
+          'weight' => -1,
+        ),
+        'sidebar_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'sidebar_teaser', 'image_link' => ''),
+          'weight' => -1,
         ),
       ),
     ),
-    'field_carousel_caption' => array(
+    array(
       'entity_type' => 'node',
-      'bundle' => 'carousel_item',
-      'field_name' => 'field_carousel_caption',
-      'label' => st('Caption'),
-      'description' => st('The text to show with the image. If blank, the administrative title will be used.'),
-      'required' => 0,
-      'cardinality' => 1,
-      'type' => 'field_carousel_caption',
-      'settings' => array(
-        'size' => 60,
-        'text_processing' => 0,
-      ),
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'type' => 'text_plain',
-          'weight' => 1,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'type' => 'text_plain',
-          'weight' => 1,
-        ),
-      ),
-    ),
-    'field_carousel_link' => array(
-      'entity_type' => 'node',
-      'bundle' => 'carousel_item',
-      'field_name' => 'field_carousel_link',
+      'bundle' => 'link',
+      'field_name' => 'field_link',
       'label' => st('Link'),
       'required' => 1,
       'cardinality' => 1,
       'type' => 'field_carousel_caption',
       'settings' => array(
-        'title' => 'none',
+        'title' => 'optional',
       ),
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'type' => 'link_url',
-          'weight' => 2,
+          'type' => 'link_default',
+          'weight' => 1,
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'type' => 'link_url',
-          'weight' => 2,
+          'type' => 'link_default',
+          'weight' => 1,
+        ),
+        'carousel_item' => array(
+          'label' => 'hidden',
+          'type' => 'link_default',
+          'weight' => 1,
+        ),
+        'vertical_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'link_default',
+          'weight' => 1,
+        ),
+        'sidebar_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'link_default',
+          'weight' => 1,
         ),
       ),
     ),
@@ -395,11 +297,22 @@ function cambridge_base_install() {
     field_create_instance($instance);
   }
 
+  foreach ($types as $type) {
+    // Make sure the body appears trimmed in teasers.
+
+    $instance = field_info_instance('node', 'body', $type['type']);
+
+    $instance['display']['vertical_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
+    $instance['display']['sidebar_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
+
+    field_update_instance($instance);
+  }
+
   // Basic Pages can have a main-menu item.
   variable_set('menu_options_page', array('main-menu'));
 
-  // Carousel Items shouldn't be on a menu.
-  variable_set('menu_options_carousel_item', array());
+  // Links shouldn't be on a menu.
+  variable_set('menu_options_link', array());
 
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
@@ -577,7 +490,7 @@ function cambridge_base_install() {
   // Update the menu router information.
   menu_rebuild();
 
-  // Create a carousel view and make it visible on the front page.
+  // Create an example carousel view of recent content and make it visible on the front page.
 
   $view = new view();
   $view->name = 'carousel';
@@ -589,8 +502,9 @@ function cambridge_base_install() {
   $view->api_version = '3.0';
   $view->disabled = FALSE;
 
-  $handler = $view->new_display('default', 'Master', 'default');
+  $handler = $view->new_display('default', 'Recent Content', 'default');
   $handler->display->display_options['title'] = 'Carousel';
+  $handler->display->display_options['css_class'] = 'section-carousel campl-carousel clearfix campl-banner';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -603,54 +517,15 @@ function cambridge_base_install() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['class'] = 'campl-unstyled-list campl-slides';
-  $handler->display->display_options['style_options']['wrapper_class'] = '';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'campl-carousel-container';
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'carousel_item';
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_link']['id'] = 'field_carousel_link';
-  $handler->display->display_options['fields']['field_carousel_link']['table'] = 'field_data_field_carousel_link';
-  $handler->display->display_options['fields']['field_carousel_link']['field'] = 'field_carousel_link';
-  $handler->display->display_options['fields']['field_carousel_link']['label'] = '';
-  $handler->display->display_options['fields']['field_carousel_link']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_carousel_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_link']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_carousel_link']['type'] = 'link_plain';
-  $handler->display->display_options['fields']['field_carousel_image']['id'] = 'field_carousel_image';
-  $handler->display->display_options['fields']['field_carousel_image']['table'] = 'field_data_field_carousel_image';
-  $handler->display->display_options['fields']['field_carousel_image']['field'] = 'field_carousel_image';
-  $handler->display->display_options['fields']['field_carousel_image']['label'] = '';
-  $handler->display->display_options['fields']['field_carousel_image']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_carousel_image']['alter']['path'] = '[field_carousel_link]';
-  $handler->display->display_options['fields']['field_carousel_image']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_carousel_image']['element_class'] = 'image-container';
-  $handler->display->display_options['fields']['field_carousel_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_carousel_image']['settings'] = array(
-    'image_style' => 'carousel',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_carousel_caption']['id'] = 'field_carousel_caption';
-  $handler->display->display_options['fields']['field_carousel_caption']['table'] = 'field_data_field_carousel_caption';
-  $handler->display->display_options['fields']['field_carousel_caption']['field'] = 'field_carousel_caption';
-  $handler->display->display_options['fields']['field_carousel_caption']['label'] = '';
-  $handler->display->display_options['fields']['field_carousel_caption']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_carousel_caption']['alter']['text'] = '<span class="campl-slide-caption-txt">[field_carousel_caption]</span>';
-  $handler->display->display_options['fields']['field_carousel_caption']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_carousel_caption']['alter']['path'] = '[field_carousel_link]';
-  $handler->display->display_options['fields']['field_carousel_caption']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_carousel_caption']['element_class'] = 'campl-slide-caption';
-  $handler->display->display_options['fields']['field_carousel_caption']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_caption']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_carousel_caption']['empty'] = '<span class="campl-slide-caption-txt">[title]</span>';
-  $handler->display->display_options['fields']['field_carousel_caption']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -661,12 +536,13 @@ function cambridge_base_install() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array('carousel_item' => 'carousel_item',);
+  $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
 
-  $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Homepage', 'block');
+  $handler->display->display_options['block_description'] = 'Homepage Carousel';
 
   $view->update();
 
@@ -692,73 +568,7 @@ function cambridge_base_install() {
     )
     ->execute();
 
-  // Create a view for the related links field and make it visible in the sidebar.
-
-  $view = new view();
-  $view->name = 'related_links';
-  $view->description = 'Display a list of related links for a node.';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Related links';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE;
-
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Related links';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['class'] = 'campl-unstyled-list campl-related-links';
-  $handler->display->display_options['style_options']['wrapper_class'] = '';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['fields']['field_related_links']['id'] = 'field_related_links';
-  $handler->display->display_options['fields']['field_related_links']['table'] = 'field_data_field_related_links';
-  $handler->display->display_options['fields']['field_related_links']['field'] = 'field_related_links';
-  $handler->display->display_options['fields']['field_related_links']['label'] = '';
-  $handler->display->display_options['fields']['field_related_links']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_related_links']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_related_links']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_related_links']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_related_links']['delta_offset'] = '0';
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
-    'page' => 'page',
-  );
-  $handler->display->display_options['arguments']['nid']['validate']['fail'] = 'empty';
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['filters']['field_related_links_url']['id'] = 'field_related_links_url';
-  $handler->display->display_options['filters']['field_related_links_url']['table'] = 'field_data_field_related_links';
-  $handler->display->display_options['filters']['field_related_links_url']['field'] = 'field_related_links_url';
-  $handler->display->display_options['filters']['field_related_links_url']['operator'] = 'not empty';
-
-  $view->new_display('block', 'Block', 'block');
-
-  $view->update();
-
-  $view->init_display();
-
-  $view->save();
+  // Make the related links view block visible in the sidebar.
 
   db_insert('block')
     ->fields(
@@ -767,7 +577,7 @@ function cambridge_base_install() {
         'delta' => 'related_links-block',
         'theme' => 'cambridge_theme',
         'status' => TRUE,
-        'weight' => 1,
+        'weight' => -10,
         'region' => 'sidebar',
         'custom' => BLOCK_CUSTOM_FIXED,
         'visibility' => BLOCK_VISIBILITY_NOTLISTED,
@@ -777,6 +587,12 @@ function cambridge_base_install() {
       )
     )
     ->execute();
+
+  // Set some sensible defaults for the Image javascript crop module.
+
+  variable_set('imagecrop_popup', 'basic');
+  variable_set('imagecrop_scale_default', 1);
+  variable_set('imagecrop_ui_controls', 1);
 }
 
 /**

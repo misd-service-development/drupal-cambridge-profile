@@ -25,14 +25,21 @@ dependencies[] = shortcut
 dependencies[] = taxonomy
 dependencies[] = toolbar
 
-; theme
-
-dependencies[] = menu_block
-
 ; contrib
 
+dependencies[] = features
+dependencies[] = imagecrop
 dependencies[] = link
+dependencies[] = menu_block
 dependencies[] = php
 dependencies[] = raven
 dependencies[] = views
 dependencies[] = views_ui
+
+; features
+
+dependencies[] = cambridge_carousel
+dependencies[] = cambridge_image_styles
+dependencies[] = cambridge_link
+dependencies[] = cambridge_related_links
+dependencies[] = cambridge_teasers
