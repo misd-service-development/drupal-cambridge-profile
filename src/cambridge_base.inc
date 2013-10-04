@@ -350,9 +350,9 @@ function cambridge_base_install() {
   variable_set("menu_block_1_title_link", 0);
   variable_set("menu_block_1_admin_title", 'Horizontal menu');
   variable_set("menu_block_1_parent", 'main-menu:0');
-  variable_set("menu_block_1_level", 1);
+  variable_set("menu_block_1_level", '1');
   variable_set("menu_block_1_follow", 0);
-  variable_set("menu_block_1_depth", 0);
+  variable_set("menu_block_1_depth", '0');
   variable_set("menu_block_1_expanded", 1);
   variable_set("menu_block_1_sort", 0);
 
@@ -360,9 +360,9 @@ function cambridge_base_install() {
   variable_set("menu_block_2_title_link", 0);
   variable_set("menu_block_2_admin_title", 'Vertical menu');
   variable_set("menu_block_2_parent", 'main-menu:0');
-  variable_set("menu_block_2_level", 1);
-  variable_set("menu_block_2_follow", 1);
-  variable_set("menu_block_2_depth", 0);
+  variable_set("menu_block_2_level", '1');
+  variable_set("menu_block_2_follow", 'active');
+  variable_set("menu_block_2_depth", '0');
   variable_set("menu_block_2_expanded", 0);
   variable_set("menu_block_2_sort", 1);
 
