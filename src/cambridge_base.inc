@@ -335,17 +335,6 @@ function cambridge_base_install() {
   // Use the admin theme for creating/editing nodes
   variable_set('node_admin_theme', 1);
 
-  // Insert the page_title block required by the theme
-  db_insert('block_custom')
-    ->fields(
-      array(
-        'body' => "<h1>\n<?php\nprint drupal_get_title();\n?>\n</h1>",
-        'info' => 'Page title',
-        'format' => 'php_code',
-      )
-    )
-    ->execute();
-
   // Insert the horizontal menu block required by the theme
   variable_set("menu_block_1_title_link", 0);
   variable_set("menu_block_1_admin_title", 'Horizontal menu');
@@ -393,17 +382,6 @@ function cambridge_base_install() {
       'weight' => 10,
       'region' => 'sidebar',
       'pages' => '',
-      'title' => '',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'block',
-      'delta' => 1,
-      'theme' => $theme,
-      'status' => TRUE,
-      'weight' => 0,
-      'region' => 'page_title',
-      'pages' => '<front>',
       'title' => '',
       'cache' => DRUPAL_NO_CACHE,
     ),
