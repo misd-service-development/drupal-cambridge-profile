@@ -24,7 +24,7 @@ function cambridge_install() {
 
   variable_set('pathauto_node_pattern', '[node:title]');
   variable_set('pathauto_node_page_pattern', '[node:menu-link:parent:url:path]/[node:title]');
-  variable_set('pathauto_node_carousel_item_pattern', 'carousel/[node:title]');
+  variable_set('pathauto_node_link_pattern', 'link/[node:title]');
 
   // Use the media module for image field instances.
 
