@@ -57,5 +57,6 @@ dependencies[] = workbench_media
 dependencies[] = cambridge_carousel
 dependencies[] = cambridge_image_styles
 dependencies[] = cambridge_link
+dependencies[] = cambridge_news
 dependencies[] = cambridge_related_links
 dependencies[] = cambridge_teasers

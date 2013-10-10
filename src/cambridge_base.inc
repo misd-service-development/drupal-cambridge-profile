@@ -154,6 +154,10 @@ function cambridge_base_install() {
           'settings' => array('image_style' => 'carousel', 'image_link' => 'content'),
           'weight' => -1,
         ),
+        'news_listing_item' => array(
+          'label' => 'hidden',
+          'type' => 'hidden',
+        ),
         'vertical_teaser' => array(
           'label' => 'hidden',
           'type' => 'image',
@@ -238,6 +242,10 @@ function cambridge_base_install() {
           'settings' => array('image_style' => 'carousel', 'image_link' => ''),
           'weight' => -1,
         ),
+        'news_listing_item' => array(
+          'label' => 'hidden',
+          'type' => 'hidden',
+        ),
         'vertical_teaser' => array(
           'label' => 'hidden',
           'type' => 'image',
@@ -279,6 +287,11 @@ function cambridge_base_install() {
           'type' => 'link_default',
           'weight' => 1,
         ),
+        'news_listing_item' => array(
+          'label' => 'hidden',
+          'type' => 'link_defualt',
+          'weight' => 1,
+        ),
         'vertical_teaser' => array(
           'label' => 'hidden',
           'type' => 'link_default',
@@ -302,6 +315,7 @@ function cambridge_base_install() {
 
     $instance = field_info_instance('node', 'body', $type['type']);
 
+    $instance['display']['news_listing_item'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
     $instance['display']['vertical_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
     $instance['display']['sidebar_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
 
