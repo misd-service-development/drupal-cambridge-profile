@@ -417,7 +417,7 @@ function cambridge_base_install() {
       'status' => TRUE,
       'weight' => 0,
       'region' => 'left_navigation',
-      'pages' => "<front>\nadmin/\nadmin/*\ncarousel/*\nuser\nuser/*",
+      'pages' => "<front>\nadmin/\nadmin/*\ncarousel/*\nuser\nuser/*search\nsearch/*",
       'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
     ),
