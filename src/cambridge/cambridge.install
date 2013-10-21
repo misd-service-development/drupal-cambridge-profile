@@ -148,12 +148,22 @@ function cambridge_install() {
   // Force a main-menu link on Basic Pages.
   variable_set('menu_force_page', TRUE);
 
+  // Questions and Answers shouldn't be promoted to front page.
+  variable_set('node_options_questions_and_answers', array('status'));
+
+  // Questions and Answers shouldn't show date and author information.
+  variable_set('node_submitted_questions_and_answers', FALSE);
+
+  // Force a main-menu link on Questions and Answers.
+  variable_set('menu_force_questions_and_answers', TRUE);
+
   // Set sensible URL alias pattern defaults.
 
   variable_set('pathauto_node_pattern', '[node:title]');
   variable_set('pathauto_node_page_pattern', '[node:menu-link:parent:url:path]/[node:title]');
   variable_set('pathauto_node_link_pattern', 'link/[node:title]');
   variable_set('pathauto_node_news_article_pattern', 'news/[node:title]');
+  variable_set('pathauto_node_questions_and_answers_pattern', '[node:menu-link:parent:url:path]/[node:title]');
 
   // Use the media module for image field instances.
 
