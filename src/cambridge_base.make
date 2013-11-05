@@ -58,5 +58,5 @@ projects[cambridge_related_links][subdir] = "features"
 
 projects[cambridge_teasers][type] = "module"
 projects[cambridge_teasers][download][type] = "file"
-projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/master.tar.gz"
+projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.0.tar.gz"
 projects[cambridge_teasers][subdir] = "features"
