@@ -33,7 +33,7 @@ projects[views] = "3.7"
 
 projects[cambridge_carousel][type] = "module"
 projects[cambridge_carousel][download][type] = "file"
-projects[cambridge_carousel][download][url] = "https://github.com/misd-service-development/drupal-feature-carousel/archive/master.tar.gz"
+projects[cambridge_carousel][download][url] = "https://github.com/misd-service-development/drupal-feature-carousel/archive/7.x-1.0.tar.gz"
 projects[cambridge_carousel][subdir] = "features"
 
 projects[cambridge_image_styles][type] = "module"
