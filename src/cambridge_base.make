@@ -38,7 +38,7 @@ projects[cambridge_carousel][subdir] = "features"
 
 projects[cambridge_image_styles][type] = "module"
 projects[cambridge_image_styles][download][type] = "file"
-projects[cambridge_image_styles][download][url] = "https://github.com/misd-service-development/drupal-feature-image-styles/archive/master.tar.gz"
+projects[cambridge_image_styles][download][url] = "https://github.com/misd-service-development/drupal-feature-image-styles/archive/7.x-1.0.tar.gz"
 projects[cambridge_image_styles][subdir] = "features"
 
 projects[cambridge_link][type] = "module"
