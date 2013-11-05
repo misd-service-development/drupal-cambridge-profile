@@ -43,7 +43,7 @@ projects[cambridge_image_styles][subdir] = "features"
 
 projects[cambridge_link][type] = "module"
 projects[cambridge_link][download][type] = "file"
-projects[cambridge_link][download][url] = "https://github.com/misd-service-development/drupal-feature-link/archive/master.tar.gz"
+projects[cambridge_link][download][url] = "https://github.com/misd-service-development/drupal-feature-link/archive/7.x-1.0.tar.gz"
 projects[cambridge_link][subdir] = "features"
 
 projects[cambridge_news][type] = "module"
