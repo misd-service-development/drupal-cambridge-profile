@@ -48,7 +48,12 @@ foreach ($profiles as $profile) {
 
   $make->setTimeout(NULL);
 
-  if ($make->run() > 0) {
+  if ($make->run(
+      function ($type, $buffer) {
+        echo $buffer;
+      }
+    ) > 0
+  ) {
     throw new Exception('Failed to run command: ' . $make->getCommandLine());
   }
 
