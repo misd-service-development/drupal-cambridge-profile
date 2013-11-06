@@ -10,7 +10,6 @@ dependencies[] = contextual
 dependencies[] = dblog
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = help
 dependencies[] = image
 dependencies[] = list
 dependencies[] = menu
@@ -31,7 +30,6 @@ dependencies[] = menu_block
 
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
-dependencies[] = advanced_help
 dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = email
