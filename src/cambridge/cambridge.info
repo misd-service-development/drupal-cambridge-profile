@@ -53,6 +53,7 @@ dependencies[] = workbench_media
 
 ; features
 
+dependencies[] = body_field
 dependencies[] = cambridge_carousel
 dependencies[] = cambridge_image_styles
 dependencies[] = cambridge_link

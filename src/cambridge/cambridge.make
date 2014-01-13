@@ -60,6 +60,11 @@ projects[workbench_moderation] = "1.3"
 
 ; features
 
+projects[body_field][type] = "module"
+projects[body_field][download][type] = "file"
+projects[body_field][download][url] = "https://github.com/misd-service-development/drupal-feature-body-field/archive/master.tar.gz"
+projects[body_field][subdir] = "features"
+
 projects[cambridge_questions_and_answers][type] = "module"
 projects[cambridge_questions_and_answers][download][type] = "file"
 projects[cambridge_questions_and_answers][download][url] = "https://github.com/misd-service-development/drupal-feature-questions-and-answers/archive/master.tar.gz"
