@@ -7,20 +7,20 @@
     "packages": [
         {
             "name": "drush/drush",
-            "version": "6.1.0",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "d948558986cdd810e3be2a3e9a0d37b1540005e8"
+                "reference": "b1a8edbfd4ab5ea53f1d0dc03da171ee9c78fc18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/d948558986cdd810e3be2a3e9a0d37b1540005e8",
-                "reference": "d948558986cdd810e3be2a3e9a0d37b1540005e8",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/b1a8edbfd4ab5ea53f1d0dc03da171ee9c78fc18",
+                "reference": "b1a8edbfd4ab5ea53f1d0dc03da171ee9c78fc18",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.5"
@@ -69,7 +69,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2013-09-24 14:03:03"
+            "time": "2013-12-07 22:12:16"
         },
         {
             "name": "symfony/filesystem",
