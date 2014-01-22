@@ -585,6 +585,10 @@ function cambridge_base_install() {
   variable_set('imagecrop_popup', 'basic');
   variable_set('imagecrop_scale_default', 1);
   variable_set('imagecrop_ui_controls', 1);
+
+  // Set some sensible defaults for the Views module.
+
+  variable_set('views_ui_show_advanced_help_warning', 0);
 }
 
 /**
