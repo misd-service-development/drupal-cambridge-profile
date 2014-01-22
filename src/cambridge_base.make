@@ -51,11 +51,6 @@ projects[cambridge_news][download][type] = "file"
 projects[cambridge_news][download][url] = "https://github.com/misd-service-development/drupal-feature-news/archive/7.x-1.0.tar.gz"
 projects[cambridge_news][subdir] = "features"
 
-projects[cambridge_related_links][type] = "module"
-projects[cambridge_related_links][download][type] = "file"
-projects[cambridge_related_links][download][url] = "https://github.com/misd-service-development/drupal-feature-related-links/archive/7.x-1.0.tar.gz"
-projects[cambridge_related_links][subdir] = "features"
-
 projects[cambridge_teasers][type] = "module"
 projects[cambridge_teasers][download][type] = "file"
 projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.0.tar.gz"

@@ -34,6 +34,7 @@ dependencies[] = ckeditor
 dependencies[] = date
 dependencies[] = email
 dependencies[] = features
+dependencies[] = fe_block
 dependencies[] = field_collection
 dependencies[] = globalredirect
 dependencies[] = imagecrop

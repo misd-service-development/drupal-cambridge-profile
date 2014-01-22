@@ -174,27 +174,6 @@ function cambridge_base_install() {
     ),
     array(
       'entity_type' => 'node',
-      'bundle' => 'page',
-      'field_name' => 'field_related_links',
-      'label' => st('Related links'),
-      'cardinality' => -1,
-      'type' => 'field_related_links',
-      'settings' => array(
-        'title' => 'required',
-      ),
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'type' => 'hidden',
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'type' => 'hidden',
-        ),
-      ),
-    ),
-    array(
-      'entity_type' => 'node',
       'bundle' => 'link',
       'field_name' => 'field_image',
       'label' => st('Image'),
@@ -423,14 +402,12 @@ function cambridge_base_install() {
     ),
   );
 
-  $query = db_insert('block')
-    ->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'title', 'cache'));
-
   foreach ($blocks as $block) {
-    $query->values($block);
+    db_merge('block')
+      ->key(array('module' => $block['module'], 'delta' => $block['delta'], 'theme' => $theme))
+      ->fields($block)
+      ->execute();
   }
-
-  $query->execute();
 
   // Insert default pre-defined RDF mapping into the database.
   $rdf_mappings = array(
@@ -555,26 +532,6 @@ function cambridge_base_install() {
         'visibility' => BLOCK_VISIBILITY_LISTED,
         'pages' => '<front>',
         'title' => '<none>',
-        'cache' => DRUPAL_NO_CACHE,
-      )
-    )
-    ->execute();
-
-  // Make the related links view block visible in the sidebar.
-
-  db_insert('block')
-    ->fields(
-      array(
-        'module' => 'views',
-        'delta' => 'related_links-block',
-        'theme' => 'cambridge_theme',
-        'status' => TRUE,
-        'weight' => -10,
-        'region' => 'sidebar',
-        'custom' => BLOCK_CUSTOM_FIXED,
-        'visibility' => BLOCK_VISIBILITY_NOTLISTED,
-        'pages' => '',
-        'title' => '',
         'cache' => DRUPAL_NO_CACHE,
       )
     )

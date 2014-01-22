@@ -139,6 +139,27 @@ function cambridge_install() {
         ),
       ),
     ),
+    array(
+      'entity_type' => 'node',
+      'bundle' => 'page',
+      'field_name' => 'field_related_links',
+      'label' => st('Related links'),
+      'cardinality' => -1,
+      'type' => 'field_related_links',
+      'settings' => array(
+        'title' => 'required',
+      ),
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'type' => 'hidden',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'type' => 'hidden',
+        ),
+      ),
+    ),
   );
 
   foreach ($instances as $instance) {
@@ -431,4 +452,7 @@ function cambridge_install() {
       )
     )
     ->execute();
+
+  // FE Block settings don't appear to be right at this point, so...
+  features_revert();
 }
