@@ -452,7 +452,4 @@ function cambridge_install() {
       )
     )
     ->execute();
-
-  // FE Block settings don't appear to be right at this point, so...
-  features_revert();
 }

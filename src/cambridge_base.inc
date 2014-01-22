@@ -9,7 +9,23 @@
  * Perform actions to set up the site for the profiles.
  */
 function cambridge_base_install() {
+  // Enable the default and admin theme.
+  $enable = array(
+    'theme_default' => 'cambridge_theme',
+    'admin_theme' => 'seven',
+  );
+  theme_enable($enable);
+
+  foreach ($enable as $var => $theme) {
+    if (!is_numeric($var)) {
+      variable_set($var, $theme);
+    }
+  }
+
+  theme_disable(array('bartik'));
+
   // Features aren't normally available until after hook_install, so make them available now.
+  // For Features Extra this has to come after the theme is enabled.
   features_revert();
 
   // Add text formats.
@@ -309,21 +325,6 @@ function cambridge_base_install() {
 
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
-
-  // Enable the default and admin theme.
-  $enable = array(
-    'theme_default' => 'cambridge_theme',
-    'admin_theme' => 'seven',
-  );
-  theme_enable($enable);
-
-  foreach ($enable as $var => $theme) {
-    if (!is_numeric($var)) {
-      variable_set($var, $theme);
-    }
-  }
-
-  theme_disable(array('bartik'));
 
   // Use the admin theme for creating/editing nodes
   variable_set('node_admin_theme', 1);
