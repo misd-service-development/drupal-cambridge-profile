@@ -64,6 +64,11 @@ projects[workbench_moderation] = "1.3"
 projects[body_field_definition][version] = "1.0"
 projects[body_field_definition][subdir] = "features"
 
+projects[cambridge_news][type] = "module"
+projects[cambridge_news][download][type] = "file"
+projects[cambridge_news][download][url] = "https://github.com/misd-service-development/drupal-feature-news/archive/master.tar.gz"
+projects[cambridge_news][subdir] = "features"
+
 projects[cambridge_related_links][type] = "module"
 projects[cambridge_related_links][download][type] = "file"
 projects[cambridge_related_links][download][url] = "https://github.com/misd-service-development/drupal-feature-related-links/archive/master.tar.gz"

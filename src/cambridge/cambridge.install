@@ -17,128 +17,19 @@ function cambridge_install() {
 
   cambridge_base_install();
 
-  // Add content types.
+  // Force a main-menu link on Basic Pages.
+  variable_set('menu_force_page', TRUE);
 
-  $type = array(
-    'type' => 'news_article',
-    'name' => st('News Article'),
-    'base' => 'node_content',
-    'description' => st("Use <em>news article</em> for something something."),
-    'custom' => TRUE,
-    'modified' => TRUE,
-    'locked' => FALSE,
-    'title_label' => 'Article title',
-  );
+  // News articles shouldn't be promoted to front page.
+  variable_set('node_options_news_article', array('status'));
 
-  $type = node_type_set_defaults($type);
-  node_type_save($type);
-  node_add_body_field($type);
-
-  // Not promoted to front page.
-  variable_set('node_options_' . $type->type, array('status'));
-
-  // Display date and author information.
-  variable_set('node_submitted_' . $type->type, TRUE);
-
-  // Make sure the body appears trimmed in teasers.
-
-  $instance = field_info_instance('node', 'body', $type->type);
-
-  $instance['display']['vertical_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
-  $instance['display']['sidebar_teaser'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
-  $instance['display']['news_listing_item'] = array('label' => 'hidden', 'type' => 'text_summary_or_trimmed');
-
-  field_update_instance($instance);
+  // Display date and author information on news articles.
+  variable_set('node_submitted_news_article', TRUE);
 
   // News articles shouldn't be on a menu.
   variable_set('menu_options_news_article', array());
 
   $instances = array(
-    array(
-      'entity_type' => 'node',
-      'bundle' => 'news_article',
-      'field_name' => 'field_image',
-      'label' => st('Image'),
-      'cardinality' => 1,
-      'type' => 'field_image',
-      'settings' => array(
-        'alt_field' => 1,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg',
-        'imagecrop' => array(
-          'carousel' => 'carousel',
-          'inline' => 'inline',
-          'leading' => 'leading',
-          'sidebar_teaser' => 'sidebar_teaser'
-        ),
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '885x432',
-        'title_field' => 1,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'module' => 'media',
-        'type' => 'media_generic',
-        'settings' => array(
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
-        ),
-      ),
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'type' => 'image',
-          'settings' => array('image_style' => 'leading', 'image_link' => ''),
-          'weight' => -1,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'type' => 'image',
-          'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
-          'weight' => -1,
-        ),
-        'carousel_item' => array(
-          'label' => 'hidden',
-          'type' => 'image',
-          'settings' => array('image_style' => 'carousel', 'image_link' => 'content'),
-          'weight' => -1,
-        ),
-        'news_listing_item' => array(
-          'label' => 'hidden',
-          'type' => 'hidden',
-        ),
-        'vertical_teaser' => array(
-          'label' => 'hidden',
-          'type' => 'image',
-          'settings' => array('image_style' => 'inline', 'image_link' => 'content'),
-          'weight' => -1,
-        ),
-        'sidebar_teaser' => array(
-          'label' => 'hidden',
-          'type' => 'image',
-          'settings' => array('image_style' => 'sidebar_teaser', 'image_link' => 'content'),
-          'weight' => -1,
-        ),
-      ),
-    ),
-    array(
-      'entity_type' => 'node',
-      'bundle' => 'news_article',
-      'field_name' => 'field_related_links',
-      'label' => st('Related links'),
-      'cardinality' => -1,
-      'type' => 'field_related_links',
-      'settings' => array(
-        'title' => 'required',
-      ),
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'type' => 'hidden',
-        ),
-      ),
-    ),
     array(
       'entity_type' => 'node',
       'bundle' => 'page',
@@ -326,121 +217,11 @@ function cambridge_install() {
       ->execute();
   }
 
-  // Create a view of recent news and make it visible on the front page, as its own page, and as an RSS feed.
-
-  $view = new view();
-  $view->name = 'news';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'News';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE;
-
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'News';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array('news_article' => 'news_article');
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['empty'] = FALSE;
-  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area_text_custom']['content'] = "<div class=\"campl-content-container\">\n\n<p>No news articles have been posted.</p>\n\n</div>";
-  $handler->display->display_options['path'] = 'news';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'News';
-  $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['name'] = 'main-menu';
-  $handler->display->display_options['menu']['context'] = 0;
-  $handler->display->display_options['menu']['context_only_inline'] = 0;
-  $handler = $view->new_display('feed', 'Feed', 'feed');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['path'] = 'news/feed';
-  $handler->display->display_options['displays'] = array('page' => 'page', 'default' => 0, 'block' => 0);
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Latest news';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'View all news';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'news_listing_item';
-  $handler->display->display_options['row_options']['links'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array('news_article' => 'news_article');
-  $handler->display->display_options['filters']['created']['id'] = 'created';
-  $handler->display->display_options['filters']['created']['table'] = 'node';
-  $handler->display->display_options['filters']['created']['field'] = 'created';
-  $handler->display->display_options['filters']['created']['operator'] = '>=';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-2 months';
-  $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
-  $handler->display->display_options['block_description'] = 'Latest news';
-
-  $view->update();
-  $view->init_display();
-  $view->save();
-
-  db_insert('block')
+  // The News feature block appears to not be created (no idea why), so manually do it here.
+  db_merge('block')
+    ->key(array('module' => 'views', 'delta' => 'news-block', 'theme' => 'cambridge_theme'))
     ->fields(
       array(
-        'module' => 'views',
-        'delta' => 'news-block',
-        'theme' => 'cambridge_theme',
         'status' => TRUE,
         'weight' => 0,
         'region' => 'sub_content',
