@@ -9,6 +9,9 @@
  * Perform actions to set up the site for the profiles.
  */
 function cambridge_base_install() {
+  // Remove any status messages that have been set.
+  drupal_get_messages('status', TRUE);
+
   // Enable the default and admin theme.
   $enable = array(
     'theme_default' => 'cambridge_theme',
