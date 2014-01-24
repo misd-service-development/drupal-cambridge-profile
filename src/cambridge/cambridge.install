@@ -216,21 +216,4 @@ function cambridge_install() {
       ->condition('name', $name)
       ->execute();
   }
-
-  // The News feature block appears to not be created (no idea why), so manually do it here.
-  db_merge('block')
-    ->key(array('module' => 'views', 'delta' => 'news-block', 'theme' => 'cambridge_theme'))
-    ->fields(
-      array(
-        'status' => TRUE,
-        'weight' => 0,
-        'region' => 'sub_content',
-        'custom' => BLOCK_CUSTOM_FIXED,
-        'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => '<front>',
-        'title' => '',
-        'cache' => DRUPAL_NO_CACHE,
-      )
-    )
-    ->execute();
 }

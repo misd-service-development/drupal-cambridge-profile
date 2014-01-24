@@ -24,6 +24,9 @@ function cambridge_base_install() {
 
   theme_disable(array('bartik'));
 
+  // When using Drush not all view blocks are added to the database. See https://drupal.org/node/1632698
+  drupal_static_reset();
+
   // Features aren't normally available until after hook_install, so make them available now.
   // For Features Extra this has to come after the theme is enabled.
   features_revert();
