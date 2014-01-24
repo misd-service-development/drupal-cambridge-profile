@@ -71,7 +71,7 @@ projects[cambridge_news][subdir] = "features"
 
 projects[cambridge_related_links][type] = "module"
 projects[cambridge_related_links][download][type] = "file"
-projects[cambridge_related_links][download][url] = "https://github.com/misd-service-development/drupal-feature-related-links/archive/master.tar.gz"
+projects[cambridge_related_links][download][url] = "https://github.com/misd-service-development/drupal-feature-related-links/archive/7.x-1.1.tar.gz"
 projects[cambridge_related_links][subdir] = "features"
 
 projects[cambridge_questions_and_answers][type] = "module"
