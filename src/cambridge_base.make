@@ -22,6 +22,7 @@ projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6351355/r
 projects[libraries] = "2.1"
 projects[link] = "1.2"
 projects[menu_block] = "2.3"
+projects[menu_firstchild] = "1.1"
 projects[pathauto] = "1.2"
 projects[raven][type] = "module"
 projects[raven][download][type] = "file"

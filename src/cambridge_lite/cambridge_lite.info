@@ -30,6 +30,7 @@ dependencies[] = features
 dependencies[] = imagecrop
 dependencies[] = link
 dependencies[] = menu_block
+dependencies[] = menu_firstchild
 dependencies[] = raven
 dependencies[] = views
 dependencies[] = views_ui
