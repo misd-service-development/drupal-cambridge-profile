@@ -61,15 +61,29 @@ foreach ($profiles as $profile) {
     $profileSrc => array(
       $profile . '.info',
       $profile . '.install',
-      $profile . '.profile'
+      $profile . '.profile',
+      'README.md',
+      'CHANGELOG.md',
     ),
     $src => array('cambridge_base.inc'),
     __DIR__ => array('LICENSE.txt'),
   );
 
+  $directorySets = array(
+    $profileSrc => array(
+      'doc',
+    ),
+  );
+
   foreach ($filesets as $fileDir => $files) {
     foreach ($files as $file) {
       $fs->copy($fileDir . '/' . $file, $build . '/src/' . $profile . '/' . $file);
+    }
+  }
+
+  foreach ($directorySets as $directoryDir => $directories) {
+    foreach ($directories as $directory) {
+      $fs->mirror($directoryDir . '/' . $directory, $build . '/src/' . $profile . '/' . $directory);
     }
   }
 
