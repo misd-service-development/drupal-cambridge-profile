@@ -41,6 +41,7 @@ projects[memcache][patch][] = "http://drupal.org/files/memcache-missing-extensio
 projects[memcache][patch][] = "http://drupal.org/files/memcache-display-connection-error-1830496-6.patch"
 projects[menu_admin_per_menu] = "1.0"
 projects[menu_force] = "1.2"
+projects[menu_trail_by_path] = "2.0"
 projects[nodequeue] = "2.0-beta1"
 projects[pathologic] = "2.12"
 projects[realname] = "1.1"
