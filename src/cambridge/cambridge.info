@@ -39,6 +39,7 @@ dependencies[] = media
 dependencies[] = menu_block
 dependencies[] = menu_firstchild
 dependencies[] = menu_force
+dependencies[] = menu_trail_by_path
 dependencies[] = pathauto
 dependencies[] = raven
 dependencies[] = realname

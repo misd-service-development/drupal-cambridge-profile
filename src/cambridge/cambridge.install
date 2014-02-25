@@ -77,6 +77,9 @@ function cambridge_install() {
   variable_set('pathauto_node_news_article_pattern', 'news/[node:title]');
   variable_set('pathauto_node_questions_and_answers_pattern', '[node:menu-link:parent:url:path]/[node:title]');
 
+  // Don't let Menu Trail By Path handle breadcrumbs.
+  variable_set('menu_trail_by_path_breadcrumb_handling', FALSE);
+
   // Use the media module for image field instances.
 
   $instances = array(
@@ -216,4 +219,21 @@ function cambridge_install() {
       ->condition('name', $name)
       ->execute();
   }
+}
+
+/**
+ * Set up the Menu Trail By Path module.
+ */
+function cambridge_update_7100() {
+  if (module_exists('menu_trail_by_path') || module_exists('menu_position')) {
+    return;
+  }
+
+  $result = module_enable(array('menu_trail_by_path'));
+
+  if (!$result) {
+    throw new DrupalUpdateException('Failed to enabled Menu Trail By Path module');
+  }
+
+  variable_set('menu_trail_by_path_breadcrumb_handling', FALSE);
 }
