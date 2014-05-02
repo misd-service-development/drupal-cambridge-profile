@@ -276,3 +276,18 @@ function cambridge_update_7101() {
     }
   }
 }
+
+/**
+ * Enable Metatag modules.
+ */
+function cambridge_update_7102() {
+  if (module_exists('metatag') || module_exists('metatags_quick') || module_exists('opengraph_meta')) {
+    return;
+  }
+
+  $result = module_enable(array('metatag', 'metatag_dc', 'metatag_views'));
+
+  if (!$result) {
+    throw new DrupalUpdateException('Failed to enabled Metatag modules');
+  }
+}
