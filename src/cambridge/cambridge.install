@@ -219,6 +219,9 @@ function cambridge_install() {
       ->condition('name', $name)
       ->execute();
   }
+
+  // Fix usernames in emails
+  cambridge_update_7101();
 }
 
 /**
@@ -236,4 +239,40 @@ function cambridge_update_7100() {
   }
 
   variable_set('menu_trail_by_path_breadcrumb_handling', FALSE);
+}
+
+/**
+ * Stop names appearing where usernames should in emails.
+ *
+ * See https://drupal.org/node/1827980
+ */
+function cambridge_update_7101() {
+  global $conf;
+
+  if (FALSE === module_exists('realname')) {
+    return;
+  }
+
+  $emails = array('register_admin_created_body', 'register_no_approval_required_body', 'status_activated_body');
+
+  foreach ($emails as $email) {
+    $key = 'user_mail_' . $email;
+
+    $current_variable = variable_get($key);
+    $conf[$key] = FALSE; // temporarily hide a customised message
+    $default_message = _user_mail_text($email, NULL, array(), FALSE); // find the default
+    $conf[$key] = $current_variable; // revert back
+
+    $current_message = _user_mail_text($email, NULL, array(), FALSE); // find the current
+
+    $current_message = preg_replace('~\R~u', "\n", $current_message); // normalise line endings
+
+    if ($current_message === $default_message) {
+      // only change cases where the message is still Drupal's default
+
+      $new_message = str_replace('username: [user:name]', 'username: [user:name-raw]', $default_message);
+
+      variable_set($key, $new_message);
+    }
+  }
 }
