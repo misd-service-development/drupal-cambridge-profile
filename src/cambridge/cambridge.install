@@ -379,3 +379,12 @@ function cambridge_update_7103() {
     field_update_instance($instance);
   }
 }
+
+/**
+ * Set up Focus On teasers.
+ */
+function cambridge_update_7104() {
+  require_once 'cambridge_base.inc';
+
+  cambridge_base_set_up_focus_on_teasers();
+}
