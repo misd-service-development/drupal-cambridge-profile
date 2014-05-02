@@ -47,6 +47,7 @@ dependencies[] = pathauto
 dependencies[] = raven
 dependencies[] = realname
 dependencies[] = redirect
+dependencies[] = smart_trim
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = views
