@@ -17,3 +17,12 @@ function cambridge_lite_install() {
 
   cambridge_base_install();
 }
+
+/**
+ * Set up Focus On teasers.
+ */
+function cambridge_lite_update_7100() {
+  require_once 'cambridge_base.inc';
+
+  cambridge_base_set_up_focus_on_teasers();
+}

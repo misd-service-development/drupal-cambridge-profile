@@ -143,7 +143,8 @@ function cambridge_base_install() {
           'carousel' => 'carousel',
           'inline' => 'inline',
           'leading' => 'leading',
-          'sidebar_teaser' => 'sidebar_teaser'
+          'sidebar_teaser' => 'sidebar_teaser',
+          'small' => 'small',
         ),
         'max_filesize' => '',
         'max_resolution' => '',
@@ -192,6 +193,12 @@ function cambridge_base_install() {
           'settings' => array('image_style' => 'sidebar_teaser', 'image_link' => 'content'),
           'weight' => -1,
         ),
+        'focus_on_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'small', 'image_link' => 'content'),
+          'weight' => -1,
+        ),
       ),
     ),
     array(
@@ -210,7 +217,8 @@ function cambridge_base_install() {
           'carousel' => 'carousel',
           'inline' => 'inline',
           'leading' => 0,
-          'sidebar_teaser' => 'sidebar_teaser'
+          'sidebar_teaser' => 'sidebar_teaser',
+          'small' => 'small',
         ),
         'max_filesize' => '',
         'max_resolution' => '',
@@ -259,6 +267,12 @@ function cambridge_base_install() {
           'settings' => array('image_style' => 'sidebar_teaser', 'image_link' => ''),
           'weight' => -1,
         ),
+        'focus_on_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'image',
+          'settings' => array('image_style' => 'small', 'image_link' => ''),
+          'weight' => -1,
+        ),
       ),
     ),
     array(
@@ -299,6 +313,11 @@ function cambridge_base_install() {
           'weight' => 1,
         ),
         'sidebar_teaser' => array(
+          'label' => 'hidden',
+          'type' => 'link_default',
+          'weight' => 1,
+        ),
+        'focus_on_teaser' => array(
           'label' => 'hidden',
           'type' => 'link_default',
           'weight' => 1,
@@ -568,4 +587,62 @@ function cambridge_base_install_configure_form_alter(&$form, $form_state) {
 
   // Only check for updates, no need for email notifications.
   $form['update_notifications']['update_status_module']['#default_value'] = array(1);
+}
+
+/**
+ * Set up Focus On teasers.
+ */
+function cambridge_base_set_up_focus_on_teasers() {
+  if (FALSE === module_exists('cambridge_teasers')) {
+    return;
+  }
+
+  // Update Page's image field.
+
+  if (FALSE !== node_type_get_name('page') && NULL !== $instance = field_info_instance('node', 'field_image', 'page')) {
+    $instance['display']['focus_on_teaser'] = array_merge(
+      $instance['display']['focus_on_teaser'],
+      array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'small', 'image_link' => 'content'),
+        'weight' => -1,
+      )
+    );
+    $instance['settings']['imagecrop']['small'] = 'small';
+
+    field_update_instance($instance);
+  }
+
+  // Update Link's image field.
+
+  if (FALSE !== node_type_get_name('link') && NULL !== $instance = field_info_instance('node', 'field_image', 'link')) {
+    $instance['display']['focus_on_teaser'] = array_merge(
+      $instance['display']['focus_on_teaser'],
+      array(
+        'label' => 'hidden',
+        'type' => 'image',
+        'settings' => array('image_style' => 'small', 'image_link' => ''),
+        'weight' => -1,
+      )
+    );
+    $instance['settings']['imagecrop']['small'] = 'small';
+
+    field_update_instance($instance);
+  }
+
+  // Update Link's link field.
+
+  if (FALSE !== node_type_get_name('link') && NULL !== $instance = field_info_instance('node', 'field_link', 'link')) {
+    $instance['display']['focus_on_teaser'] = array_merge(
+      $instance['display']['focus_on_teaser'],
+      array(
+        'label' => 'hidden',
+        'type' => 'link_default',
+        'weight' => 1,
+      )
+    );
+
+    field_update_instance($instance);
+  }
 }
