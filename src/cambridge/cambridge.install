@@ -57,6 +57,36 @@ function cambridge_install() {
     field_create_instance($instance);
   }
 
+  // Use the Smart Trim module for teasers.
+
+  $smart_trimmed = array(
+    'label' => 'hidden',
+    'module' => 'smart_trim',
+    'settings' => array(
+      'more_link' => 0,
+      'more_text' => 'Read more',
+      'summary_handler' => 'full',
+      'trim_length' => 325,
+      'trim_options' => array(
+        'text' => 'text',
+      ),
+      'trim_suffix' => '...',
+      'trim_type' => 'chars',
+    ),
+    'type' => 'smart_trim_format',
+    'weight' => 0,
+  );
+
+  foreach (array('page', 'link') as $type) {
+    $instance = field_info_instance('node', 'body', $type);
+
+    foreach (array('teaser', 'news_listing_item', 'vertical_teaser', 'sidebar_teaser') as $mode) {
+      $instance['display'][$mode] = $smart_trimmed;
+    }
+
+    field_update_instance($instance);
+  }
+
   // Force a main-menu link on Basic Pages.
   variable_set('menu_force_page', TRUE);
 
@@ -289,5 +319,63 @@ function cambridge_update_7102() {
 
   if (!$result) {
     throw new DrupalUpdateException('Failed to enabled Metatag modules');
+  }
+}
+
+/**
+ * Use the Smart Trim module for teasers rather than Drupal's native trimming.
+ */
+function cambridge_update_7103() {
+  if (module_exists('smart_trim')) {
+    return;
+  }
+
+  if (FALSE === module_enable(array('smart_trim'))) {
+    throw new DrupalUpdateException('Failed to install Smart Trim module');
+  }
+
+  $smart_trimmed = array(
+    'label' => 'hidden',
+    'module' => 'smart_trim',
+    'settings' => array(
+      'more_link' => 0,
+      'more_text' => 'Read more',
+      'summary_handler' => 'full',
+      'trim_length' => 325,
+      'trim_options' => array(
+        'text' => 'text',
+      ),
+      'trim_suffix' => '...',
+      'trim_type' => 'chars',
+    ),
+    'type' => 'smart_trim_format',
+  );
+
+  foreach (array('page', 'link') as $type) {
+    // Make sure the body appears trimmed in teasers.
+
+    if (FALSE === node_type_get_name($type)) {
+      // Content type no longer exists.
+      continue;
+    }
+
+    $instance = field_info_instance('node', 'body', $type);
+
+    foreach (array('teaser', 'news_listing_item', 'vertical_teaser', 'sidebar_teaser') as $mode) {
+      if (
+        $instance['display'][$mode]['label'] !== 'hidden'
+        ||
+        $instance['display'][$mode]['type'] !== 'text_summary_or_trimmed'
+        ||
+        $instance['display'][$mode]['settings']['trim_length'] !== 600
+      ) {
+        // Display has been changed, so don't touch it.
+        continue;
+      }
+
+      $instance['display'][$mode] = array_merge($instance['display'][$mode], $smart_trimmed);
+    }
+
+    field_update_instance($instance);
   }
 }
