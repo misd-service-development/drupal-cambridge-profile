@@ -85,7 +85,7 @@ projects[body_field_definition][subdir] = "features"
 
 projects[cambridge_news][type] = "module"
 projects[cambridge_news][download][type] = "file"
-projects[cambridge_news][download][url] = "https://github.com/misd-service-development/drupal-feature-news/archive/7.x-2.0.tar.gz"
+projects[cambridge_news][download][url] = "https://github.com/misd-service-development/drupal-feature-news/archive/7.x-2.1.tar.gz"
 projects[cambridge_news][subdir] = "features"
 
 projects[cambridge_related_links][type] = "module"
