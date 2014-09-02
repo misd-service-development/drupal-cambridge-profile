@@ -388,3 +388,16 @@ function cambridge_update_7104() {
 
   cambridge_base_set_up_focus_on_teasers();
 }
+
+/**
+ * Enable the Pathauto Persistent State module.
+ */
+function cambridge_update_7105() {
+  if (module_exists('pathauto_persist') || FALSE === module_exists('pathauto')) {
+    return;
+  }
+
+  if (FALSE === module_enable(array('pathauto_persist'))) {
+    throw new DrupalUpdateException('Failed to install Pathauto Persistent State module');
+  }
+}
