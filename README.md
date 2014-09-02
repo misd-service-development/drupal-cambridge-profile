@@ -18,6 +18,8 @@ There are two different install profiles available:
 Build process
 -------------
 
+You probably want to use one of the [ready-built releases](https://github.com/misd-service-development/drupal-cambridge-profile/releases), but in case you're interested:
+
 ### Installing dependencies
 
 #### *nix
