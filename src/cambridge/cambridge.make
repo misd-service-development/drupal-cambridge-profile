@@ -13,6 +13,7 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 projects[context] = "3.2"
 projects[date] = "2.8"
 projects[delta] = "3.0-beta11"
+projects[diff] = "3.2"
 projects[easy_breadcrumb] = "2.12"
 projects[email] = "1.3"
 projects[entity] = "1.5"
