@@ -63,6 +63,7 @@ projects[varnish][patch][] = "https://gist.github.com/thewilkybarkid/6595645/raw
 projects[varnish][patch][] = "https://gist.github.com/thewilkybarkid/6595676/raw/4ddb6a03ce521ab5520e27099997650a2e390679/varnish_authentication_fix.patch"
 projects[varnish][patch][] = "http://cgit.drupalcode.org/varnish/patch/?id=d4cddfed72855199be9dd0047f5d80183c723ac0"
 projects[varnish][patch][] = "http://www.drupal.org/files/issues/purge-site-aliases-2185281-1.patch"
+projects[views_accordion] = "1.0"
 projects[views_bulk_operations] = "3.2"
 projects[views_data_export] = "3.0-beta8"
 projects[webform] = "3.20"
