@@ -27,6 +27,7 @@ dependencies[] = taxonomy
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = ckeditor
+dependencies[] = ckeditor_link
 dependencies[] = date
 dependencies[] = email
 dependencies[] = features

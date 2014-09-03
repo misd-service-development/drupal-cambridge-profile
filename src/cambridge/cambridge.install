@@ -244,11 +244,28 @@ function cambridge_install() {
     // Turn off Advanced Content Filter.
     $settings['js_conf'] = 'config.allowedContent = true;';
 
+    $plugins = ckeditor_load_plugins();
+
+    // Enable CKEditor Link plugin.
+    $settings['loadPlugins']['ckeditor_link'] = $plugins['ckeditor_link'];
+
     db_update('ckeditor_settings')
       ->fields(array('settings' => serialize($settings)))
       ->condition('name', $name)
       ->execute();
   }
+
+  // Add the CKEditor Link filter.
+  foreach (array('filtered_html', 'full_html') as $format_name) {
+    $format = filter_format_load($format_name);
+    $format->filters = filter_list_format($format_name);
+    foreach ($format->filters as $key => $filter) {
+      $format->filters[$key] = (array) $filter;
+    }
+    $format->filters['ckeditor_link_filter']['status'] = 1;
+    filter_format_save($format);
+  }
+  filter_formats_reset();
 
   // Fix usernames in emails
   cambridge_update_7101();
@@ -400,4 +417,58 @@ function cambridge_update_7105() {
   if (FALSE === module_enable(array('pathauto_persist'))) {
     throw new DrupalUpdateException('Failed to install Pathauto Persistent State module');
   }
+}
+
+/**
+ * Enable the CKEditor Link module
+ */
+function cambridge_update_7106() {
+  if (module_exists('ckeditor_link') || FALSE === module_exists('ckeditor')) {
+    return;
+  }
+
+  if (FALSE === module_enable(array('ckeditor_link'))) {
+    throw new DrupalUpdateException('Failed to install CKEditor link module');
+  }
+
+  $profiles = db_select('ckeditor_settings', 's')
+    ->fields('s')
+    ->condition('name', array('Advanced', 'Full'), 'IN')
+    ->execute()
+    ->fetchAllAssoc('name');
+
+  if (0 === count($profiles)) {
+    // Profiles have changed.
+    return;
+  }
+
+  foreach ($profiles as $name => $profile) {
+    $settings = unserialize($profile->settings);
+
+    $plugins = ckeditor_load_plugins();
+
+    // Enable CKEditor Link plugin.
+    $settings['loadPlugins']['ckeditor_link'] = $plugins['ckeditor_link'];
+
+    db_update('ckeditor_settings')
+      ->fields(array('settings' => serialize($settings)))
+      ->condition('name', $name)
+      ->execute();
+  }
+
+  // Add the CKEditor Link filter.
+  foreach (array('filtered_html', 'full_html') as $format_name) {
+    $format = filter_format_load($format_name);
+    if (FALSE === $format) {
+      // Text format no longer exists.
+      continue;
+    }
+    $format->filters = filter_list_format($format_name);
+    foreach ($format->filters as $key => $filter) {
+      $format->filters[$key] = (array) $filter;
+    }
+    $format->filters['ckeditor_link_filter']['status'] = 1;
+    filter_format_save($format);
+  }
+  filter_formats_reset();
 }
