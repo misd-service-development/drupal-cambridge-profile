@@ -1,6 +1,18 @@
 Changelog
 =========
 
+7.x-1.2
+-------
+
+11 September 2014.
+
+* Stopped patched modules from appearing a separate 'patched' directory to stop modules from moving between 'contrib' and 'patched'. You may need to run [Registry Rebuild](https://www.drupal.org/project/registry_rebuild) once.
+* Updated Features to [2.2](https://www.drupal.org/node/2316559) (see also [2.1](https://www.drupal.org/node/2311903)).
+* Added [Pathauto Persistent State 1.3](https://www.drupal.org/project/pathauto_persist).
+* Patched the Menu Firstchild module with the fix for issue [#2295059](https://www.drupal.org/node/2295059).
+* Updated Raven to [1.2](https://github.com/misd-service-development/drupal-raven/releases/tag/7.x-1.2).
+* Updated the Cambridge theme to [1.2](https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.2).
+
 7.x-1.1
 -------
 
