@@ -358,9 +358,9 @@ function cambridge_base_install() {
   variable_set("menu_block_1_title_link", 0);
   variable_set("menu_block_1_admin_title", 'Horizontal menu');
   variable_set("menu_block_1_parent", 'main-menu:0');
-  variable_set("menu_block_1_level", '1');
+  variable_set("menu_block_1_level", 1);
   variable_set("menu_block_1_follow", 0);
-  variable_set("menu_block_1_depth", '0');
+  variable_set("menu_block_1_depth", 0);
   variable_set("menu_block_1_expanded", 1);
   variable_set("menu_block_1_sort", 0);
 
@@ -368,10 +368,10 @@ function cambridge_base_install() {
   variable_set("menu_block_2_title_link", 0);
   variable_set("menu_block_2_admin_title", 'Vertical menu');
   variable_set("menu_block_2_parent", 'main-menu:0');
-  variable_set("menu_block_2_level", '1');
-  variable_set("menu_block_2_follow", 'active');
-  variable_set("menu_block_2_depth", '0');
-  variable_set("menu_block_2_expanded", 0);
+  variable_set("menu_block_2_level", 1);
+  variable_set("menu_block_2_follow", 0);
+  variable_set("menu_block_2_depth", 0);
+  variable_set("menu_block_2_expanded", 1);
   variable_set("menu_block_2_sort", 1);
 
   variable_set('menu_block_ids', array(1, 2));
@@ -677,4 +677,39 @@ function cambridge_base_set_up_date_formats() {
   variable_set('date_format_long', 'l, j F, Y - H:i');
   variable_set('date_format_medium', 'D, d/m/Y - H:i');
   variable_set('date_format_short', 'd/m/Y - H:i');
+}
+
+/**
+ * Fix menu block configuration.
+ */
+function cambridge_base_fix_menu_blocks() {
+  if (FALSE === module_exists('menu_block')) {
+    return;
+  }
+
+  $blocks = db_query(
+    'SELECT delta FROM {block} WHERE module = :module AND theme = :theme AND region = :region',
+    array(':module' => 'menu_block', ':theme' => 'cambridge_theme', 'region' => 'horizontal_navigation')
+  );
+
+  foreach ($blocks as $block) {
+    variable_set('menu_block_' . $block->delta . '_level', 1);
+    variable_set('menu_block_' . $block->delta . '_follow', 0);
+    variable_set('menu_block_' . $block->delta . '_depth', 0);
+    variable_set('menu_block_' . $block->delta . '_expanded', 1);
+    variable_set('menu_block_' . $block->delta . '_sort', 0);
+  }
+
+  $blocks = db_query(
+    'SELECT delta FROM {block} WHERE module = :module AND theme = :theme AND region = :region',
+    array(':module' => 'menu_block', ':theme' => 'cambridge_theme', 'region' => 'left_navigation')
+  );
+
+  foreach ($blocks as $block) {
+    variable_set('menu_block_' . $block->delta . '_level', 1);
+    variable_set('menu_block_' . $block->delta . '_follow', 0);
+    variable_set('menu_block_' . $block->delta . '_depth', 0);
+    variable_set('menu_block_' . $block->delta . '_expanded', 1);
+    variable_set('menu_block_' . $block->delta . '_sort', 1);
+  }
 }

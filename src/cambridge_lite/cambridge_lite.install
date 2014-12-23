@@ -35,3 +35,12 @@ function cambridge_lite_update_7101() {
 
   cambridge_base_set_up_date_formats();
 }
+
+/**
+ * Fix menu block configuration.
+ */
+function cambridge_lite_update_7102() {
+  require_once 'cambridge_base.inc';
+
+  cambridge_base_fix_menu_blocks();
+}
