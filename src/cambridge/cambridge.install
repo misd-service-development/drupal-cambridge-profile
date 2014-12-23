@@ -472,3 +472,12 @@ function cambridge_update_7106() {
   }
   filter_formats_reset();
 }
+
+/**
+ * Set date formats to UK style.
+ */
+function cambridge_update_7107() {
+  require_once 'cambridge_base.inc';
+
+  cambridge_base_set_up_date_formats();
+}

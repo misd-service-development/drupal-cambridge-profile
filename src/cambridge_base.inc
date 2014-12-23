@@ -572,6 +572,9 @@ function cambridge_base_install() {
   // Set some sensible defaults for the Views module.
 
   variable_set('views_ui_show_advanced_help_warning', 0);
+
+  // Set date formats to UK style.
+  cambridge_base_set_up_date_formats();
 }
 
 /**
@@ -645,4 +648,33 @@ function cambridge_base_set_up_focus_on_teasers() {
 
     field_update_instance($instance);
   }
+}
+
+/**
+ * Set date formats to UK style.
+ */
+function cambridge_base_set_up_date_formats() {
+  if (TRUE === module_exists('locale')) {
+    // Something has been done with locales, so abort.
+    return;
+  }
+
+  if ('Europe/London' !== variable_get('date_default_timezone', 'Europe/London')) {
+    return;
+  }
+
+  if (
+    'l, F j, Y - H:i' !== variable_get('date_format_long', 'l, F j, Y - H:i')
+    ||
+    'D, m/d/Y - H:i' !== variable_get('date_format_medium', 'D, m/d/Y - H:i')
+    ||
+    'm/d/Y - H:i' !== variable_get('date_format_short', 'm/d/Y - H:i')
+  ) {
+    // One of the Drupal defaults has changed, so abort.
+    return;
+  }
+
+  variable_set('date_format_long', 'l, j F, Y - H:i');
+  variable_set('date_format_medium', 'D, d/m/Y - H:i');
+  variable_set('date_format_short', 'd/m/Y - H:i');
 }
