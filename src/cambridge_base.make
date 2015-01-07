@@ -12,7 +12,7 @@ projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
-projects[ctools] = "1.4"
+projects[ctools] = "1.5"
 projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
