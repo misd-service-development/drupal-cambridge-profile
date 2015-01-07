@@ -5,7 +5,7 @@ includes[cambridge_base] = "../cambridge_base.make"
 
 ; contrib
 
-projects[admin_menu] = "3.0-rc4"
+projects[admin_menu] = "3.0-rc5"
 projects[advanced_help] = "1.1"
 projects[ckeditor] = "1.15"
 libraries[ckeditor][download][type] = "file"
