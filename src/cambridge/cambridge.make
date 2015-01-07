@@ -65,6 +65,7 @@ projects[redirect][patch][] = "http://drupal.org/files/redirect-prevent_circular
 projects[rules] = "2.7"
 projects[scheduler] = "1.3"
 projects[search_api] = "1.14"
+projects[search_api_db] = "1.4"
 projects[smart_trim][version] = "1.4"
 projects[smart_trim][patch][] = "http://drupal.org/files/issues/smart_trim_remove_punctuation_from_end_of_truncated_output-2169583-3.patch"
 projects[strongarm] = "2.0"
