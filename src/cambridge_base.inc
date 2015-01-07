@@ -123,6 +123,9 @@ function cambridge_base_install() {
     // Not promoted to front page.
     variable_set('node_options_' . $type->type, array('status'));
 
+    // Disable previewing.
+    variable_set('node_preview_' . $type->type, DRUPAL_DISABLED);
+
     // Don't display date and author information.
     variable_set('node_submitted_' . $type->type, FALSE);
   }
