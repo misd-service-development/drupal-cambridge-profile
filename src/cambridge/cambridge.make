@@ -7,6 +7,7 @@ includes[cambridge_base] = "../cambridge_base.make"
 
 projects[admin_menu] = "3.0-rc5"
 projects[advanced_help] = "1.1"
+projects[block_titlelink] = "1.3"
 projects[ckeditor] = "1.15"
 libraries[ckeditor][download][type] = "file"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.4/ckeditor_4.4.4_full.tar.gz"
