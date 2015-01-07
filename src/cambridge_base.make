@@ -13,7 +13,7 @@ projects[cambridge_theme][subdir] = ""
 ; contrib
 
 projects[ctools] = "1.5"
-projects[features][version] = "2.2"
+projects[features][version] = "2.3"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/raw/fccdba35efbd5ec106d8b92a8af98f71172e1870/imagecrop_query_string.patch"
