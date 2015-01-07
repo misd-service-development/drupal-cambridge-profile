@@ -85,6 +85,7 @@ projects[varnish][patch][] = "http://www.drupal.org/files/issues/varnish-2371907
 projects[views_accordion] = "1.0"
 projects[views_bulk_operations] = "3.2"
 projects[views_data_export] = "3.0-beta8"
+projects[views_rss] = "2.0-rc4"
 projects[webform] = "3.20"
 projects[workbench] = "1.2"
 projects[workbench_access] = "1.2"
