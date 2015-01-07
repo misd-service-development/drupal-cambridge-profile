@@ -73,6 +73,7 @@ projects[smart_trim][patch][] = "http://drupal.org/files/issues/smart_trim_remov
 projects[strongarm] = "2.0"
 projects[synonyms] = "1.2"
 projects[tac_lite] = "1.2"
+projects[term_merge] = "1.1"
 projects[transliteration] = "3.2"
 projects[varnish][version] = "1.0-beta2"
 projects[varnish][patch][] = "https://gist.github.com/thewilkybarkid/6595645/raw/e53554206350c1b00316fcf02f2ff61c0bdfee36/varnish_watchdog_success.patch"
