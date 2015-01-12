@@ -23,11 +23,17 @@ function cambridge_install() {
   // News articles shouldn't be promoted to front page.
   variable_set('node_options_news_article', array('status'));
 
+  // Disable previewing on news articles.
+  variable_set('node_preview_news_article', DRUPAL_DISABLED);
+
   // Display date and author information on news articles.
   variable_set('node_submitted_news_article', TRUE);
 
   // News articles shouldn't be on a menu.
   variable_set('menu_options_news_article', array());
+
+  // Disable previewing on questions and answers pages.
+  variable_set('node_preview_questions_and_answers', DRUPAL_DISABLED);
 
   $instances = array(
     array(
