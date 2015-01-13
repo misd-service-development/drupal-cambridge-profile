@@ -1,6 +1,21 @@
 Changelog
 =========
 
+7.x-1.3
+-------
+
+13 January 2015.
+
+* Set date formats to UK style.
+* Fix menu block configuration for the Cambridge theme.
+* Updated the Cambridge theme to [1.3](https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.3).
+* Updated Chaos Tools to [1.5](https://drupal.org/node/2378333).
+* Updated Features to [2.3](https://drupal.org/node/2402173).
+* Updated Link to [1.3](https://drupal.org/node/2361091).
+* Updated Raven to [1.3](https://github.com/misd-service-development/drupal-raven/releases/tag/7.x-1.3).
+* Patched the Raven module with the fix for issue [#42](https://github.com/misd-service-development/drupal-raven/pull/42).
+* Disabled node previews on new sites.
+
 7.x-1.2
 -------
 
