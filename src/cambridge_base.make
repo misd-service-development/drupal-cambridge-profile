@@ -33,7 +33,7 @@ projects[raven][download][type] = "file"
 projects[raven][download][url] = "https://github.com/misd-service-development/drupal-raven/archive/7.x-1.3.tar.gz"
 projects[raven][patch][] = "https://github.com/misd-service-development/drupal-raven/commit/cfff4cbf50a03ec3806da4a9ce11c29773fbc0eb.patch"
 projects[token] = "1.6"
-projects[views] = "3.8"
+projects[views] = "3.10"
 
 ; features
 
