@@ -91,7 +91,7 @@ projects[varnish][patch][] = "http://cgit.drupalcode.org/varnish/patch/?id=d4cdd
 projects[varnish][patch][] = "http://www.drupal.org/files/issues/purge-site-aliases-2185281-1.patch"
 projects[varnish][patch][] = "http://www.drupal.org/files/issues/varnish-2371907-24.patch"
 projects[view_unpublished] = "1.2"
-projects[views_accordion] = "1.0"
+projects[views_accordion] = "1.1"
 projects[views_bulk_operations] = "3.2"
 projects[views_data_export] = "3.0-beta8"
 projects[views_rss] = "2.0-rc4"
