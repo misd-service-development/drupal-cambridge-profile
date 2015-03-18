@@ -100,7 +100,7 @@ projects[webform_conditional] = "1.0-beta2"
 projects[workbench] = "1.2"
 projects[workbench_access] = "1.2"
 projects[workbench_media] = "1.1"
-projects[workbench_moderation] = "1.3"
+projects[workbench_moderation] = "1.4"
 
 ; features
 
