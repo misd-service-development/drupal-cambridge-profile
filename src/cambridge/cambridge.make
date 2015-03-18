@@ -105,6 +105,7 @@ projects[workbench_moderation] = "1.4"
 ; features
 
 projects[body_field_definition][version] = "1.0"
+projects[body_field_definition][patch][] = "http://www.drupal.org/files/issues/foreign-keys-2454593-1.patch"
 projects[body_field_definition][subdir] = "features"
 
 projects[cambridge_news][type] = "module"
