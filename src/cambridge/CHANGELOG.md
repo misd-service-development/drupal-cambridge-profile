@@ -1,6 +1,42 @@
 Changelog
 =========
 
+7.x-1.4
+-------
+
+19 March 2015.
+
+* Patched the theme with [updated Project Light assets](https://github.com/misd-service-development/drupal-cambridge-theme/commit/c1056076902e87e6eef838adb202321775b2b310).
+* Patched the Link module with the fix for issue [#2367069](https://www.drupal.org/node/2367069).
+* Patched the Image Styles feature with the fix for issue [#1](https://github.com/misd-service-development/drupal-feature-image-styles/pull/1).
+* Updated Chaos Tools to [1.7](https://www.drupal.org/node/2454883) (see also [1.6](https://drupal.org/node/2415979)).
+* Updated Features to [2.4](https://drupal.org/node/2446159).
+* Updated Menu Block to [2.5](https://www.drupal.org/node/2420375).
+* Updated Token to [1.6](https://www.drupal.org/node/2443407).
+* Updated Views to [3.10](https://www.drupal.org/node/2424103).
+* Added [Automatic Entity Label 1.3](https://www.drupal.org/project/auto_entitylabel).
+* Updated CKEditor library to [4.4.7](http://ckeditor.com/release/CKEditor-4.4.7).
+* Added [Crazy Egg 1.0](https://www.drupal.org/project/crazyegg).
+* Updated Entity API to [1.6](https://www.drupal.org/node/2437885).
+* Updated fancyBox to [2.0-beta5](https://www.drupal.org/node/2422095).
+* Added [Field Validation 2.4](https://www.drupal.org/project/field_validation).
+* Updated Memcache to [1.5](https://www.drupal.org/node/2413389).
+* Added [Module Filter 2.0](https://www.drupal.org/project/module_filter).
+* Added [RESTful Web Services 2.3](https://www.drupal.org/project/restws).
+* Updated Rules to [2.9](https://www.drupal.org/node/2453319) (see also [2.8](https://www.drupal.org/node/2404103)).
+* Added [ShareThis 2.10](https://www.drupal.org/project/sharethis).
+* Updated Term Merge to [1.2](https://www.drupal.org/node/2406869).
+* Added [UUID 1.0-alpha6](https://www.drupal.org/project/uuid).
+* Added [View Unpublished 1.2](https://www.drupal.org/project/view_unpublished).
+* Updated Views Accordion to [1.1](https://www.drupal.org/node/2416539).
+* Updated Webform to [3.23](https://www.drupal.org/node/2454059) (see also [3.22](https://www.drupal.org/node/2445295)).
+* Added [Webform Conditional 1.0-beta2](https://www.drupal.org/project/webform_conditional).
+* Updated Workbench Moderation to [1.4](https://www.drupal.org/node/2428047).
+* Patched the Body Field Definition feature with the fix for issue [#2454593](https://www.drupal.org/node/2454593).
+* Patched the Questions and Answer feature with the fix for issue [#9](https://github.com/misd-service-development/drupal-feature-questions-and-answers/pull/9).
+* Added [Disqus 1.10](https://www.drupal.org/project/disqus).
+* Added [Imagecache External 2.0](https://www.drupal.org/project/imagecache_external).
+
 7.x-1.3
 -------
 

@@ -1,6 +1,20 @@
 Changelog
 =========
 
+7.x-1.4
+-------
+
+19 March 2015.
+
+* Patched the theme with [updated Project Light assets](https://github.com/misd-service-development/drupal-cambridge-theme/commit/c1056076902e87e6eef838adb202321775b2b310).
+* Patched the Link module with the fix for issue [#2367069](https://www.drupal.org/node/2367069).
+* Patched the Image Styles feature with the fix for issue [#1](https://github.com/misd-service-development/drupal-feature-image-styles/pull/1).
+* Updated Chaos Tools to [1.7](https://www.drupal.org/node/2454883) (see also [1.6](https://drupal.org/node/2415979)).
+* Updated Features to [2.4](https://drupal.org/node/2446159).
+* Updated Menu Block to [2.5](https://www.drupal.org/node/2420375).
+* Updated Token to [1.6](https://www.drupal.org/node/2443407).
+* Updated Views to [3.10](https://www.drupal.org/node/2424103).
+
 7.x-1.3
 -------
 
