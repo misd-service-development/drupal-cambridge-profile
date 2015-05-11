@@ -134,6 +134,5 @@ projects[cambridge_related_links][subdir] = "features"
 
 projects[cambridge_questions_and_answers][type] = "module"
 projects[cambridge_questions_and_answers][download][type] = "file"
-projects[cambridge_questions_and_answers][download][url] = "https://github.com/misd-service-development/drupal-feature-questions-and-answers/archive/7.x-1.2.tar.gz"
-projects[cambridge_questions_and_answers][patch][] = "https://github.com/thewilkybarkid/drupal-feature-questions-and-answers/commit/de371aa71e6c6f6515ca9070a6ca2d36518f7b25.patch"
+projects[cambridge_questions_and_answers][download][url] = "https://github.com/misd-service-development/drupal-feature-questions-and-answers/archive/7.x-1.3.tar.gz"
 projects[cambridge_questions_and_answers][subdir] = "features"
