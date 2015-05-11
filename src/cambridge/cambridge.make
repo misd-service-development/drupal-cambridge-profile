@@ -90,6 +90,7 @@ projects[smart_trim][patch][] = "http://drupal.org/files/issues/smart_trim_remov
 projects[strongarm] = "2.0"
 projects[synonyms] = "1.2"
 projects[tac_lite] = "1.2"
+projects[telephone] = "1.0-alpha1"
 projects[term_merge] = "1.2"
 projects[transliteration] = "3.2"
 projects[twitter_block] = "2.2"
