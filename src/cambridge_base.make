@@ -44,8 +44,7 @@ projects[cambridge_carousel][subdir] = "features"
 
 projects[cambridge_image_styles][type] = "module"
 projects[cambridge_image_styles][download][type] = "file"
-projects[cambridge_image_styles][download][url] = "https://github.com/misd-service-development/drupal-feature-image-styles/archive/7.x-1.0.tar.gz"
-projects[cambridge_image_styles][patch][] = "https://github.com/thewilkybarkid/drupal-feature-image-styles/commit/8e581c3591702fbff8481a8c0c7e94a68b58cbea.patch"
+projects[cambridge_image_styles][download][url] = "https://github.com/misd-service-development/drupal-feature-image-styles/archive/7.x-1.1.tar.gz"
 projects[cambridge_image_styles][subdir] = "features"
 
 projects[cambridge_link][type] = "module"
