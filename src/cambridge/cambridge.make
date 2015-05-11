@@ -51,6 +51,7 @@ projects[filefield_paths][patch][] = "http://www.drupal.org/files/issues/depreca
 projects[filefield_sources] = "1.9"
 projects[globalredirect] = "1.5"
 projects[google_analytics] = "1.4"
+projects[honeypot] = "1.17"
 projects[imageapi_optimize] = "1.2"
 projects[imagecache_external] = "2.0"
 projects[job_scheduler] = "2.0-alpha3"
