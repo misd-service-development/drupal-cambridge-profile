@@ -1,6 +1,40 @@
 Changelog
 =========
 
+7.x-1.5
+-------
+
+14 May 2015.
+
+* Updated Features to [2.5](https://drupal.org/node/2470129).
+* Updated Views to [3.11](https://drupal.org/node/2480259).
+* Updated the Image Styles feature to [1.1](https://github.com/misd-service-development/drupal-feature-image-styles/releases/tag/7.x-1.1).
+* Updated the Teasers feature to [1.4](https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.4).
+* Updated Advanced Help to [1.2](https://drupal.org/node/2460775).
+* Added [Calendar 3.5](https://www.drupal.org/project/calendar).
+* Updated Environment Indicator to [2.6](https://drupal.org/node/2462127).
+* Patched the Cache Expiration module with the fix for issue [#2183995](https://www.drupal.org/node/2183995).
+* Updated fancyBox to [2.0-beta6](https://drupal.org/node/2463393).
+* Added [Field Display Label 1.3](https://www.drupal.org/project/field_display_label).
+* Added [File Resumable Upload 1.2](https://www.drupal.org/project/file_resup).
+* Added [File (Field) Paths 1.0-beta4](https://www.drupal.org/project/filefield_paths).
+* Added [Honeypot 1.17](https://www.drupal.org/project/honeypot).
+* Updated Imagecache External to [2.1](https://drupal.org/node/imagecache_external).
+* Updated Media to [1.5](https://drupal.org/node/2456987).
+* Updated RESTful Web Services to [2.4](https://drupal.org/node/2472449).
+* Updated Select (or other) to [2.21](https://drupal.org/node/2465589).
+* Patched the Similar By Terms module with the fix for issue [#1851754](https://www.drupal.org/node/1851754).
+* Updated Smart Trim to [1.5](https://drupal.org/node/2480289).
+* Added [Telephone 1.0-alpha1](https://www.drupal.org/project/telephone).
+* Updated Varnish to [1.0-beta3](https://drupal.org/node/2336795).
+* Updated Webform to [3.24](https://drupal.org/node/2464229).
+* Patched the Workbench Moderation module with the fix for issue [#1838640](https://www.drupal.org/node/1838640).
+* Added [XML sitemap 2.2](https://www.drupal.org/project/xmlsitemap).
+* Updated the News feature to [2.2](https://github.com/misd-service-development/drupal-feature-news/releases/tag/7.x-2.2).
+* Updated the Related Links feature to [1.2](https://github.com/misd-service-development/drupal-feature-related-links/releases/tag/7.x-1.2).
+* Updated the Questions and Answers feature to [1.3](https://github.com/misd-service-development/drupal-feature-questions-and-answers/releases/tag/7.x-1.3).
+* Updated the Cambridge theme to [1.4](https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.4).
+
 7.x-1.4
 -------
 

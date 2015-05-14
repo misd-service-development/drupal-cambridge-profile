@@ -1,6 +1,17 @@
 Changelog
 =========
 
+7.x-1.5
+-------
+
+14 May 2015.
+
+* Updated Features to [2.5](https://drupal.org/node/2470129).
+* Updated Views to [3.11](https://drupal.org/node/2480259).
+* Updated the Image Styles feature to [1.1](https://github.com/misd-service-development/drupal-feature-image-styles/releases/tag/7.x-1.1).
+* Updated the Teasers feature to [1.4](https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.4).
+* Updated the Cambridge theme to [1.4](https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.4).
+
 7.x-1.4
 -------
 
