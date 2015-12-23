@@ -103,7 +103,7 @@ projcets[varnish][patch][] = "http://cgit.drupalcode.org/varnish/patch/?id=211af
 projects[view_unpublished] = "1.2"
 projects[views_accordion] = "1.1"
 projects[views_bulk_operations] = "3.3"
-projects[views_data_export] = "3.0-beta8"
+projects[views_data_export] = "3.0-beta9"
 projects[views_rss] = "2.0-rc4"
 projects[webform] = "3.24"
 projects[webform_conditional] = "1.0-beta2"
