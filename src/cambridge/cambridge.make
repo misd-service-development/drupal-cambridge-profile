@@ -34,7 +34,7 @@ projects[fancybox][patch][] = "https://gist.githubusercontent.com/thewilkybarkid
 libraries[fancybox][download][type] = "file"
 libraries[fancybox][download][url] = "https://github.com/fancyapps/fancyBox/archive/v2.1.5.tar.gz"
 projects[features_extra] = "1.0"
-projects[feeds][version] = "2.0-alpha8"
+projects[feeds][version] = "2.0-beta1"
 projects[feeds][patch][] = "http://cgit.drupalcode.org/feeds/patch/?id=004f03c"
 projects[feeds][patch][] = "http://cgit.drupalcode.org/feeds/patch/?id=f22a0f7"
 projects[feeds][patch][] = "http://cgit.drupalcode.org/feeds/patch/?id=7b36762"
