@@ -36,6 +36,7 @@ libraries[fancybox][download][url] = "https://github.com/fancyapps/fancyBox/arch
 projects[features_extra] = "1.0"
 projects[feeds][version] = "2.0-beta1"
 projects[feeds][patch][] = "https://www.drupal.org/files/issues/feeds-cache-table-exists-2531706-1.patch"
+projects[feeds_entity_processor] = "1.x-dev"
 projects[feeds_tamper] = "1.0"
 projects[feeds_xpathparser] = "1.0"
 projects[field_collection] = "1.0-beta8"
