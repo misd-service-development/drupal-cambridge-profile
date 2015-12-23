@@ -25,7 +25,7 @@ projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=2e82084e104
 projects[menu_block] = "2.7"
 projects[menu_firstchild][version] = "1.1"
 projects[menu_firstchild][patch][] = "http://www.drupal.org/files/issues/pathauto-token-2295059-1.patch"
-projects[pathauto] = "1.2"
+projects[pathauto] = "1.3"
 projects[pathauto_persist] = "1.3"
 projects[raven][type] = "module"
 projects[raven][download][type] = "file"
