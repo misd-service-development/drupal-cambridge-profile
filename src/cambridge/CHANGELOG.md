@@ -1,6 +1,50 @@
 Changelog
 =========
 
+7.x-1.6
+
+16 December 2015.
+
+Upgraded Chaos Tools Suite to [1.9] (https://www.drupal.org/node/2554183).
+Upgraded Features to [2.7] (https://www.drupal.org/node/2592441).
+Upgraded Menu Block to [2.7] (https://www.drupal.org/node/2514710).
+Upgraded Pathauto to [1.3] (https://www.drupal.org/node/2582001).
+Upgraded Pathauto Persist to [1.4] (https://www.drupal.org/node/2575197).
+Upgraded Views to [3.13] (https://www.drupal.org/node/2609964).
+
+Upgraded Advanced Help to [1.3] (https://www.drupal.org/node/2494535).
+Upgraded Block Title Link to [1.5] (https://www.drupal.org/node/2553863).
+Upgraded Date to [2.9] (https://www.drupal.org/node/2565073).
+Upgraded Disqus to [2.12] (https://www.drupal.org/node/2508545).
+Upgraded Environment Indicator to [2.8] (https://www.drupal.org/node/2589923).
+Upgraded Features Extra to [1.0] (https://www.drupal.org/node/2550015).
+Upgraded Feeds to [2.0-beta1] (https://www.drupal.org/node/2531428).
+Added [Feeds Entity Processor 1.x-dev] (https://www.drupal.org/project/feeds_entity_processor).
+Upgraded Feeds Tamper to [1.1] (https://www.drupal.org/node/2499333).
+Upgraded Feeds XPath Parser to [1.1] (https://www.drupal.org/node/2522726).
+Upgraded Field Collection to [1.0-beta10] (https://www.drupal.org/node/2599186).
+Upgraded Field Validation to [2.6] (https://www.drupal.org/node/2509354).
+Upgraded File Resumable Upload to [1.3] (https://www.drupal.org/node/2491449).
+Upgraded Filefield Paths to [1.0] (https://www.drupal.org/node/2616860).
+Upgraded Filefield Sources to [1.10] (https://www.drupal.org/node/2553079).
+Upgraded Google Analytics to [2.1] (https://www.drupal.org/node/2384245).
+Upgraded Honeypot to [1.21] (https://www.drupal.org/node/2562887).
+Upgraded Markup to [1.2] (https://www.drupal.org/node/2538224).
+Upgraded Menu Admin Per Menu to [1.1] (https://www.drupal.org/node/2550813).
+Upgraded Metatag to [1.7] (https://www.drupal.org/node/2539434).
+Upgraded Nodequeue to [2.0] (https://www.drupal.org/node/2501755).
+Upgraded Redirect to [1.3] (https://www.drupal.org/node/2529548).
+Upgraded Search API to [1.16] (https://www.drupal.org/node/2560103).
+Upgraded Search API Database Search to [1.5] (https://www.drupal.org/node/2560105).
+Upgraded Select (or other) to [2.22] (https://www.drupal.org/node/2492237).
+Upgraded ShareThis to [2.12] (https://www.drupal.org/node/2522728).
+Upgraded Term Merge to [1.3] (https://www.drupal.org/node/2625344).
+Upgraded Twitter Block to [2.3] (https://www.drupal.org/node/2569109).
+Upgraded Universally Unique IDentifier to [1.0-beta1] (https://www.drupal.org/node/2581967).
+Upgraded Views Bulk Operations (VBO) to [3.3] (https://www.drupal.org/node/2516680).
+Upgraded Views Data Export to [3.0-beta9] (https://www.drupal.org/node/2601086).
+Upgraded Workbench Access to [1.4] (https://www.drupal.org/node/2587365).
+
 7.x-1.5
 -------
 
