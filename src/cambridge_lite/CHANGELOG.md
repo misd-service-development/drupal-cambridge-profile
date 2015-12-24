@@ -1,6 +1,18 @@
 Changelog
 =========
 
+7.x-1.6
+
+23 December 2015.
+
+Upgraded Chaos Tools Suite to [1.9] (https://www.drupal.org/node/2554183).
+Upgraded Features to [2.7] (https://www.drupal.org/node/2592441).
+Upgraded Menu Block to [2.7] (https://www.drupal.org/node/2514710).
+Upgraded Pathauto to [1.3] (https://www.drupal.org/node/2582001).
+Upgraded Pathauto Persist to [1.4] (https://www.drupal.org/node/2575197).
+Upgraded Views to [3.13] (https://www.drupal.org/node/2609964).
+
+
 7.x-1.5
 -------
 
