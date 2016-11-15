@@ -1,6 +1,18 @@
 Changelog
 =========
 
+7.x-1.7
+-------
+
+10 November 2016.
+
+Upgrades Chaos Tools Suite to [1.11] (https://www.drupal.org/project/ctools/releases/7.x-1.11). 
+Upgraded Features to [2.10] (https://www.drupal.org/project/features/releases/7.x-2.10). 
+Upgraded Libraries to [2.3] (https://www.drupal.org/project/libraries/releases/7.x-2.3). 
+Upgraded Link to [1.4] (https://www.drupal.org/project/link/releases/7.x-1.4). 
+Upgraded Views to [3.14] (https://www.drupal.org/project/views/releases/7.x-3.14). 
+
+
 7.x-1.6
 
 23 December 2015.
