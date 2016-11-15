@@ -12,16 +12,16 @@ projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
-projects[ctools] = "1.9"
-projects[features][version] = "2.7"
+projects[ctools] = "1.11"
+projects[features][version] = "2.10"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/raw/fccdba35efbd5ec106d8b92a8af98f71172e1870/imagecrop_query_string.patch"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6351355/raw/a34c91e4480aa7c4c0b79644e13aeeec914c1726/imagecrop_theme.patch"
-projects[libraries] = "2.2"
-projects[link][version] = "1.3"
-projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=b373ad65850947c2a69a15be3587ebb22b107efc"
-projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=2e82084e104ed8696c1fda15f001bea25ededf03"
+projects[libraries] = "2.3"
+projects[link][version] = "1.4"
+#projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=b373ad65850947c2a69a15be3587ebb22b107efc"
+#projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=2e82084e104ed8696c1fda15f001bea25ededf03" #fixed in 1.4?
 projects[menu_block] = "2.7"
 projects[menu_firstchild][version] = "1.1"
 projects[menu_firstchild][patch][] = "http://www.drupal.org/files/issues/pathauto-token-2295059-1.patch"
@@ -32,7 +32,7 @@ projects[raven][download][type] = "file"
 projects[raven][download][url] = "https://github.com/misd-service-development/drupal-raven/archive/7.x-1.3.tar.gz"
 projects[raven][patch][] = "https://github.com/misd-service-development/drupal-raven/commit/cfff4cbf50a03ec3806da4a9ce11c29773fbc0eb.patch"
 projects[token] = "1.6"
-projects[views] = "3.13"
+projects[views] = "3.14"
 
 ; features
 

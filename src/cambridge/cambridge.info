@@ -62,6 +62,7 @@ dependencies[] = workbench_media
 
 dependencies[] = body_field_definition
 dependencies[] = cambridge_carousel
+dependencies[] = cambridge_events
 dependencies[] = cambridge_image_styles
 dependencies[] = cambridge_link
 dependencies[] = cambridge_news

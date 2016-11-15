@@ -1,6 +1,59 @@
 Changelog
 =========
 
+7.x-1.7
+-------
+
+10 November 2016.
+
+Upgrades Chaos Tools Suite to [1.11] (https://www.drupal.org/project/ctools/releases/7.x-1.11). 
+Upgraded Features to [2.10] (https://www.drupal.org/project/features/releases/7.x-2.10). 
+Upgraded Libraries to [2.3] (https://www.drupal.org/project/libraries/releases/7.x-2.3). 
+Upgraded Link to [1.4] (https://www.drupal.org/project/link/releases/7.x-1.4). 
+Upgraded Views to [3.14] (https://www.drupal.org/project/views/releases/7.x-3.14). 
+
+Added [Admin Views 1.6] (https://www.drupal.org/project/admin_views/releases/7.x-1.6).
+Upgraded CKEditor to [1.17] (https://www.drupal.org/project/ckeditor/releases/7.x-1.17). 
+Upgraded CKEditor Link to [2.4] (https://www.drupal.org/project/ckeditor_link/releases/7.x-2.4).
+Upgraded Context to [3.7] (https://www.drupal.org/project/context/releases/7.x-3.7). 
+Added [CSS Injector 1.10] (https://www.drupal.org/project/css_injector/releases/7.x-1.10).
+Added [Devel 1.5] (https://www.drupal.org/project/devel/releases/7.x-1.5).
+Upgraded Entity to [1.8] (https://www.drupal.org/project/entity/releases/7.x-1.8). 
+Upgraded Entity Reference to [1.2] (https://www.drupal.org/project/entityreference/releases/7.x-1.2).
+Upgraded Feeds to [2.0-beta2] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta2). 
+Upgraded Field Collection to [1.0-beta11] (https://www.drupal.org/project/field_collection/releases/7.x-1.0-beta11). 
+Upgraded Field Display Label to [1.4] (https://www.drupal.org/project/field_display_label/releases/7.x-1.4).
+Upgraded Field Group to [1.5] (https://www.drupal.org/project/field_group/releases/7.x-1.5). 
+Upgraded Field Permissions to [1.0] (https://www.drupal.org/project/field_permissions/releases/7.x-1.0). 
+Upgraded File Resumable Uploads to [1.4] (https://www.drupal.org/project/file_resup/releases/7.x-1.4). 
+Upgraded Google Analytics to [2.3] (https://www.drupal.org/project/google_analytics/releases/7.x-2.3). 
+Added [Hierarchical Select 3.0-beta7] (https://www.drupal.org/project/hierarchical_select/releases/7.x-3.0-beta7). 
+Upgraded Honeypot to [1.22] (https://www.drupal.org/project/honeypot/releases/7.x-1.22). 
+Upgraded Link Checker to [1.3] (https://www.drupal.org/project/linkchecker/releases/7.x-1.3). 
+Upgraded Menu Trail By Path to [2.1] (https://www.drupal.org/project/menu_trail_by_path/releases/7.x-3.1). 
+Upgraded Metatag to [1.17] (https://www.drupal.org/project/metatag/releases/7.x-1.17). 
+Added [Multiselect 1.12] (https://www.drupal.org/project/multiselect/releases/7.x-1.12). 
+Upgraded Nodequeue to [2.1] (https://www.drupal.org/project/nodequeue/releases/7.x-2.1). 
+Upgraded Publish Content to [1.4] (https://www.drupal.org/project/publishcontent/releases/7.x-1.4). 
+Upgraded Real Name to [1.3] (https://www.drupal.org/project/realname/releases/7.x-1.3). 
+Upgraded RESTful Web Services to [2.6] (https://www.drupal.org/project/restws/releases/7.x-2.6). 
+Added [Role Delegation 1.1] (https://www.drupal.org/project/role_delegation/releases/7.x-1.1). 
+Upgraded Scheduler to [1.5] (https://www.drupal.org/project/scheduler/releases/7.x-1.5). 
+Upgraded Search API to [1.20] (https://www.drupal.org/project/search_api/releases/7.x-1.20). 
+Upgraded Share This to [2.13] (https://www.drupal.org/project/sharethis/releases/7.x-2.13). 
+Upgraded Similar Terms to [2.6] (https://www.drupal.org/project/similarterms/releases/7.x-2.6). 
+Upgraded Synonyms to [1.5] (https://www.drupal.org/project/synonyms/releases/7.x-1.5). 
+Upgraded UUID to [1.0-beta2] (https://www.drupal.org/project/uuid/releases/7.x-1.0-beta2). 
+Upgraded Views Data Export to [3.1] (https://www.drupal.org/project/views_data_export/releases/7.x-3.1). 
+Upgraded Webform to [3.25] (https://www.drupal.org/project/webform/releases/7.x-3.25). 
+Upgraded Webform Conditional to [1.2] (https://www.drupal.org/project/webform_conditional/releases/7.x-1.2). 
+Upgraded XML Sitemap to [2.3] (https://www.drupal.org/project/xmlsitemap/releases/7.x-2.3)
+
+Added [Cambridge Access Handling 1.0] (https://github.com/misd-service-development/drupal-feature-access-handling/releases/tag/7.x-1.0).
+Added [Cambridge Events 1.0] (https://github.com/misd-service-development/drupal-feature-events/releases/tag/7.x-1.0). 
+Added [Webform Date Format 1.0] (https://github.com/misd-service-development/drupal-feature-webform-date-format/releases/tag/7.x-1.0). 
+ 
+
 7.x-1.6
 
 16 December 2015.

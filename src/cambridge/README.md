@@ -22,3 +22,137 @@ When updating the profile, replace the whole contents of the `/profiles/cambridg
 You shouldn't normally make changes to the `/profiles/cambridge/` folder (including trying to updates profile-provided modules through Drupal's update manager), as you may run into problems trying to update the profile in the future.
 
 If you do need a different version of a module to what the profile provides, however, you can override it by placing your version in your site's folder (so one of `/sites/all/modules/`, `/sites/default/modules/` or `/sites/www.mysite.cam.ac.uk/modules/`). When the profile is updated to include the new version you should then remove your override and let Drupal revert back to using the profile's version.
+
+
+List of currently included modules
+----------------------------------
+
+There have been requests in earlier versions of the Profile for a full list of supported / included modules in the Profile, so with the release of version 1.7 we are now including this. The list of included modules is as follows:
+
+Contributed Modules
+-------------------
+
+Admin Menu
+Admin Views
+Advanced Help
+Auto Entity Label
+Block Title Link
+Calendar
+CKEditor
+CKEditor Link
+Context
+Crazy Egg
+CSS Injector
+CTools
+Date
+Delta
+Devel
+Diff
+Disqus
+Easy Breadcrumb
+Email
+Entity
+Entity Reference
+Environment Indicator
+Expire
+Facet API
+Fancybox
+Features
+Features Extra
+Feeds
+Feeds Entity Processor
+Feeds Tamper
+Feeds Xpath Parser
+Field Collection
+Field Display Label
+Field Group
+Field Permissions
+Field Validation
+File Resumable Upload
+Filefield Paths
+Filefield Sources
+Global Redirect
+Google Analytics
+Hierarchical Select
+Honeypot
+Image API Optimize
+Imagecache External
+Image Crop
+Job Scheduler
+Libraries
+Link
+Link Checker
+Media
+Media Flickr
+Media Soundcloud
+Media Vimeo
+Media YouTube
+Memcache
+Menu Admin Per Menu
+Menu Block
+Menu First Child
+Menu Force
+Menu Trail By Path
+Menu View Unpublished
+Metatag
+Module Filter
+Multiselect
+Nodequeue
+Pathauto
+Pathauto Persist
+Pathologic
+Persistent Menu Items
+Publish Content
+Raven (Cambridge authored module)
+Real Name
+Redirect
+RESTful Web Services
+Role Delegation
+Rules
+Scheduler
+Search API
+Search API DB
+Select Or Other
+Share This
+Similar Terms
+Smart Trim
+Strongarm
+Synonyms
+Taxonomy Access Control Lite
+Telephone
+Term Merge
+Token
+Transliteration
+Twitter Block
+UUID
+Varnish
+View Unpublished
+Views
+Views Accordion
+Views Bulk Operations
+Views Data Export
+Views RSS
+Webform
+Webform Conditional
+Workbench
+Workbench Access
+Workbench Media
+Workbench Moderation
+XML Sitemap
+
+
+Cambridge Feature Modules
+-------------------------
+
+Body Field Definition - Utility module used by other features that create content types.
+Cam Access Handling - Provides the standard "access denied" blocks for anonymous and logged in users.
+Cambridge Carousel - Provides the carousel functionality used on the homepage of many Cambridge websites.
+Cambridge Events - Provides the Events content type and associated views. 
+Cambridge Image Styles - Provides various image styles (e.g. leading images, carousel sized image, teaser images). 
+Cambridge Link - Provides the Link content type.
+Cambridge News - Provides the News content type.
+Cambridge Questions and Answers - Provides the Q&A content type and associated functionality.
+Cambridge Related Links - Provides the related links functionality. 
+Cambridge Teasers - Provides a variety of teaser formats as Drupal view modes.
+Webform Date Format - Converts the date format of webforms from the American default to British. 
+ 
