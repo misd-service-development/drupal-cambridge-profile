@@ -22,3 +22,33 @@ When updating the profile, replace the whole contents of the `/profiles/cambridg
 You shouldn't normally make changes to the `/profiles/cambridge_lite/` folder (including trying to updates profile-provided modules through Drupal's update manager), as you may run into problems trying to update the profile in the future.
 
 If you do need a different version of a module to what the profile provides, however, you can override it by placing your version in your site's folder (so one of `/sites/all/modules/`, `/sites/default/modules/` or `/sites/www.mysite.cam.ac.uk/modules/`). When the profile is updated to include the new version you should then remove your override and let Drupal revert back to using the profile's version.
+
+
+List of currently included modules
+----------------------------------
+
+There have been requests in earlier versions of the Profile for a full list of supported / included modules in the Profile, so with the release of version 1.7 we are now including this. The list of included modules is as follows:
+
+CTools
+Features
+Imagecrop
+Libraries
+Link
+Menu Block
+Menu Firstchild
+Pathauto
+Pathauto Persist
+Raven (Cambridge authored module)
+Token
+Views
+
+Cambridge Feature Modules
+-------------------------
+
+Cambridge Carousel - Provides the carousel functionality used on the homepage of many Cambridge websites.
+Cambridge Image Styles - Provides various image styles (e.g. leading images, carousel sized image, teaser images). 
+Cambridge Link - Provides the Link content type.
+Cambridge Teasers - Provides a variety of teaser formats as Drupal view modes.
+
+
+
