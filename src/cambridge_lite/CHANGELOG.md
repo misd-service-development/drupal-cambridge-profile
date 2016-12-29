@@ -1,6 +1,13 @@
 Changelog
 =========
 
+7.x-1.7.1
+
+29 December 2016
+
+Patched the link module with the fix for issue [#2666912](https://www.drupal.org/node/2666912)
+
+
 7.x-1.7
 -------
 
