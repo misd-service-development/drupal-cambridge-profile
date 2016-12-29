@@ -20,8 +20,8 @@ projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/r
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6351355/raw/a34c91e4480aa7c4c0b79644e13aeeec914c1726/imagecrop_theme.patch"
 projects[libraries] = "2.3"
 projects[link][version] = "1.4"
-#projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=b373ad65850947c2a69a15be3587ebb22b107efc"
-#projects[link][patch][] = "http://cgit.drupalcode.org/link/patch/?id=2e82084e104ed8696c1fda15f001bea25ededf03" #fixed in 1.4?
+projects[link][patch][] = "https://www.drupal.org/files/issues/revert-url-validation-2666912.patch"
+
 projects[menu_block] = "2.7"
 projects[menu_firstchild][version] = "1.1"
 projects[menu_firstchild][patch][] = "http://www.drupal.org/files/issues/pathauto-token-2295059-1.patch"
