@@ -1,6 +1,13 @@
 Changelog
 =========
 
+7.x-1.7.3
+
+19 January 2017
+
+Re-added a patched version of Workbench Moderation [1.4] (https://github.com/JeebsUK/drupal-workbench-moderation/releases/tag/1.4) to solve issues with viewing current drafts. This is being hosted on GitHub.
+
+
 7.x-1.7.2
 
 6 January 2017
