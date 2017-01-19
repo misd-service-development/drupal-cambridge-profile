@@ -115,8 +115,16 @@ projects[webform_conditional] = "1.2"
 projects[workbench] = "1.2"
 projects[workbench_access] = "1.4"
 projects[workbench_media] = "1.1"
-projects[workbench_moderation][version] = "1.4"
-projects[workbench_moderation][patch][] = "http://www.drupal.org/files/issues/workbench_moderation-fix_callback_argument-1838640-23.patch"
+
+projects[workbench_moderation][type] = "module"
+projects[workbench_moderation][download][type] = "file"
+projects[workbench_moderation][download][url] = "https://github.com/JeebsUK/drupal-workbench-moderation/archive/1.4.tar.gz"
+projects[workbench_moderation][subdir] = "contrib"
+
+
+
+
+
 projects[xmlsitemap] = "2.3"
 
 ; features
