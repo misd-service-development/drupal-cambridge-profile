@@ -1,6 +1,13 @@
 Changelog
 =========
 
+7.x-1.7.4
+
+20 January 2017
+
+Added [Media CKEditor 1.0-alpha2] (https://www.drupal.org/project/media_ckeditor/releases/7.x-1.0-alpha2).
+
+
 7.x-1.7.3
 
 19 January 2017

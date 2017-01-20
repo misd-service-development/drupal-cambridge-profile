@@ -1,6 +1,13 @@
 Changelog
 =========
 
+7.x-1.7.4
+
+20 January 2017
+
+No changes. Changes in this release are only in the full version of the Profile.
+
+
 7.x-1.7.3
 
 19 January 2017
