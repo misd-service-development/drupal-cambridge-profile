@@ -7,7 +7,7 @@ defaults[projects][subdir] = "contrib"
 
 projects[cambridge_theme][type] = "theme"
 projects[cambridge_theme][download][type] = "file"
-projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.5.tar.gz"
+projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.6.tar.gz"
 projects[cambridge_theme][subdir] = ""
 
 ; contrib

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+7.x-1.7.5
+
+25 April 2017
+
+Upgraded Cambridge Theme to [1.6] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.6).
+
+
 7.x-1.7.4
 
 20 January 2017
