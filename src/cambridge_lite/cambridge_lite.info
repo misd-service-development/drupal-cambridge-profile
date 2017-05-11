@@ -1,6 +1,6 @@
 name = "University of Cambridge (lite)"
 description = "Install the core University of Cambridge features."
-version = 7.x-1.7.6
+version = 7.x-1.8-dev
 core = 7.x
 
 ; core
