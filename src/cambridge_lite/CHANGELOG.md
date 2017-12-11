@@ -1,6 +1,16 @@
 Changelog
 =========
 
+7.x-1.8
+
+22 May 2017
+
+Upgraded Theme to [1.8] (https://github.com/misd-service-development/drupal-cambridge-theme/)
+
+Upgraded Chaos Tools Suite to [1.12] (https://www.drupal.org/project/ctools/releases/7.x-1.12)
+Upgraded Token to [1.7] (https://www.drupal.org/project/token/releases/7.x-1.7)
+Upgraded Views to [3.16] (https://www.drupal.org/project/views/releases/7.x-3.16)
+
 7.x-1.7.6
 
 10 May 2017

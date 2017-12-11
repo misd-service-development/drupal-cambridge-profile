@@ -7,12 +7,12 @@ defaults[projects][subdir] = "contrib"
 
 projects[cambridge_theme][type] = "theme"
 projects[cambridge_theme][download][type] = "file"
-projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.7.tar.gz"
+projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.8.tar.gz"
 projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
-projects[ctools] = "1.11"
+projects[ctools] = "1.12"
 projects[features][version] = "2.10"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
@@ -31,8 +31,8 @@ projects[raven][type] = "module"
 projects[raven][download][type] = "file"
 projects[raven][download][url] = "https://github.com/misd-service-development/drupal-raven/archive/7.x-1.3.tar.gz"
 projects[raven][patch][] = "https://github.com/misd-service-development/drupal-raven/commit/cfff4cbf50a03ec3806da4a9ce11c29773fbc0eb.patch"
-projects[token] = "1.6"
-projects[views] = "3.14"
+projects[token] = "1.7"
+projects[views] = "3.16"
 
 ; features
 

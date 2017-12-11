@@ -1,6 +1,40 @@
 Changelog
 =========
 
+7.x-1.8
+
+22 May 2017
+
+Upgraded Auto Entity Label to [1.4] https://www.drupal.org/project/auto_entitylabel/releases/7.x-1.4
+Upgraded Chaos Tools Suite to [1.12] (https://www.drupal.org/project/ctools/releases/7.x-1.12)
+Upgraded CK Editor to [1.18] (https://www.drupal.org/project/ckeditor/releases/7.x-1.18)
+Upgraded Date to [2.10] (https://www.drupal.org/project/date/releases/7.x-2.10)
+Upgraded Diff to [3.3] (https://www.drupal.org/project/diff/releases/7.x-3.3)
+Upgraded Easy Breadcrumb to [2.13] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.13)
+Upgraded Entity Reference to [1.4] (https://www.drupal.org/project/entityreference/releases/7.x-1.4)
+Upgraded Feeds to [2.0-beta3] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta3)
+Upgraded Field Collection to [1.0-beta11] (https://www.drupal.org/project/field_collection/releases/7.x-1.0-beta11)
+Upgraded Hierarchical Select to [3.0-beta8] (https://www.drupal.org/project/hierarchical_select/releases/7.x-3.0-beta8)
+Upgraded ImageAPI Optimize to [1.3] (https://www.drupal.org/project/imageapi_optimize/releases/7.x-1.3)
+Upgraded Imagecache External to [2.2] (https://www.drupal.org/project/imagecache_external/releases/7.x-2.2)
+Upgraded Memcache to [1.6] (https://www.drupal.org/project/memcache/releases/7.x-1.6)
+Upgraded Menu Trail By Path [3.3] (https://www.drupal.org/project/menu_trail_by_path/releases/7.x-3.0)
+Upgraded Metatag to [1.21] (https://www.drupal.org/project/metatag/releases/7.x-1.21)
+Upgraded Module Filter to [2.1] (https://www.drupal.org/project/module_filter/releases/7.x-2.1)
+Upgraded Restful Web Services to [2.7] (https://www.drupal.org/project/restws/releases/7.x-2.7)
+Upgraded Rules to [2.10] (https://www.drupal.org/project/rules/releases/7.x-2.10)
+Upgraded Search API to [1.22] (https://www.drupal.org/project/search_api/releases/7.x-1.22)
+Upgraded Search API Database Search to [1.6] (https://www.drupal.org/project/search_api_db/releases/7.x-1.6)
+Upgraded Synonyms to [1.6] (https://www.drupal.org/project/synonyms/releases/7.x-1.6)
+Upgraded Term Merge to [1.4] (https://www.drupal.org/project/term_merge/releases/7.x-1.4)
+Upgraded Token to [1.7] (https://www.drupal.org/project/token/releases/7.x-1.7)
+Upgraded Universally Unique IDentifier to [1.0] (https://www.drupal.org/project/uuid/releases/7.x-1.0)
+Upgraded Views to [3.16] (https://www.drupal.org/project/views/releases/7.x-3.16)
+Upgraded Views Bulk Operations to [3.4] (https://www.drupal.org/project/views_bulk_operations/releases/7.x-3.4)
+Upgraded Views Data Export to [3.2] (https://www.drupal.org/project/views_data_export/releases/7.x-3.2)
+Upgraded Workbench Access to [1.5] (https://www.drupal.org/project/workbench_access/releases/7.x-1.5)
+Upgraded Webform to [3.27] (https://www.drupal.org/project/webform/releases/7.x-3.27)
+
 7.x-1.7.6
 
 10 May 2017
