@@ -116,17 +116,12 @@ projects[webform_conditional] = "1.2"
 projects[workbench] = "1.2"
 projects[workbench_access] = "1.5"
 projects[workbench_media] = "1.1"
-
 projects[workbench_moderation][type] = "module"
 projects[workbench_moderation][download][type] = "file"
 projects[workbench_moderation][download][url] = "https://github.com/JeebsUK/drupal-workbench-moderation/archive/1.4.tar.gz"
 projects[workbench_moderation][subdir] = "contrib"
-
-
-
-
-
 projects[xmlsitemap] = "2.3"
+
 
 ; features
 
