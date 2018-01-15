@@ -7,6 +7,14 @@ Changelog
 
 Upgraded Imagecrop to [1.x-dev] 
 
+Added Classy Paragraphs [1.0] (https://ftp.drupal.org/files/projects/classy_paragraphs-7.x-1.0.zip)
+Added Display Suite [2.14] (https://ftp.drupal.org/files/projects/ds-7.x-2.14.zip)
+Added File Entity [2.15] (https://ftp.drupal.org/files/projects/file_entity-7.x-2.15.zip)
+Added Font Awesome [2.7] (https://ftp.drupal.org/files/projects/fontawesome-7.x-2.7.zip)
+Added Paragraphs [1.0-rc5] (https://ftp.drupal.org/files/projects/paragraphs-7.x-1.0-rc5.zip)
+Added String Overrides [1.8] (https://ftp.drupal.org/files/projects/stringoverrides-7.x-1.8.zip)
+Added Views Field View [1.2] (https://ftp.drupal.org/files/projects/views_field_view-7.x-1.2.zip)
+
 Upgraded Easy Breadcrumb to [2.14] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.14)
 Upgraded Entity Reference to [1.5] (https://www.drupal.org/project/entityreference/releases/7.x-1.5)
 Upgraded Environment Indicator to [2.9] https://www.drupal.org/project/environment_indicator/releases/7.x-2.9
@@ -14,7 +22,9 @@ Upgraded Feeds to [2.0-beta4] (https://www.drupal.org/project/feeds/releases/7.x
 Upgraded Field Group to [1.6] (https://www.drupal.org/project/field_group/releases/7.x-1.6)
 Upgraded Google Analaytics to [2.4] (https://www.drupal.org/project/google_analytics/releases/7.x-2.4)
 Upgraded Media to [2.14] (https://www.drupal.org/project/media/releases/7.x-2.14)
+Upgraded Media CKEditor to [2.5] (https://www.drupal.org/project/media_ckeditor/releases/7.x-2.5)
 Upgraded Media: Flickr to [2.0-alpha5] (https://www.drupal.org/project/media_flickr/releases/7.x-2.0-alpha5)
+Upgraded Media: Soundcloud to [2.1] (https://www.drupal.org/project/media_soundcloud/releases/7.x-2.1)
 Upgraded Media: Vimeo to [2.1] (https://www.drupal.org/project/media_vimeo/releases/7.x-2.1)
 Upgraded Media: YouTube to [3.6] (https://www.drupal.org/project/media_youtube/releases/7.x-3.6)
 Upgraded Multiselect to [1.13] (https://www.drupal.org/project/multiselect/releases/7.x-1.13)
