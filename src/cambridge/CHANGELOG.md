@@ -5,7 +5,8 @@ Changelog
 
 11 January 2018
 
-Upgraded Imagecrop to [1.x-dev] 
+Upgraded Imagecrop to [1.x-dev]
+Upgraded Cambridge Theme to [1.9] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/download/7.x-1.9/drupal-cambridge-theme.zip) 
 
 Added Classy Paragraphs [1.0] (https://ftp.drupal.org/files/projects/classy_paragraphs-7.x-1.0.zip)
 Added Display Suite [2.14] (https://ftp.drupal.org/files/projects/ds-7.x-2.14.zip)
@@ -14,6 +15,7 @@ Added Font Awesome [2.7] (https://ftp.drupal.org/files/projects/fontawesome-7.x-
 Added Paragraphs [1.0-rc5] (https://ftp.drupal.org/files/projects/paragraphs-7.x-1.0-rc5.zip)
 Added String Overrides [1.8] (https://ftp.drupal.org/files/projects/stringoverrides-7.x-1.8.zip)
 Added Views Field View [1.2] (https://ftp.drupal.org/files/projects/views_field_view-7.x-1.2.zip)
+Added Webform Submissions Bulk Delete [1.2] (https://ftp.drupal.org/files/projects/webform_submissions_bulk_delete-7.x-1.2.zip)
 
 Upgraded Easy Breadcrumb to [2.14] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.14)
 Upgraded Entity Reference to [1.5] (https://www.drupal.org/project/entityreference/releases/7.x-1.5)
