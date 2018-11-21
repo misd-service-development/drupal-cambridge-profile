@@ -1,6 +1,48 @@
 Changelog
 =========
 
+7.x-1.8.1
+
+5 October 2018
+
+Upgraded Advanced Help to [1.5] (https://www.drupal.org/project/advanced_help/releases/7.x-1.5)
+Upgraded Chaos Tools Suite to [1.14] (https://www.drupal.org/project/ctools/releases/7.x-1.14)
+Upgraded Crazy Egg to [1.1] (https://www.drupal.org/project/crazyegg/releases/7.x-1.1)
+Upgraded Devel to [1.6] (https://www.drupal.org/project/devel/releases/7.x-1.6)
+Upgraded Diff to [3.4] (https://www.drupal.org/project/diff/releases/7.x-3.4)
+Upgraded Easy Breadcrumb to [2.15] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.15)
+Upgraded Entity API to [1.9] (https://www.drupal.org/project/entity/releases/7.x-1.9)
+Upgraded Entity Reference to [1.5] (https://www.drupal.org/project/entityreference/releases/7.x-1.5)
+Upgraded Environment Indicator to [2.9] (https://www.drupal.org/project/environment_indicator/releases/7.x-2.9) - 2.8 has a patch - need to check if it will still apply or if it is not needed anymore.
+Upgraded Features to [2.11] (https://www.drupal.org/project/features/releases/7.x-2.11)
+Upgraded Field Group to [1.6] (https://www.drupal.org/project/field_group/releases/7.x-1.6)
+Upgraded Filefield Paths to [1.1] (https://www.drupal.org/project/filefield_paths/releases/7.x-1.1)
+Upgraded File Resumable Upload to [1.5] (https://www.drupal.org/project/file_resup/releases/7.x-1.5)
+Upgraded Filefield Sources to [1.11] (https://www.drupal.org/project/filefield_sources/releases/7.x-1.11)
+Upgrade Global Redirect to [1.6] (https://www.drupal.org/project/globalredirect/releases/7.x-1.6)
+Upgraded Google Analytics to [2.5] (https://www.drupal.org/project/google_analytics/releases/7.x-2.5) 
+Upgraded Hierarchical Select to [3.0-beta9] (https://www.drupal.org/project/hierarchical_select/releases/7.x-3.0-beta9)
+Upgraded Honeypot to [1.25] (https://www.drupal.org/project/honeypot/releases/7.x-1.25)
+Upgraded Job Scheduler to [2.0] (https://www.drupal.org/project/job_scheduler/releases/7.x-2.0)
+Upgraded Libraries API to [2.5] (https://www.drupal.org/project/libraries/releases/7.x-2.5)
+Upgraded Link to [1.5] (https://www.drupal.org/project/link/releases/7.x-1.5) 
+Upgraded Link Checker to [1.4] (https://www.drupal.org/project/linkchecker/releases/7.x-1.4)
+Upgraded Media to [1.7] (https://www.drupal.org/project/media/releases/7.x-1.7)
+Upgraded Media: Flickr to [2.0-alpha5] (https://www.drupal.org/project/media_flickr/releases/7.x-2.0-alpha5)
+Upgraded Media: Vimeo to [2.1] (https://www.drupal.org/project/media_vimeo/releases/7.x-2.1)
+Upgraded Media: YouTube to [3.7] (https://www.drupal.org/project/media_youtube/releases/7.x-3.7)
+Upgraded Metatag to [1.25] (https://www.drupal.org/project/metatag/releases/7.x-1.25)
+Upgraded Rules to [2.11] (https://www.drupal.org/project/rules/releases/7.x-2.11)
+Upgraded Search API to [1.25] (https://www.drupal.org/project/search_api/releases/7.x-1.22)
+Upgraded Search API Database Search to [1.7] (https://www.drupal.org/project/search_api_db/releases/7.x-1.7)
+Upgraded Select (or other) to [2.24] (https://www.drupal.org/project/select_or_other/releases/7.x-2.24)
+Upgraded Universally Unique IDentifier to [1.2] (https://www.drupal.org/project/uuid/releases/7.x-1.2)
+Upgraded Views to [3.20] (https://www.drupal.org/project/views/releases/7.x-3.20)
+Upgraded Views Bulk Operations to [3.5] (https://www.drupal.org/project/views_bulk_operations/releases/7.x-3.5)
+Upgraded XML sitemap to [2.6] (https://www.drupal.org/project/xmlsitemap/releases/7.x-2.6)
+
+
+
 7.x-1.8
 
 22 May 2017

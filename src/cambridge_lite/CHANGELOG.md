@@ -1,6 +1,14 @@
 Changelog
 =========
 
+7.x-1.9
+
+5 October 2018
+
+Upgraded Chaos Tools Suite to [1.14] (https://www.drupal.org/project/ctools/releases/7.x-1.14)
+Upgraded Libraries API to [2.5] (https://www.drupal.org/project/libraries/releases/7.x-2.5)
+Upgraded Views to [3.20] (https://www.drupal.org/project/views/releases/7.x-3.20)
+
 7.x-1.8
 
 22 May 2017
