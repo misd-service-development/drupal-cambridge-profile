@@ -1,6 +1,17 @@
 Changelog
 =========
 
+2.0
+
+21 November 2018
+
+Upgraded Theme to [1.10] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.9)
+
+Upgraded Features to [2.11] (https://www.drupal.org/project/features/releases/7.x-2.11)
+
+Upgraded Cambridge Carousel to [1.1] (https://github.com/misd-service-development/drupal-feature-carousel/releases/tag/7.x-1.1)
+Upgraded Cambridge Teasers to [1.5] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.5)
+
 7.x-1.8.1
 
 5 October 2018

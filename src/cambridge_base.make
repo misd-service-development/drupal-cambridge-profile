@@ -7,13 +7,13 @@ defaults[projects][subdir] = "contrib"
 
 projects[cambridge_theme][type] = "theme"
 projects[cambridge_theme][download][type] = "file"
-projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.8.tar.gz"
+projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.10.tar.gz"
 projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
 projects[ctools] = "1.14"
-projects[features][version] = "2.10"
+projects[features][version] = "2.11"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/raw/fccdba35efbd5ec106d8b92a8af98f71172e1870/imagecrop_query_string.patch"
@@ -40,7 +40,7 @@ projects[views] = "3.20"
 
 projects[cambridge_carousel][type] = "module"
 projects[cambridge_carousel][download][type] = "file"
-projects[cambridge_carousel][download][url] = "https://github.com/misd-service-development/drupal-feature-carousel/archive/7.x-1.0.tar.gz"
+projects[cambridge_carousel][download][url] = "https://github.com/misd-service-development/drupal-feature-carousel/archive/7.x-1.1.tar.gz"
 projects[cambridge_carousel][subdir] = "features"
 
 projects[cambridge_image_styles][type] = "module"
@@ -55,5 +55,5 @@ projects[cambridge_link][subdir] = "features"
 
 projects[cambridge_teasers][type] = "module"
 projects[cambridge_teasers][download][type] = "file"
-projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.4.tar.gz"
+projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.5.tar.gz"
 projects[cambridge_teasers][subdir] = "features"

@@ -1,6 +1,45 @@
 Changelog
 =========
 
+2.0
+
+21 November 2018
+
+Upgraded Theme to [1.10] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.9)
+
+Upgraded Context to [3.8] (https://www.drupal.org/project/context/releases/7.x-3.8)
+Upgraded Features to [2.11] (https://www.drupal.org/project/features/releases/7.x-2.11)
+Upgraded Media to [2.19] (https://www.drupal.org/project/media/releases/7.x-2.19)
+Upgraded Media CKEditor to [2.9] (https://www.drupal.org/project/media_ckeditor/releases/7.x-2.9)
+Upgraded Webform to [4.17] (https://www.drupal.org/project/webform/releases/7.x-4.17)
+
+Upgraded Cambridge Carousel to [1.1] (https://github.com/misd-service-development/drupal-feature-carousel/releases/tag/7.x-1.1)
+Upgraded Cambridge Teasers to [1.5] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.5)
+
+Added Better Formats [1.0-beta2] (https://www.drupal.org/project/better_formats/releases/7.x-1.0-beta2)
+Added Big Menu [1.3] (https://www.drupal.org/project/bigmenu/releases/7.x-1.3)
+Added Default Menu Link [1.3] (https://www.drupal.org/project/default_menu_link/releases/7.x-1.3)
+Added Display Suite [2.16] (https://www.drupal.org/project/ds/releases/7.x-2.16)
+Added Facet API Pretty Paths [1.4] (https://www.drupal.org/project/facetapi_pretty_paths/releases/7.x-1.4)
+Added File Entity [2.25] (https://www.drupal.org/project/file_entity/releases/7.x-2.25)
+Added Font Awesome [3.8] (https://www.drupal.org/project/fontawesome/releases/7.x-3.8)
+Added Image Link Formatter [1.1] (https://www.drupal.org/project/image_link_formatter/releases/7.x-1.1)
+Added Migrate [2.11] (https://www.drupal.org/project/migrate/releases/7.x-2.11)
+Added Migrate Extras [2.5] (https://www.drupal.org/project/migrate_extras/releases/7.x-2.5)
+Added Node Clone [1.0] (https://www.drupal.org/project/node_clone/releases/7.x-1.0)
+Added oEmbed [1.0-rc2] (https://www.drupal.org/project/oembed/releases/7.x-1.0-rc2)
+Added Paragraphs [1.0-rc5] (https://www.drupal.org/project/paragraphs/releases/7.x-1.0-rc5)
+Added Search API Sorts [1.7] (https://www.drupal.org/project/search_api_sorts/releases/7.x-1.7)
+Added String Overrides [1.8] (https://www.drupal.org/project/stringoverrides/releases/7.x-1.8)
+Added Taxonomy Display [1.1] (https://www.drupal.org/project/taxonomy_display/releases/7.x-1.1)
+Added Taxonomy Manager [1.0] (https://www.drupal.org/project/taxonomy_manager/releases/7.x-1.0)
+Added Taxonomy Menu [1.5] (https://www.drupal.org/project/taxonomy_menu/releases/7.x-1.5)
+Added TOC Node [1.7] (https://www.drupal.org/project/toc_node/releases/7.x-1.7)
+Added Views Field View [1.2] (https://www.drupal.org/project/views_field_view/releases/7.x-1.2)
+Added Views Menu Children Filter [1.0-rc3] (https://www.drupal.org/project/views_menu_children_filter/releases/7.x-1.0-rc3)
+
+Added Cambridge Jobs Feature (1.0) (https://github.com/misd-service-development/drupal-feature-jobs/releases/tag/7.x-1.0)
+
 7.x-1.8.1
 
 5 October 2018
