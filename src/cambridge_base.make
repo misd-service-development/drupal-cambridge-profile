@@ -12,15 +12,17 @@ projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
-projects[ctools] = "1.12"
+projects[ctools] = "1.14"
 projects[features][version] = "2.10"
 projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/raw/fccdba35efbd5ec106d8b92a8af98f71172e1870/imagecrop_query_string.patch"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6351355/raw/a34c91e4480aa7c4c0b79644e13aeeec914c1726/imagecrop_theme.patch"
-projects[libraries] = "2.3"
-projects[link][version] = "1.4"
-projects[link][patch][] = "https://www.drupal.org/files/issues/revert-url-validation-2666912.patch"
+projects[libraries] = "2.5"
+projects[link][version] = "1.5"
+;projects[link][patch][] = "https://www.drupal.org/files/issues/revert-url-validation-2666912.patch"
+;projects[link][patch][] = "https://www.drupal.org/files/issues/2018-08-10/link-revert_url_validation-2666912_2.patch"
+projects[link][patch][] = "https://raw.githubusercontent.com/misd-service-development/drupal-patches/master/link-revert_url_validation-2666912_2_modified.patch"
 
 projects[menu_block] = "2.7"
 projects[menu_firstchild][version] = "1.1"
@@ -32,7 +34,7 @@ projects[raven][download][type] = "file"
 projects[raven][download][url] = "https://github.com/misd-service-development/drupal-raven/archive/7.x-1.3.tar.gz"
 projects[raven][patch][] = "https://github.com/misd-service-development/drupal-raven/commit/cfff4cbf50a03ec3806da4a9ce11c29773fbc0eb.patch"
 projects[token] = "1.7"
-projects[views] = "3.18"
+projects[views] = "3.20"
 
 ; features
 
