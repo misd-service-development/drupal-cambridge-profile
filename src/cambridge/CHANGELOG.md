@@ -10,6 +10,11 @@ The following modules have been upgraded as a result of [Drupal SA-Core-2019-003
 Upgraded Link to [1.6] (https://www.drupal.org/project/link/releases/7.x-1.6)
 Upgraded Restful Web Services to [2.8] (https://www.drupal.org/project/restws/releases/7.x-2.8)
 
+The following modules have been removed due to no longer being compatible with current versions:
+
+Webform Conditional - This module is only compatible with Webform 3.x and we are now on 4.x
+Full notes on how to transition from 3.x to 4.x are listed underneath the list of module upgrades
+
 The following modules have other required security or maintenance upgrades:
 
 Upgraded Administration Menu to [3.0-rc6] (https://www.drupal.org/project/admin_menu/releases/7.x-3.0-rc6)
@@ -27,6 +32,16 @@ Upgraded Views Accordion to [1.2] (https://www.drupal.org/project/views_accordio
 Upgraded Workbench Access to [1.6] (https://www.drupal.org/project/workbench_access/releases/7.x-1.6)
 Upgraded Webform to [4.19] (https://www.drupal.org/project/webform/releases/7.x-4.19)
 
+If you are running Webform 3.x and intend to upgrade to this version of the Profile we recommend the following steps:
+
+Add Webform 4.x to your sites/all/modules (or wherever your local site modules folder is)
+Rebuild the registry so that Webform 4.x is acknowledged as the version being used.
+Run updatedb in Drush or update.php in the browser
+Disable Webform Conditional in /admin/modules.
+Uninstall Webform Condition in /admin/modules. 
+Replace your current version of the Profile with this version (2.1)
+Remove Webform from your local modules directory
+Rebuild the registry again - this should now have Drupal picking up Webform from the profile again.
 
 
 2.0
