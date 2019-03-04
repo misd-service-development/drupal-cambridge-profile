@@ -11,6 +11,8 @@ Upgraded Link to [1.6] (https://www.drupal.org/project/link/releases/7.x-1.6)
 
 The following modules have other required security or maintenance upgrades:
 
+Upgraded Theme to [1.11] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.11)
+
 Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
 Upgraded Menu Block to [2.8] (https://www.drupal.org/project/menu_block/releases/7.x-2.8)
 
@@ -23,7 +25,7 @@ Pathauto Persist
 
 21 November 2018
 
-Upgraded Theme to [1.10] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.9)
+Upgraded Theme to [1.10] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.10)
 
 Upgraded Features to [2.11] (https://www.drupal.org/project/features/releases/7.x-2.11)
 

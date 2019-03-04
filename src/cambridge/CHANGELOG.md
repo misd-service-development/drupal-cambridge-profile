@@ -18,6 +18,8 @@ Full notes on how to transition from 3.x to 4.x are listed underneath the list o
 
 The following modules have other required security or maintenance upgrades:
 
+Upgraded Theme to [1.11] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.11)
+
 Upgraded Administration Menu to [3.0-rc6] (https://www.drupal.org/project/admin_menu/releases/7.x-3.0-rc6)
 Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
 Upgraded Context to [3.10] (https://www.drupal.org/project/context/releases/7.x-3.10)
