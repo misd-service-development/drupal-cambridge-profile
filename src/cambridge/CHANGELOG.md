@@ -41,7 +41,7 @@ Add Webform 4.x to your sites/all/modules (or wherever your local site modules f
 Rebuild the registry so that Webform 4.x is acknowledged as the version being used.
 Run updatedb in Drush or update.php in the browser
 Disable Webform Conditional in /admin/modules.
-Uninstall Webform Condition in /admin/modules. 
+Uninstall Webform Conditional in /admin/modules. 
 Replace your current version of the Profile with this version (2.1)
 Remove Webform from your local modules directory
 Rebuild the registry again - this should now have Drupal picking up Webform from the profile again.
