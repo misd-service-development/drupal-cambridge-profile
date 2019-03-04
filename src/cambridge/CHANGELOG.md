@@ -12,6 +12,7 @@ Upgraded Restful Web Services to [2.8] (https://www.drupal.org/project/restws/re
 
 The following modules have been removed due to no longer being compatible with current versions:
 
+Pathauto Persist - This module is no longer needed after pathauto 7.x-1.3.
 Webform Conditional - This module is only compatible with Webform 3.x and we are now on 4.x
 Full notes on how to transition from 3.x to 4.x are listed underneath the list of module upgrades
 
@@ -19,7 +20,7 @@ The following modules have other required security or maintenance upgrades:
 
 Upgraded Administration Menu to [3.0-rc6] (https://www.drupal.org/project/admin_menu/releases/7.x-3.0-rc6)
 Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
-Upgraded Context to [3.9] (https://www.drupal.org/project/context/releases/7.x-3.9)
+Upgraded Context to [3.10] (https://www.drupal.org/project/context/releases/7.x-3.10)
 Upgraded Devel to [1.7] (https://www.drupal.org/project/devel/releases/7.x-1.7)
 Upgraded Field Collection to [1.0beta13] (https://www.drupal.org/project/field_collection/releases/7.x-1.0-beta13)
 Upgraded Google Analytics to [2.6] (https://www.drupal.org/project/google_analytics/releases/7.x-2.6)

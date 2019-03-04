@@ -14,6 +14,10 @@ The following modules have other required security or maintenance upgrades:
 Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
 Upgraded Menu Block to [2.8] (https://www.drupal.org/project/menu_block/releases/7.x-2.8)
 
+The following modules have been removed as they are no longer needed:
+
+Pathauto Persist
+
 
 2.0
 
