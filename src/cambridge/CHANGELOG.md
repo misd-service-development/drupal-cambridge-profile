@@ -1,6 +1,33 @@
 Changelog
 =========
 
+7.x-1.8.2
+
+The following modules have been upgraded as a result of [Drupal SA-Core-2019-003] (https://www.drupal.org/sa-core-2019-003)
+
+Upgraded Link to [1.6] (https://www.drupal.org/project/link/releases/7.x-1.6)
+Upgraded Restful Web Services to [2.8] (https://www.drupal.org/project/restws/releases/7.x-2.8)
+
+The following modules have other required security or maintenance upgrades:
+
+Upgraded Administration Menu to [3.0-rc6] (https://www.drupal.org/project/admin_menu/releases/7.x-3.0-rc6)
+Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
+Upgraded Context to [3.10] (https://www.drupal.org/project/context/releases/7.x-3.10)
+Upgraded Devel to [1.7] (https://www.drupal.org/project/devel/releases/7.x-1.7)
+Upgraded Features to [2.11] (https://www.drupal.org/project/features/releases/7.x-2.11)
+Upgraded Field Collection to [1.0beta13] (https://www.drupal.org/project/field_collection/releases/7.x-1.0-beta13)
+Upgraded Google Analytics to [2.6] (https://www.drupal.org/project/google_analytics/releases/7.x-2.6)
+Upgraded Media YouTube to [3.8] (https://www.drupal.org/project/media_youtube/releases/7.x-3.8)
+Upgraded Menu Block to [2.8] (https://www.drupal.org/project/menu_block/releases/7.x-2.8)
+Upgraded Rules to [2.12] (https://www.drupal.org/project/rules/releases/7.x-2.12)
+Upgraded Varnish to [1.9] (https://www.drupal.org/project/varnish/releases/7.x-1.9)
+Upgraded Views Accordion to [1.2] (https://www.drupal.org/project/views_accordion/releases/7.x-1.2)
+Upgraded Workbench Access to [1.6] (https://www.drupal.org/project/workbench_access/releases/7.x-1.6)
+
+The following modules have been removed as they are no longer needed:
+
+Pathauto Persist
+
 7.x-1.8.1
 
 5 October 2018
