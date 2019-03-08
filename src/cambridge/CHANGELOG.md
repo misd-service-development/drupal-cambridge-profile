@@ -8,6 +8,8 @@ The following modules have been upgraded as a result of [Drupal SA-Core-2019-003
 Upgraded Link to [1.6] (https://www.drupal.org/project/link/releases/7.x-1.6)
 Upgraded Restful Web Services to [2.8] (https://www.drupal.org/project/restws/releases/7.x-2.8)
 
+The Cambridge theme has been upgraded to [1.11] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.11)
+
 The following modules have other required security or maintenance upgrades:
 
 Upgraded Administration Menu to [3.0-rc6] (https://www.drupal.org/project/admin_menu/releases/7.x-3.0-rc6)

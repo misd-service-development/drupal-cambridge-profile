@@ -9,6 +9,8 @@ The following modules have been upgraded as a result of [Drupal SA-Core-2019-003
 
 Upgraded Link to [1.6] (https://www.drupal.org/project/link/releases/7.x-1.6)
 
+The Cambridge theme has been upgraded to [1.11] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.11)
+
 The following modules have other required security or maintenance upgrades:
 
 Upgraded Chaos Tools to [1.15] (https://ftp.drupal.org/files/projects/ctools-7.x-1.15.zip)
