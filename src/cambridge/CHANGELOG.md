@@ -1,6 +1,38 @@
 Changelog
 =========
 
+2.3
+
+4 April 2019
+
+The following modules have been upgraded for security reasons:
+
+Upgraded Module Filter to [2.2] (https://www.drupal.org/project/module_filter/releases/7.x-2.2)
+
+The following modules have maintenance or scheduled releases:
+
+Upgraded Cambridge Events to [2.0] (https://github.com/misd-service-development/drupal-feature-events/releases/tag/7.x-2.0)
+Upgraded Cambridge Teasers to [1.6] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.6)
+Upgraded Devel to [1.7] (https://www.drupal.org/project/devel/releases/7.x-1.7)
+Upgraded Easy Breadcrumb to [2.16] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.16)
+Upgraded Varnish to [1.9] (https://www.drupal.org/project/varnish/releases/7.x-1.9)
+Upgraded Views to [3.22] (https://www.drupal.org/project/views/releases/7.x-3.22)
+Upgraded Views Accordion to [1.6] (https://www.drupal.org/project/views_accordion/releases/7.x-1.6)
+
+
+2.2
+
+21 March 2019
+
+The following modules have been upgraded for security reasons:
+
+Upgraded Views to [3.21] (https://www.drupal.org/project/views/releases/7.x-3.21)
+
+The following modules have maintenance releases:
+
+Upgraded Search API to [1.26] (https://www.drupal.org/project/search_api/releases/7.x-1.26)
+Upgraded Views Accordion to [1.3] (https://www.drupal.org/project/views_accordion/releases/7.x-1.6)
+
 2.1
 
 25 February 2019

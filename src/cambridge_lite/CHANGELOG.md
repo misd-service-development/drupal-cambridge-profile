@@ -1,6 +1,25 @@
 Changelog
 =========
 
+2.3
+
+4 April 2019
+
+The following modules have maintenance or scheduled releases:
+
+Upgraded Cambridge Teasers to [1.6] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.6)
+Upgraded Views to [3.22] (https://www.drupal.org/project/views/releases/7.x-3.22)
+
+
+2.2
+
+21 March 2019
+
+The following modules have been upgraded for security reasons:
+
+Upgraded Views to [3.21] (https://www.drupal.org/project/views/releases/7.x-3.21)
+
+
 2.1
 
 25 February 2019
