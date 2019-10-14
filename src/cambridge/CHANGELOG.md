@@ -1,6 +1,43 @@
 Changelog
 =========
 
+2.4
+
+3 October 2019
+
+The following new modules have been added to the profile:
+
+Added Cambridge Download [1.10] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-7-features/drupal-feature-download/-/tags/1.10)
+Added Conditional Fields [3.0-alpha2] (https://www.drupal.org/project/conditional_fields/releases/7.x-3.0-alpha2)
+Added Form Element Layout [1.0-beta3] (https://www.drupal.org/project/fel/releases/7.x-1.0-beta3)
+Added Rules Once Per Day [1.3] (https://www.drupal.org/project/rules_onceperday/releases/7.x-1.3)
+Added Scanner [1.1] (https://www.drupal.org/project/scanner/releases/7.x-1.1)
+Added Webform Submissions Bulk Delete [1.2] (https://www.drupal.org/project/webform_submissions_bulk_delete)
+
+The following modules have been upgraded for security reasons:
+
+Upgraded Easy Breadcrumb to [2.17] (https://www.drupal.org/project/easy_breadcrumb/releases/7.x-2.17)
+Upgraded UUID to [1.3] (https://www.drupal.org/project/uuid/releases/7.x-1.3)
+
+The Raven module has been upgraded to [1.6.2] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/raven/-/tags/v1.6.2).
+This new release will allow logins to Drupal sites to be restricted to members of a particular lookup group and/or lookup institution. 
+The new release will also update a user's "realname" in Drupal based on the value from lookup - if it has not already been filled in on the Drupal site.
+There is also a new module - Simple Lookup [1.1] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/simple_lookup/-/tags/v1.1)
+The simple lookup module is a dependency for the new version of the Raven module.
+
+The following other modules have maintenance or scheduled releases:
+
+Upgraded Cambridge Events to [2.3] (https://github.com/misd-service-development/drupal-feature-events/releases/tag/7.x-2.3)
+Upgraded Facet API to [1.6] (https://www.drupal.org/project/facetapi/releases/7.x-1.6)
+Upgraded Field Collection to [1.1] (https://www.drupal.org/project/field_collection/releases/7.x-1.1)
+Upgraded File Entity to [2.26] (https://www.drupal.org/project/file_entity/releases/7.x-2.26)
+Upgraded Media to [2.23] (https://www.drupal.org/project/media/releases/7.x-2.23)
+Upgraded Media CKEditor to [2.10] (https://www.drupal.org/project/media_ckeditor/releases/7.x-2.10)
+Upgraded Role Delegation to [1.2] (https://www.drupal.org/project/role_delegation/releases/7.x-1.2)
+Upgraded Views to [3.23] (https://www.drupal.org/project/views/releases/7.x-3.23)
+Upgraded Webform to [4.20] (https://www.drupal.org/project/webform/releases/7.x-4.20)
+
+
 2.3
 
 4 April 2019

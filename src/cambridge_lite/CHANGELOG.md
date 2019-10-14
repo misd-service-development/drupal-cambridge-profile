@@ -1,6 +1,22 @@
 Changelog
 =========
 
+2.4
+
+3 October 2019
+
+The Raven module has been upgraded to [1.6.2] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/raven/-/tags/v1.6.2).
+This new release will allow logins to Drupal sites to be restricted to members of a particular lookup group and/or lookup institution. 
+The new release will also update a user's "realname" in Drupal based on the value from lookup - if it has not already been filled in on the Drupal site.
+There is also a new module - Simple Lookup [1.1] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/simple_lookup/-/tags/v1.1)
+The simple lookup module is a dependency for the new version of the Raven module.
+
+
+The following other modules have maintenance or scheduled releases:
+
+Upgraded Views to [3.23] (https://www.drupal.org/project/views/releases/7.x-3.23)
+
+
 2.3
 
 4 April 2019

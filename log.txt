@@ -1,0 +1,266 @@
+Beginning to build                                                   [1;32;40m[1m[ok][0m
+/home/jamie/Web/Projects/JeebsUK/drupal-cambridge-profile/src/cambridge/cambridge.make.
+cambridge_theme downloaded from                                      [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.11.tar.gz.
+Project ctools contains 10 modules: ctools_custom_content, views_content, ctools_plugin_example, page_manager, bulk_export, ctools_access_ruleset, ctools_ajax_sample, stylizer, term_depth, ctools.
+ctools-7.x-1.15 downloaded.                                          [1;32;40m[1m[ok][0m
+features-7.x-2.11 downloaded.                                        [1;32;40m[1m[ok][0m
+imagecrop-7.x-1.0-rc3 downloaded.                                    [1;32;40m[1m[ok][0m
+imagecrop patched with imagecrop_query_string.patch.                 [1;32;40m[1m[ok][0m
+imagecrop patched with imagecrop_theme.patch.                        [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for imagecrop                             [1;32;40m[1m[ok][0m
+libraries-7.x-2.5 downloaded.                                        [1;32;40m[1m[ok][0m
+link-7.x-1.6 downloaded.                                             [1;32;40m[1m[ok][0m
+Project menu_block contains 2 modules: menu_block, menu_block_export.
+menu_block-7.x-2.8 downloaded.                                       [1;32;40m[1m[ok][0m
+menu_firstchild-7.x-1.1 downloaded.                                  [1;32;40m[1m[ok][0m
+menu_firstchild patched with pathauto-token-2295059-1.patch.         [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for menu_firstchild                       [1;32;40m[1m[ok][0m
+pathauto-7.x-1.3 downloaded.                                         [1;32;40m[1m[ok][0m
+raven downloaded from                                                [1;32;40m[1m[ok][0m
+https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/raven/-/archive/v1.6/raven-v1.6.tar.gz.
+token-7.x-1.7 downloaded.                                            [1;32;40m[1m[ok][0m
+Project views contains 2 modules: views, views_ui.
+views-7.x-3.23 downloaded.                                           [1;32;40m[1m[ok][0m
+cambridge_carousel downloaded from                                   [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-carousel/archive/7.x-1.1.tar.gz.
+cambridge_image_styles downloaded from                               [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-image-styles/archive/7.x-1.1.tar.gz.
+cambridge_link downloaded from                                       [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-link/archive/7.x-1.0.tar.gz.
+cambridge_teasers downloaded from                                    [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.6.tar.gz.
+simple_lookup downloaded from                                        [1;32;40m[1m[ok][0m
+https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/simple_lookup/-/archive/v1.1/simple_lookup-v1.1.tar.gz.
+Project admin_menu contains 3 modules: admin_devel, admin_menu_toolbar, admin_menu.
+admin_menu-7.x-3.0-rc6 downloaded.                                   [1;32;40m[1m[ok][0m
+admin_views-7.x-1.6 downloaded.                                      [1;32;40m[1m[ok][0m
+Project advanced_help contains 2 modules: help_example, advanced_help.
+advanced_help-7.x-1.5 downloaded.                                    [1;32;40m[1m[ok][0m
+auto_entitylabel-7.x-1.4 downloaded.                                 [1;32;40m[1m[ok][0m
+better_formats-7.x-1.0-beta2 downloaded.                             [1;32;40m[1m[ok][0m
+bigmenu-7.x-1.3 downloaded.                                          [1;32;40m[1m[ok][0m
+block_titlelink-7.x-1.5 downloaded.                                  [1;32;40m[1m[ok][0m
+calendar-7.x-3.5 downloaded.                                         [1;32;40m[1m[ok][0m
+ckeditor-7.x-1.18 downloaded.                                        [1;32;40m[1m[ok][0m
+ckeditor_link-7.x-2.4 downloaded.                                    [1;32;40m[1m[ok][0m
+conditional_fields-7.x-3.0-alpha2 downloaded.                        [1;32;40m[1m[ok][0m
+Project context contains 3 modules: context_ui, context_layouts, context.
+context-7.x-3.10 downloaded.                                         [1;32;40m[1m[ok][0m
+crazyegg-7.x-1.1 downloaded.                                         [1;32;40m[1m[ok][0m
+css_injector-7.x-1.10 downloaded.                                    [1;32;40m[1m[ok][0m
+Project date contains 11 modules: date_all_day, date_repeat, date_tools, date_views, date_api, date_context, date_repeat_field, date_popup, date_migrate_example, date_migrate, date.
+date-7.x-2.10 downloaded.                                            [1;32;40m[1m[ok][0m
+default_menu_link-7.x-1.3 downloaded.                                [1;32;40m[1m[ok][0m
+Project delta contains 4 modules: delta_color, delta_ui, delta_blocks, delta.
+delta-7.x-3.0-beta11 downloaded.                                     [1;32;40m[1m[ok][0m
+Project devel contains 3 modules: devel_generate, devel, devel_node_access.
+devel-7.x-1.7 downloaded.                                            [1;32;40m[1m[ok][0m
+diff-7.x-3.4 downloaded.                                             [1;32;40m[1m[ok][0m
+Project disqus contains 2 modules: disqus_ds, disqus.
+disqus-7.x-1.12 downloaded.                                          [1;32;40m[1m[ok][0m
+Project ds contains 7 modules: ds_search, ds_forms, ds_ui, ds_extras, ds_devel, ds_format, ds.
+ds-7.x-2.16 downloaded.                                              [1;32;40m[1m[ok][0m
+easy_breadcrumb-7.x-2.17 downloaded.                                 [1;32;40m[1m[ok][0m
+email-7.x-1.3 downloaded.                                            [1;32;40m[1m[ok][0m
+Project entity contains 2 modules: entity, entity_token.
+entity-7.x-1.9 downloaded.                                           [1;32;40m[1m[ok][0m
+Project entityreference contains 2 modules: entityreference_behavior_example, entityreference.
+entityreference-7.x-1.5 downloaded.                                  [1;32;40m[1m[ok][0m
+Project environment_indicator contains 2 modules: environment_indicator_variable, environment_indicator.
+environment_indicator-7.x-2.9 downloaded.                            [1;32;40m[1m[ok][0m
+environment_indicator patched with z-index-2331315-1.patch.          [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for environment_indicator                 [1;32;40m[1m[ok][0m
+expire-7.x-1.0-beta1 downloaded.                                     [1;32;40m[1m[ok][0m
+expire patched with patch.                                           [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for expire                                [1;32;40m[1m[ok][0m
+Project facetapi contains 2 modules: current_search, facetapi.
+facetapi-7.x-1.6 downloaded.                                         [1;32;40m[1m[ok][0m
+facetapi_pretty_paths-7.x-1.4 downloaded.                            [1;32;40m[1m[ok][0m
+fancybox-7.x-2.0-beta6 downloaded.                                   [1;32;40m[1m[ok][0m
+fancybox patched with fancybox_jquery.patch.                         [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for fancybox                              [1;32;40m[1m[ok][0m
+Project features_extra contains 4 modules: fe_nodequeue, fe_profile, fe_date, fe_block.
+features_extra-7.x-1.0 downloaded.                                   [1;32;40m[1m[ok][0m
+Project feeds contains 4 modules: feeds_ui, feeds_news, feeds_import, feeds.
+feeds-7.x-2.0-beta3 downloaded.                                      [1;32;40m[1m[ok][0m
+feeds_entity_processor-7.x-1.x-dev downloaded.                       [1;32;40m[1m[ok][0m
+Project feeds_tamper contains 2 modules: feeds_tamper_ui, feeds_tamper.
+feeds_tamper-7.x-1.1 downloaded.                                     [1;32;40m[1m[ok][0m
+feeds_xpathparser-7.x-1.1 downloaded.                                [1;32;40m[1m[ok][0m
+Project fel contains 3 modules: fel_fields, fel_webform, fel.
+fel-7.x-1.0-beta3 downloaded.                                        [1;32;40m[1m[ok][0m
+field_collection-7.x-1.1 downloaded.                                 [1;32;40m[1m[ok][0m
+field_display_label-7.x-1.4 downloaded.                              [1;32;40m[1m[ok][0m
+field_group-7.x-1.6 downloaded.                                      [1;32;40m[1m[ok][0m
+field_permissions-7.x-1.0 downloaded.                                [1;32;40m[1m[ok][0m
+Project field_validation contains 4 modules: property_validation, field_validation_extras, field_validation_ui, field_validation.
+field_validation-7.x-2.6 downloaded.                                 [1;32;40m[1m[ok][0m
+file_entity-7.x-2.26 downloaded.                                     [1;32;40m[1m[ok][0m
+file_resup-7.x-1.5 downloaded.                                       [1;32;40m[1m[ok][0m
+filefield_paths-7.x-1.1 downloaded.                                  [1;32;40m[1m[ok][0m
+fontawesome-7.x-3.8 downloaded.                                      [1;32;40m[1m[ok][0m
+filefield_sources-7.x-1.11 downloaded.                               [1;32;40m[1m[ok][0m
+globalredirect-7.x-1.6 downloaded.                                   [1;32;40m[1m[ok][0m
+Project google_analytics contains a module named googleanalytics.
+google_analytics-7.x-2.6 downloaded.                                 [1;32;40m[1m[ok][0m
+Project hierarchical_select contains 6 modules: hser, hs_taxonomy, hs_smallhierarchy, hs_menu, hs_flatlist, hierarchical_select.
+hierarchical_select-7.x-3.0-beta9 downloaded.                        [1;32;40m[1m[ok][0m
+honeypot-7.x-1.25 downloaded.                                        [1;32;40m[1m[ok][0m
+image_link_formatter-7.x-1.1 downloaded.                             [1;32;40m[1m[ok][0m
+imageapi_optimize-7.x-1.3 downloaded.                                [1;32;40m[1m[ok][0m
+imagecache_external-7.x-2.2 downloaded.                              [1;32;40m[1m[ok][0m
+Project job_scheduler contains 2 modules: job_scheduler_trigger, job_scheduler.
+job_scheduler-7.x-2.0 downloaded.                                    [1;32;40m[1m[ok][0m
+linkchecker-7.x-1.4 downloaded.                                      [1;32;40m[1m[ok][0m
+markup-7.x-1.2 downloaded.                                           [1;32;40m[1m[ok][0m
+Project media contains 7 modules: mediafield, media_wysiwyg, media_bulk_upload, media_migrate_file_types, media_internet, media_wysiwyg_view_mode, media.
+media-7.x-2.21 downloaded.                                           [1;32;40m[1m[ok][0m
+media_ckeditor-7.x-2.10 downloaded.                                  [1;32;40m[1m[ok][0m
+media_flickr-7.x-2.0-alpha5 downloaded.                              [1;32;40m[1m[ok][0m
+media_soundcloud-7.x-1.0 downloaded.                                 [1;32;40m[1m[ok][0m
+media_vimeo-7.x-2.1 downloaded.                                      [1;32;40m[1m[ok][0m
+media_youtube-7.x-3.8 downloaded.                                    [1;32;40m[1m[ok][0m
+Project memcache contains 2 modules: memcache_admin, memcache.
+memcache-7.x-1.6 downloaded.                                         [1;32;40m[1m[ok][0m
+menu_admin_per_menu-7.x-1.1 downloaded.                              [1;32;40m[1m[ok][0m
+menu_force-7.x-1.2 downloaded.                                       [1;32;40m[1m[ok][0m
+menu_trail_by_path-7.x-3.3 downloaded.                               [1;32;40m[1m[ok][0m
+menu_view_unpublished-7.x-1.0-beta3 downloaded.                      [1;32;40m[1m[ok][0m
+Project metatag contains 19 modules: metatag_mobile, metatag_panels, metatag_google_cse, metatag_dc_advanced, metatag_google_plus, metatag_favicons, metatag_views, metatag_context, metatag_twitter_cards, metatag_importer, metatag_dc, metatag_app_links, metatag_opengraph_products, metatag_opengraph, metatag_hreflang, metatag_facebook, metatag_devel, metatag_verification, metatag.
+metatag-7.x-1.25 downloaded.                                         [1;32;40m[1m[ok][0m
+Project migrate contains 5 modules: migrate_ui, migrate_example_oracle, migrate_example, migrate_example_baseball, migrate.
+migrate-7.x-2.11 downloaded.                                         [1;32;40m[1m[ok][0m
+Project migrate_extras contains 4 modules: migrate_extras_profile2, migrate_extras_media, migrate_extras_pathauto, migrate_extras.
+migrate_extras-7.x-2.5 downloaded.                                   [1;32;40m[1m[ok][0m
+module_filter-7.x-2.2 downloaded.                                    [1;32;40m[1m[ok][0m
+Project multiselect contains 2 modules: multiselect_fapi_example, multiselect.
+multiselect-7.x-1.13 downloaded.                                     [1;32;40m[1m[ok][0m
+Project node_clone contains a module named clone.
+node_clone-7.x-1.0 downloaded.                                       [1;32;40m[1m[ok][0m
+Project nodequeue contains 4 modules: nodequeue_service, nodequeue, smartqueue, nodequeue_generate.
+nodequeue-7.x-2.1 downloaded.                                        [1;32;40m[1m[ok][0m
+Project oembed contains 7 modules: media_oembed, oembedcore, oembedfield, oembedembedly, oembedprovider_embed, oembedprovider, oembed.
+oembed-7.x-1.0-rc2 downloaded.                                       [1;32;40m[1m[ok][0m
+Project paragraphs contains 3 modules: paragraphs_i18n, paragraphs_bundle_permissions, paragraphs.
+paragraphs-7.x-1.0-rc5 downloaded.                                   [1;32;40m[1m[ok][0m
+pathologic-7.x-2.12 downloaded.                                      [1;32;40m[1m[ok][0m
+persistent_menu_items-7.x-1.0 downloaded.                            [1;32;40m[1m[ok][0m
+publishcontent-7.x-1.4 downloaded.                                   [1;32;40m[1m[ok][0m
+realname-7.x-1.4 downloaded.                                         [1;32;40m[1m[ok][0m
+realname patched with                                                [1;32;40m[1m[ok][0m
+realname-fix-user-view-warning-2782711-4-D7.patch.
+Generated PATCHES.txt file for realname                              [1;32;40m[1m[ok][0m
+redirect-7.x-1.0-rc3 downloaded.                                     [1;32;40m[1m[ok][0m
+Project restws contains 2 modules: restws_basic_auth, restws.
+restws-7.x-2.8 downloaded.                                           [1;32;40m[1m[ok][0m
+role_delegation-7.x-1.2 downloaded.                                  [1;32;40m[1m[ok][0m
+Project rules contains 4 modules: rules_i18n, rules_scheduler, rules_admin, rules.
+rules-7.x-2.12 downloaded.                                           [1;32;40m[1m[ok][0m
+rules_onceperday-7.x-1.3 downloaded.                                 [1;32;40m[1m[ok][0m
+scanner-7.x-1.1 downloaded.                                          [1;32;40m[1m[ok][0m
+scheduler-7.x-1.5 downloaded.                                        [1;32;40m[1m[ok][0m
+Project search_api contains 3 modules: search_api_views, search_api_facetapi, search_api.
+search_api-7.x-1.26 downloaded.                                      [1;32;40m[1m[ok][0m
+search_api_db-7.x-1.7 downloaded.                                    [1;32;40m[1m[ok][0m
+search_api_sorts-7.x-1.7 downloaded.                                 [1;32;40m[1m[ok][0m
+select_or_other-7.x-2.24 downloaded.                                 [1;32;40m[1m[ok][0m
+sharethis-7.x-2.13 downloaded.                                       [1;32;40m[1m[ok][0m
+similarterms-7.x-2.6 downloaded.                                     [1;32;40m[1m[ok][0m
+smart_trim-7.x-1.5 downloaded.                                       [1;32;40m[1m[ok][0m
+smart_trim patched with                                              [1;32;40m[1m[ok][0m
+smart_trim_remove_punctuation_from_end_of_truncated_output-2169583-7.patch.
+Generated PATCHES.txt file for smart_trim                            [1;32;40m[1m[ok][0m
+Project stringoverrides contains 2 modules: stringoverrides, stringoverrides_migrate.
+stringoverrides-7.x-1.8 downloaded.                                  [1;32;40m[1m[ok][0m
+strongarm-7.x-2.0 downloaded.                                        [1;32;40m[1m[ok][0m
+ Project synonyms contains 5 modules: synonyms_provider_field, synonyms_commerce, synonyms_provider_property, synonyms_search, synonyms.
+synonyms-7.x-1.6 downloaded.                                         [1;32;40m[1m[ok][0m
+Project tac_lite contains 2 modules: tac_lite, tac_lite_create.
+tac_lite-7.x-1.2 downloaded.                                         [1;32;40m[1m[ok][0m
+taxonomy_display-7.x-1.1 downloaded.                                 [1;32;40m[1m[ok][0m
+taxonomy_manager-7.x-1.0 downloaded.                                 [1;32;40m[1m[ok][0m
+taxonomy_menu-7.x-1.5 downloaded.                                    [1;32;40m[1m[ok][0m
+telephone-7.x-1.0-alpha1 downloaded.                                 [1;32;40m[1m[ok][0m
+term_merge-7.x-1.4 downloaded.                                       [1;32;40m[1m[ok][0m
+toc_node-7.x-1.7 downloaded.                                         [1;32;40m[1m[ok][0m
+transliteration-7.x-3.2 downloaded.                                  [1;32;40m[1m[ok][0m
+twitter_block-7.x-2.3 downloaded.                                    [1;32;40m[1m[ok][0m
+ Project uuid contains 4 modules: uuid_path, uuid_services_example, uuid_services, uuid.
+uuid-7.x-1.3 downloaded.                                             [1;32;40m[1m[ok][0m
+varnish-7.x-1.9 downloaded.                                          [1;32;40m[1m[ok][0m
+view_unpublished-7.x-1.2 downloaded.                                 [1;32;40m[1m[ok][0m
+views_accordion-7.x-1.6 downloaded.                                  [1;32;40m[1m[ok][0m
+Project views_bulk_operations contains 2 modules: actions_permissions, views_bulk_operations.
+views_bulk_operations-7.x-3.5 downloaded.                            [1;32;40m[1m[ok][0m
+views_data_export-7.x-3.2 downloaded.                                [1;32;40m[1m[ok][0m
+views_field_view-7.x-1.2 downloaded.                                 [1;32;40m[1m[ok][0m
+views_menu_children_filter-7.x-1.0-rc3 downloaded.                   [1;32;40m[1m[ok][0m
+Project views_rss contains 3 modules: views_rss_dc, views_rss_core, views_rss.
+views_rss-7.x-2.0-rc4 downloaded.                                    [1;32;40m[1m[ok][0m
+webform-7.x-4.20 downloaded.                                         [1;32;40m[1m[ok][0m
+webform_submissions_bulk_delete-7.x-1.2 downloaded.                  [1;32;40m[1m[ok][0m
+workbench-7.x-1.2 downloaded.                                        [1;32;40m[1m[ok][0m
+workbench_access-7.x-1.6 downloaded.                                 [1;32;40m[1m[ok][0m
+workbench_media-7.x-1.1 downloaded.                                  [1;32;40m[1m[ok][0m
+workbench_moderation downloaded from                                 [1;32;40m[1m[ok][0m
+https://github.com/JeebsUK/drupal-workbench-moderation/archive/1.4.tar.gz.
+Project xmlsitemap contains 9 modules: xmlsitemap_menu, xmlsitemap_engines, xmlsitemap_taxonomy, xmlsitemap_user, xmlsitemap_custom, xmlsitemap_i18n, xmlsitemap_modal, xmlsitemap_node, xmlsitemap.
+xmlsitemap-7.x-2.6 downloaded.                                       [1;32;40m[1m[ok][0m
+body_field_definition-7.x-1.0 downloaded.                            [1;32;40m[1m[ok][0m
+body_field_definition patched with foreign-keys-2454593-1.patch.     [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for body_field_definition                 [1;32;40m[1m[ok][0m
+cam_access_handling downloaded from                                  [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-access-handling/archive/7.x-1.0.tar.gz.
+cambridge_download downloaded from                                   [1;32;40m[1m[ok][0m
+https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-7-features/drupal-feature-download/-/archive/1.10/drupal-feature-download-1.10.tar.gz.
+cambridge_events downloaded from                                     [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-events/archive/2.3.tar.gz.
+cambridge_jobs downloaded from                                       [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-jobs/archive/7.x-1.0.tar.gz.
+cambridge_news downloaded from                                       [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-news/archive/7.x-2.2.tar.gz.
+cambridge_related_links downloaded from                              [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-related-links/archive/7.x-1.2.tar.gz.
+cambridge_questions_and_answers downloaded from                      [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-questions-and-answers/archive/7.x-1.3.tar.gz.
+webform_date_format downloaded from                                  [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-webform-date-format/archive/7.x-1.0.tar.gz.
+ckeditor downloaded from                                             [1;32;40m[1m[ok][0m
+http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.4.7/ckeditor_4.4.7_full.tar.gz.
+fancybox downloaded from                                             [1;32;40m[1m[ok][0m
+https://github.com/fancyapps/fancyBox/archive/v2.1.5.tar.gz.
+Beginning to build                                                   [1;32;40m[1m[ok][0m
+/home/jamie/Web/Projects/JeebsUK/drupal-cambridge-profile/src/cambridge_lite/cambridge_lite.make.
+cambridge_theme downloaded from                                      [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.11.tar.gz.
+Project ctools contains 10 modules: ctools_custom_content, views_content, ctools_plugin_example, page_manager, bulk_export, ctools_access_ruleset, ctools_ajax_sample, stylizer, term_depth, ctools.
+ctools-7.x-1.15 downloaded.                                          [1;32;40m[1m[ok][0m
+features-7.x-2.11 downloaded.                                        [1;32;40m[1m[ok][0m
+imagecrop-7.x-1.0-rc3 downloaded.                                    [1;32;40m[1m[ok][0m
+imagecrop patched with imagecrop_query_string.patch.                 [1;32;40m[1m[ok][0m
+imagecrop patched with imagecrop_theme.patch.                        [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for imagecrop                             [1;32;40m[1m[ok][0m
+libraries-7.x-2.5 downloaded.                                        [1;32;40m[1m[ok][0m
+link-7.x-1.6 downloaded.                                             [1;32;40m[1m[ok][0m
+Project menu_block contains 2 modules: menu_block, menu_block_export.
+menu_block-7.x-2.8 downloaded.                                       [1;32;40m[1m[ok][0m
+menu_firstchild-7.x-1.1 downloaded.                                  [1;32;40m[1m[ok][0m
+menu_firstchild patched with pathauto-token-2295059-1.patch.         [1;32;40m[1m[ok][0m
+Generated PATCHES.txt file for menu_firstchild                       [1;32;40m[1m[ok][0m
+pathauto-7.x-1.3 downloaded.                                         [1;32;40m[1m[ok][0m
+raven downloaded from                                                [1;32;40m[1m[ok][0m
+https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/raven/-/archive/v1.6/raven-v1.6.tar.gz.
+token-7.x-1.7 downloaded.                                            [1;32;40m[1m[ok][0m
+Project views contains 2 modules: views, views_ui.
+views-7.x-3.23 downloaded.                                           [1;32;40m[1m[ok][0m
+cambridge_carousel downloaded from                                   [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-carousel/archive/7.x-1.1.tar.gz.
+cambridge_image_styles downloaded from                               [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-image-styles/archive/7.x-1.1.tar.gz.
+cambridge_link downloaded from                                       [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-link/archive/7.x-1.0.tar.gz.
+cambridge_teasers downloaded from                                    [1;32;40m[1m[ok][0m
+https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.6.tar.gz.
+simple_lookup downloaded from                                        [1;32;40m[1m[ok][0m
+https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/simple_lookup/-/archive/v1.1/simple_lookup-v1.1.tar.gz.
