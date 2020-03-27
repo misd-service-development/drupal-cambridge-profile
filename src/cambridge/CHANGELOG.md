@@ -1,6 +1,35 @@
 Changelog
 =========
 
+
+2.5 
+
+27 March 2020
+
+The following modules have been added to the profile:
+
+Added Field Collection Views [1.0-beta3] (https://www.drupal.org/project/field_collection_views/releases/7.x-1.0-beta3)
+
+The following modules have security releases:
+
+Upgraded Admin Views to [1.7] (https://www.drupal.org/project/admin_views/releases/7.x-1.7)
+Upgraded Nodequeue to [2.2] (https://www.drupal.org/project/nodequeue/releases/7.x-2.2)
+
+The following modules have maintenance or scheduled releases:
+
+Upgraded Field Permissions to [1.1] (https://www.drupal.org/project/field_permissions/releases/7.x-1.1)
+Upgraded File Entity to [2.27] (https://www.drupal.org/project/file_entity/releases/7.x-2.27)
+Upgraded Honeypot to [1.26] (https://www.drupal.org/project/honeypot/releases/7.x-1.26)
+Updgraded Link to [1.7] (https://www.drupal.org/project/link/releases/7.x-1.7)
+Upgraded Media to [2.26] (https://www.drupal.org/project/media/releases/7.x-2.26)
+Upgraded Media CKEditor to [2.14] (https://www.drupal.org/project/media_ckeditor/releases/7.x-2.14)
+Upgraded Media YouTube to [3.9] (https://www.drupal.org/project/media_youtube/releases/7.x-3.9)
+Upgraded Metatag to [1.27] (https://www.drupal.org/project/metatag/releases/7.x-1.27)
+Upgraded Views to [3.24] (https://www.drupal.org/project/views/releases/7.x-3.24)
+Upgraded Webform to [4.22] (https://www.drupal.org/project/webform/releases/7.x-4.22)
+
+
+
 2.4
 
 3 October 2019

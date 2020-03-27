@@ -1,6 +1,19 @@
 Changelog
 =========
 
+
+2.5 
+
+27 March 2020
+
+The following modules have maintenance or scheduled releases:
+
+Updgraded Link to [1.7] (https://www.drupal.org/project/link/releases/7.x-1.7)
+Upgraded Views to [3.24] (https://www.drupal.org/project/views/releases/7.x-3.24)
+
+
+
+
 2.4
 
 3 October 2019

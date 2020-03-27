@@ -19,15 +19,9 @@ projects[features][subdir] = "contrib"
 projects[imagecrop][version] = "1.0-rc3"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6241365/raw/fccdba35efbd5ec106d8b92a8af98f71172e1870/imagecrop_query_string.patch"
 projects[imagecrop][patch][] = "https://gist.github.com/thewilkybarkid/6351355/raw/a34c91e4480aa7c4c0b79644e13aeeec914c1726/imagecrop_theme.patch"
+projects[imagecrop][patch][] = "https://www.drupal.org/files/issues/imagecrop-media_v2_support-2196011-24.patch"
 projects[libraries] = "2.5"
-projects[link][version] = "1.6"
-;projects[link][patch][] = "https://www.drupal.org/files/issues/revert-url-validation-2666912.patch"
-;projects[link][patch][] = "https://www.drupal.org/files/issues/2018-08-10/link-revert_url_validation-2666912_2.patch"
-;We need the 1.6 version of the patch below to be developed, will be a known issue until then.
-;projects[link][patch][] = "https://raw.githubusercontent.com/misd-service-development/drupal-patches/master/link-revert_url_validation-2666912_2_modified.patch"
-
-projects[menu_block] = "2.8"
-projects[menu_firstchild][version] = "1.1"
+projects[link][version] = "1.7"
 projects[menu_firstchild][patch][] = "http://www.drupal.org/files/issues/pathauto-token-2295059-1.patch"
 projects[pathauto] = "1.3"
 ;projects[pathauto_persist] = "1.4"
@@ -37,7 +31,7 @@ projects[raven][download][url] = "https://gitlab.developers.cam.ac.uk/uis/webcms
 ;projects[raven][download][url] = "https://github.com/misd-service-development/drupal-raven/archive/7.x-1.3.tar.gz"
 ;projects[raven][patch][] = "https://github.com/misd-service-development/drupal-raven/commit/cfff4cbf50a03ec3806da4a9ce11c29773fbc0eb.patch"
 projects[token] = "1.7"
-projects[views] = "3.23"
+projects[views] = "3.24"
 
 ; features
 
