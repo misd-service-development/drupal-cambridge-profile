@@ -6,17 +6,25 @@ Changelog
 
 27 March 2020
 
+Upgraded the Cambridge Theme to [1.12] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.12)
+
+Changed imagecrop module source to University Gitlab so it can be pre-patched with patches to make it Media2 compatible. 
+
 The following modules have been added to the profile:
 
+Added Cam Accordion [1.3] (https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/cam_accordion/-/tags/1.3)
 Added Field Collection Views [1.0-beta3] (https://www.drupal.org/project/field_collection_views/releases/7.x-1.0-beta3)
+Added JQuery Update [2.7] (https://www.drupal.org/project/jquery_update/releases/7.x-2.7)
 
 The following modules have security releases:
 
 Upgraded Admin Views to [1.7] (https://www.drupal.org/project/admin_views/releases/7.x-1.7)
 Upgraded Nodequeue to [2.2] (https://www.drupal.org/project/nodequeue/releases/7.x-2.2)
+Upgraded Webform to [4.22] (https://www.drupal.org/project/webform/releases/7.x-4.22)
 
 The following modules have maintenance or scheduled releases:
 
+Upgraded Feeds to [2.0-beta4] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta4)
 Upgraded Field Permissions to [1.1] (https://www.drupal.org/project/field_permissions/releases/7.x-1.1)
 Upgraded File Entity to [2.27] (https://www.drupal.org/project/file_entity/releases/7.x-2.27)
 Upgraded Honeypot to [1.26] (https://www.drupal.org/project/honeypot/releases/7.x-1.26)
@@ -26,7 +34,6 @@ Upgraded Media CKEditor to [2.14] (https://www.drupal.org/project/media_ckeditor
 Upgraded Media YouTube to [3.9] (https://www.drupal.org/project/media_youtube/releases/7.x-3.9)
 Upgraded Metatag to [1.27] (https://www.drupal.org/project/metatag/releases/7.x-1.27)
 Upgraded Views to [3.24] (https://www.drupal.org/project/views/releases/7.x-3.24)
-Upgraded Webform to [4.22] (https://www.drupal.org/project/webform/releases/7.x-4.22)
 
 
 

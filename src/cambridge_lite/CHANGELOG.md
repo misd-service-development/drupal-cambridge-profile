@@ -6,11 +6,18 @@ Changelog
 
 27 March 2020
 
+Upgraded the Cambridge Theme to [1.12] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.12)
+
+The following modules have been added to the profile:
+
+Added JQuery Update [2.7] (https://www.drupal.org/project/jquery_update/releases/7.x-2.7)
+
 The following modules have maintenance or scheduled releases:
 
 Updgraded Link to [1.7] (https://www.drupal.org/project/link/releases/7.x-1.7)
 Upgraded Views to [3.24] (https://www.drupal.org/project/views/releases/7.x-3.24)
 
+Changed imagecrop module source to University Gitlab so it can be pre-patched with patches to make it Media2 compatible. 
 
 
 

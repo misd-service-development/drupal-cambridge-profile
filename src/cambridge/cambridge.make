@@ -43,8 +43,7 @@ projects[fancybox][patch][] = "https://gist.githubusercontent.com/thewilkybarkid
 libraries[fancybox][download][type] = "file"
 libraries[fancybox][download][url] = "https://github.com/fancyapps/fancyBox/archive/v2.1.5.tar.gz"
 projects[features_extra] = "1.0"
-projects[feeds][version] = "2.0-beta3"
-#projects[feeds][patch][] = "https://www.drupal.org/files/issues/feeds-cache-table-exists-2531706-1.patch" #should be fixed in new version
+projects[feeds][version] = "2.0-beta4"
 projects[feeds_entity_processor] = "1.x-dev"
 projects[feeds_tamper] = "1.1"
 projects[feeds_xpathparser] = "1.1"
@@ -161,6 +160,12 @@ projects[cam_access_handling][type] = "module"
 projects[cam_access_handling][download][type] = "file"
 projects[cam_access_handling][download][url] = "https://github.com/misd-service-development/drupal-feature-access-handling/archive/7.x-1.0.tar.gz"
 projects[cam_access_handling][subdir] = "features"
+
+projects[cam_accordion][type] = "module"
+projects[cam_accordion][version] = "1.3"
+projects[cam_accordion][download][type] = "file"
+projects[cam_accordion][download][url] = "https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/cam_accordion/-/archive/1.3/cam_accordion-1.3.tar.gz"
+projects[cam_accordion][subdir] = "features"
 
 projects[cambridge_download][type] = "module"
 projects[cambridge_download][version] = "1.10"
