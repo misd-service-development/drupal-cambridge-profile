@@ -9,6 +9,7 @@ Changelog
 Upgraded the Cambridge Theme to [1.12] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.12)
 
 Changed imagecrop module source to University Gitlab so it can be pre-patched with patches to make it Media2 compatible. 
+Removed patch from Fancybox module now that JQuery Update has been added to the Profile. 
 
 The following modules have been added to the profile:
 
@@ -19,16 +20,18 @@ Added JQuery Update [2.7] (https://www.drupal.org/project/jquery_update/releases
 The following modules have security releases:
 
 Upgraded Admin Views to [1.7] (https://www.drupal.org/project/admin_views/releases/7.x-1.7)
+Upgraded CK Editor to [1.19] (https://www.drupal.org/project/ckeditor/releases/7.x-1.19)
 Upgraded Nodequeue to [2.2] (https://www.drupal.org/project/nodequeue/releases/7.x-2.2)
 Upgraded Webform to [4.22] (https://www.drupal.org/project/webform/releases/7.x-4.22)
 
 The following modules have maintenance or scheduled releases:
 
 Upgraded Feeds to [2.0-beta4] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta4)
+Upgraded Feeds Tamper to [1.2] (https://www.drupal.org/project/feeds_tamper/releases/7.x-1.2)
 Upgraded Field Permissions to [1.1] (https://www.drupal.org/project/field_permissions/releases/7.x-1.1)
 Upgraded File Entity to [2.27] (https://www.drupal.org/project/file_entity/releases/7.x-2.27)
 Upgraded Honeypot to [1.26] (https://www.drupal.org/project/honeypot/releases/7.x-1.26)
-Updgraded Link to [1.7] (https://www.drupal.org/project/link/releases/7.x-1.7)
+Upgraded Link to [1.7] (https://www.drupal.org/project/link/releases/7.x-1.7)
 Upgraded Media to [2.26] (https://www.drupal.org/project/media/releases/7.x-2.26)
 Upgraded Media CKEditor to [2.14] (https://www.drupal.org/project/media_ckeditor/releases/7.x-2.14)
 Upgraded Media YouTube to [3.9] (https://www.drupal.org/project/media_youtube/releases/7.x-3.9)
