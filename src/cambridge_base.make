@@ -6,9 +6,9 @@ defaults[projects][subdir] = "contrib"
 ; theme
 
 projects[cambridge_theme][type] = "theme"
-projects[cambridge_theme][version] = "1.12"
+projects[cambridge_theme][version] = "1.14"
 projects[cambridge_theme][download][type] = "file"
-projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.12.tar.gz"
+projects[cambridge_theme][download][url] = "https://github.com/misd-service-development/drupal-cambridge-theme/archive/7.x-1.14.tar.gz"
 projects[cambridge_theme][subdir] = ""
 
 ; contrib
@@ -17,10 +17,10 @@ projects[ctools] = "1.15"
 projects[features][version] = "2.11"
 projects[features][subdir] = "contrib"
 
-projects[imagecrop][version] = "1.0-rc3"
+projects[imagecrop][version] = "1.0-rc3-jcrop-patch"
 projects[imagecrop][type] = "module"
 projects[imagecrop][download][type] = "file"
-projects[imagecrop][download][url] = "https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/imagecrop/-/archive/1.0-rc3/imagecrop-1.0-rc3.tar.gz"
+projects[imagecrop][download][url] = "https://gitlab.developers.cam.ac.uk/uis/webcms/drupal-modules/imagecrop/-/archive/1.0-rc3-jcrop-patch/imagecrop-1.0-rc3-jcrop-patch.tar.gz"
 projects[jquery_update] = "2.7"
 projects[libraries] = "2.5"
 projects[link][version] = "1.7"

@@ -6,7 +6,7 @@ Changelog
 
 27 March 2020
 
-Upgraded the Cambridge Theme to [1.12] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.12)
+Upgraded the Cambridge Theme to [1.14] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.14)
 
 The following modules have been added to the profile:
 
