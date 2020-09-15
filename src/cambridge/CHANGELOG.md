@@ -22,7 +22,6 @@ Upgraded File Entity to [2.30] (https://www.drupal.org/project/file_entity/relea
 Upgraded Font Awesome to [3.13] (https://www.drupal.org/project/fontawesome/releases/7.x-3.13)
 Upgraded Memcache to [1.8] (https://www.drupal.org/project/memcache/releases/7.x-1.8)
 Upgraded Nodequeue to [2.3] (https://www.drupal.org/project/nodequeue/releases/7.x-2.3)
-Upgraded Smart Trim to [1.6] (https://www.drupal.org/project/smart_trim/releases/7.x-1.6)
 Upgraded Views Bulk Operations to [3.6] (https://www.drupal.org/project/views_bulk_operations/releases/7.x-3.6)
 Upgraded Webform to [4.23] (https://www.drupal.org/project/webform/releases/7.x-4.23)
 
