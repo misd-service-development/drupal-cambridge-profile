@@ -29,7 +29,7 @@ List of currently included modules
 
 There have been requests in earlier versions of the Profile for a full list of supported / included modules in the Profile, so with the release of version 1.7 we are now including this. The list of included modules is as follows:
 
-Contributed Modules
+Contributed Modules (Updated for Profile 2.6)
 -------------------
 
 Admin Menu
@@ -72,6 +72,7 @@ File Resumable Upload
 Filefield Paths
 Filefield Sources
 Global Redirect
+Google Tag Manager
 Google Analytics
 Hierarchical Select
 Honeypot
@@ -82,7 +83,9 @@ Job Scheduler
 Libraries
 Link
 Link Checker
+Markup
 Media
+Media CKEditor
 Media Flickr
 Media Soundcloud
 Media Vimeo
@@ -90,8 +93,9 @@ Media YouTube
 Memcache
 Menu Admin Per Menu
 Menu Block
-Menu First Child
+Menu Firstchild
 Menu Force
+Menu Position
 Menu Trail By Path
 Menu View Unpublished
 Metatag
@@ -99,9 +103,9 @@ Module Filter
 Multiselect
 Nodequeue
 Pathauto
-Pathauto Persist
 Pathologic
 Persistent Menu Items
+Print
 Publish Content
 Raven (Cambridge authored module)
 Real Name
@@ -114,7 +118,7 @@ Search API
 Search API DB
 Select Or Other
 Share This
-Similar Terms
+Similar By Terms
 Smart Trim
 Strongarm
 Synonyms
@@ -146,7 +150,9 @@ Cambridge Feature Modules
 
 Body Field Definition - Utility module used by other features that create content types.
 Cam Access Handling - Provides the standard "access denied" blocks for anonymous and logged in users.
+Cambridge Accordion - Provides the Accordion content type and associated functionality.
 Cambridge Carousel - Provides the carousel functionality used on the homepage of many Cambridge websites.
+Cambridge Download - Provides the Download content type - used for file handling.
 Cambridge Events - Provides the Events content type and associated views. 
 Cambridge Image Styles - Provides various image styles (e.g. leading images, carousel sized image, teaser images). 
 Cambridge Link - Provides the Link content type.

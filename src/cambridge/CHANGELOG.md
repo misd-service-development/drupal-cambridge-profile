@@ -2,6 +2,31 @@ Changelog
 =========
 
 
+2.6
+
+15 September 2020
+
+Upgraded the Cambridge Theme to [1.15] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.15)
+
+The following modules have been added to the profile:
+
+Added Google Tag Manager [2.1] (https://www.drupal.org/project/google_tag/releases/7.x-2.1)
+Added Menu Position [1.2] (https://www.drupal.org/project/menu_position/releases/7.x-1.2)
+Added Print [2.2] (https://www.drupal.org/project/print/releases/7.x-2.2)
+
+The following modules have been upgraded:
+
+Upgraded Advanced Help to [1.6] (https://www.drupal.org/project/advanced_help/releases/7.x-1.6)
+Upgraded Feeds to [2.0-beta5] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta5)
+Upgraded File Entity to [2.30] (https://www.drupal.org/project/file_entity/releases/7.x-2.30)
+Upgraded Font Awesome to [3.13] (https://www.drupal.org/project/fontawesome/releases/7.x-3.13)
+Upgraded Memcache to [1.8] (https://www.drupal.org/project/memcache/releases/7.x-1.8)
+Upgraded Nodequeue to [2.3] (https://www.drupal.org/project/nodequeue/releases/7.x-2.3)
+Upgraded Smart Trim to [1.6] (https://www.drupal.org/project/smart_trim/releases/7.x-1.6)
+Upgraded Views Bulk Operations to [3.6] (https://www.drupal.org/project/views_bulk_operations/releases/7.x-3.6)
+Upgraded Webform to [4.23] (https://www.drupal.org/project/webform/releases/7.x-4.23)
+
+
 2.5 
 
 27 March 2020
