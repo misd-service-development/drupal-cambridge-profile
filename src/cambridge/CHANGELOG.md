@@ -4,12 +4,14 @@ Changelog
 
 2.6
 
-15 September 2020
+12 October 2020
 
-Upgraded the Cambridge Theme to [1.15] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.15)
+Upgraded the Cambridge Theme to [1.16] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.16)
 
 The following modules have been added to the profile:
 
+Added Better Exposed Filters [3.6] (https://www.drupal.org/project/better_exposed_filters/releases/7.x-3.6)
+Added Entity Views Attachment (EVA) [1.4] (https://www.drupal.org/project/eva/releases/7.x-1.4)
 Added Google Tag Manager [2.1] (https://www.drupal.org/project/google_tag/releases/7.x-2.1)
 Added Menu Position [1.2] (https://www.drupal.org/project/menu_position/releases/7.x-1.2)
 Added Print [2.2] (https://www.drupal.org/project/print/releases/7.x-2.2)

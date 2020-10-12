@@ -2,6 +2,14 @@ Changelog
 =========
 
 
+2.6
+
+12 October 2020
+
+Upgraded the Cambridge Theme to [1.16] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.16)
+
+
+
 2.5 
 
 27 March 2020
