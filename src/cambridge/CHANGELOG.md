@@ -2,30 +2,48 @@ Changelog
 =========
 
 
-2.6
+2.7
 
-12 October 2020
+20 November 2020
 
-Upgraded the Cambridge Theme to [1.16] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.16)
+The following essentials have been upgraded:
+
+Upgraded the Cambridge Theme to [1.17] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.17)
+Upgraded Cambridge Teasers to [1.8] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.8)
 
 The following modules have been added to the profile:
 
 Added Better Exposed Filters [3.6] (https://www.drupal.org/project/better_exposed_filters/releases/7.x-3.6)
+Added Captcha [1.7] (https://www.drupal.org/project/captcha/releases/7.x-1.7)
 Added Entity Views Attachment (EVA) [1.4] (https://www.drupal.org/project/eva/releases/7.x-1.4)
+Added Feeds Extensible Parsers [1.0-rc1] (https://www.drupal.org/project/feeds_ex/releases/7.x-1.0-rc1)
 Added Google Tag Manager [2.1] (https://www.drupal.org/project/google_tag/releases/7.x-2.1)
 Added Menu Position [1.2] (https://www.drupal.org/project/menu_position/releases/7.x-1.2)
 Added Print [2.2] (https://www.drupal.org/project/print/releases/7.x-2.2)
+Added Recaptcha [2.3] (https://www.drupal.org/project/recaptcha/releases/7.x-2.3)
+Added Views Tree [2.0] (https://www.drupal.org/project/views_tree/releases/7.x-2.0)
 
 The following modules have been upgraded:
 
 Upgraded Advanced Help to [1.6] (https://www.drupal.org/project/advanced_help/releases/7.x-1.6)
+Upgraded Chaos Tools to [1.17] (https://www.drupal.org/project/ctools/releases/7.x-1.17)
+Upgraded Crazy Egg to [1.2] (https://www.drupal.org/project/crazyegg/releases/7.x-1.2)
+Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.12)
 Upgraded Feeds to [2.0-beta5] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta5)
 Upgraded File Entity to [2.30] (https://www.drupal.org/project/file_entity/releases/7.x-2.30)
 Upgraded Font Awesome to [3.13] (https://www.drupal.org/project/fontawesome/releases/7.x-3.13)
 Upgraded Memcache to [1.8] (https://www.drupal.org/project/memcache/releases/7.x-1.8)
-Upgraded Nodequeue to [2.3] (https://www.drupal.org/project/nodequeue/releases/7.x-2.3)
+Upgraded Nodequeue to [2.x-dev] (https://www.drupal.org/project/nodequeue/releases/7.x-2.x-dev)
+Upgraded Scheduler to [1.6] (https://www.drupal.org/project/scheduler/releases/7.x-1.6)
+Upgraded Smart Trim to [1.6] (https://www.drupal.org/project/smart_trim/releases/7.x-1.6)
 Upgraded Views Bulk Operations to [3.6] (https://www.drupal.org/project/views_bulk_operations/releases/7.x-3.6)
 Upgraded Webform to [4.23] (https://www.drupal.org/project/webform/releases/7.x-4.23)
+Upgraded Workbench Media to [2.1] (https://www.drupal.org/project/workbench_media/releases/7.x-2.1)
+
+
+2.6 12 October 2020
+
+The 2.6 version of the profile will not receive a formal release due to an enormous bug in the 2.12 version of the features module.
 
 
 2.5 

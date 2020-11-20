@@ -13,8 +13,8 @@ projects[cambridge_theme][subdir] = ""
 
 ; contrib
 
-projects[ctools] = "1.15"
-projects[features][version] = "2.11"
+projects[ctools] = "1.17"
+projects[features][version] = "2.13"
 projects[features][subdir] = "contrib"
 
 projects[imagecrop][version] = "1.0-rc3-jcrop-patch"
@@ -55,7 +55,7 @@ projects[cambridge_link][subdir] = "features"
 
 projects[cambridge_teasers][type] = "module"
 projects[cambridge_teasers][download][type] = "file"
-projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.6.tar.gz"
+projects[cambridge_teasers][download][url] = "https://github.com/misd-service-development/drupal-feature-teasers/archive/7.x-1.8.tar.gz"
 projects[cambridge_teasers][subdir] = "features"
 
 projects[simple_lookup][type] = "module"

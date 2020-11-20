@@ -2,12 +2,22 @@ Changelog
 =========
 
 
-2.6
+2.7
 
-12 October 2020
+20 November 2020
 
-Upgraded the Cambridge Theme to [1.16] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.16)
+Upgraded the Cambridge Theme to [1.17] (https://github.com/misd-service-development/drupal-cambridge-theme/releases/tag/7.x-1.17)
+Upgraded Cambridge Teasers to [1.8] (https://github.com/misd-service-development/drupal-feature-teasers/releases/tag/7.x-1.8)
 
+The following modules have maintenance or scheduled releases:
+
+Upgraded Chaos Tools to [1.17] (https://www.drupal.org/project/ctools/releases/7.x-1.17)
+Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.12)
+
+
+2.6 12 October 2020
+
+The 2.6 version of the profile will not receive a formal release due to an enormous bug in the 2.12 version of the features module.
 
 
 2.5 
