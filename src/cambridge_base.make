@@ -14,7 +14,7 @@ projects[cambridge_theme][subdir] = ""
 ; contrib
 
 projects[ctools] = "1.17"
-projects[features][version] = "2.12"
+projects[features][version] = "2.13"
 projects[features][subdir] = "contrib"
 
 projects[imagecrop][version] = "1.0-rc3-jcrop-patch"
