@@ -12,7 +12,7 @@ Upgraded Cambridge Teasers to [1.8] (https://github.com/misd-service-development
 The following modules have maintenance or scheduled releases:
 
 Upgraded Chaos Tools to [1.17] (https://www.drupal.org/project/ctools/releases/7.x-1.17)
-Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.12)
+Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.13)
 
 
 2.6 12 October 2020

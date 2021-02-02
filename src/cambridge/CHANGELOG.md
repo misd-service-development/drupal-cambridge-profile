@@ -28,7 +28,7 @@ The following modules have been upgraded:
 Upgraded Advanced Help to [1.6] (https://www.drupal.org/project/advanced_help/releases/7.x-1.6)
 Upgraded Chaos Tools to [1.17] (https://www.drupal.org/project/ctools/releases/7.x-1.17)
 Upgraded Crazy Egg to [1.2] (https://www.drupal.org/project/crazyegg/releases/7.x-1.2)
-Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.12)
+Upgraded Features to [2.13] (https://www.drupal.org/project/features/releases/7.x-2.13)
 Upgraded Feeds to [2.0-beta5] (https://www.drupal.org/project/feeds/releases/7.x-2.0-beta5)
 Upgraded File Entity to [2.30] (https://www.drupal.org/project/file_entity/releases/7.x-2.30)
 Upgraded Font Awesome to [3.13] (https://www.drupal.org/project/fontawesome/releases/7.x-3.13)
