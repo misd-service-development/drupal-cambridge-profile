@@ -2,6 +2,19 @@ Changelog
 =========
 
 
+2.8
+
+28 February 2021
+
+The following modules have been added to the Profile:
+
+Added Schema Metatag [1.4] (https://www.drupal.org/project/schema_metatag/releases/7.x-1.4)
+Added Webform Country List [1.5] (https://www.drupal.org/project/webform_country_list/releases/7.x-1.5)
+
+
+
+
+
 2.7
 
 20 November 2020
